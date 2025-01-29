@@ -83,8 +83,8 @@
 \title{ \normalsize \textsc{}
 		\\ [2.0cm]
 		\HRule{1.5pt} \\
-		\LARGE \textbf{\uppercase{Algebra II}
-		\HRule{2.0pt} \\ [0.6cm] \LARGE{Prelim Course Bootcamp} \vspace*{10\baselineskip}}
+		\LARGE \textbf{\uppercase{Small Title}
+		\HRule{2.0pt} \\ [0.6cm] \LARGE{TITLE} \vspace*{10\baselineskip}}
 		}
 \date{}
 \author{\textbf{Sudharshan K V} \\ 
