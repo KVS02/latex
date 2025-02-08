@@ -1,0 +1,175 @@
+\documentclass{amsart}
+
+\usepackage{amsmath,amssymb,amsfonts,amscd}
+\usepackage[all,cmtip]{xy}
+\usepackage{enumerate}
+\usepackage{ amssymb, latexsym, amsmath}
+%\setcounter{MaxMatrixCols}{30}%
+\usepackage{fullpage}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{ marvosym }
+
+
+
+
+\numberwithin{equation}{section}
+
+%\usepackage{cjw-latex}
+
+%\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem*{thm}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{criterion}[theorem]{Criterion}
+%\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{wildconjecture}[theorem]{Wild Conjecture}
+
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem*{dfn}{Definition}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{solution}[theorem]{Solution}
+
+
+
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{remarks}[theorem]{Remarks}
+\newtheorem{summary}[theorem]{Summary}
+\newtheorem{observation}[theorem]{Observation}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+
+
+
+\makeatletter
+\newcommand{\rmnum}[1]{\romannumeral #1}
+\newcommand{\Rmnum}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\Ext}{\operatorname{Ext}}
+\newcommand{\Tor}{\operatorname{Tor}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\osum}{\oplus}
+\newcommand{\aff}{\operatorname{Aff}}
+
+\newcommand{\Id}{\operatorname{Id}}
+\newcommand{\concat}{(\Id \to \Omega \Sigma)}
+\newcommand{\eval}{(\Sigma\Omega \to \Id)}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\g}{\mathfrak{g}}
+\newcommand{\n}{\mathfrak{n}}
+\newcommand{\h}{\mathfrak{h}}
+\newcommand{\p}{\mathfrak{p}}
+\newcommand{\q}{\mathfrak{q}}
+\newcommand{\m}{\mathfrak{m}}
+\newcommand{\e}{\mathfrak{e}}
+\newcommand{\f}{\mathfrak{f}}
+\newcommand{\V}{\mathscr{V}}
+\newcommand{\D}{\mathscr{D}}
+\renewcommand{\S}{\mathscr{S}}
+\newcommand{\Sch}{\mathscr{C}}
+\newcommand{\Y}{\mathscr{Y}}
+\renewcommand{\u}{\mathfrak{u}}
+\newcommand{\set}[2]{ \left\{ {#1} \, \left| \, {#2} \right\}\right.}
+\newcommand{\A}{\mathbb{A}}
+\newcommand{\X}{\mathcal{X}}
+\renewcommand{\Im}{\operatorname{Im}}
+\newcommand{\T}{\mathscr{T}}
+\newcommand{\HH}{\mathscr{H}}
+\newcommand{\PGL}{\operatorname{PGL}}
+\newcommand{\righthookarrow}{\hookrightarrow}
+\newcommand{\sign}{\operatorname{sign}}
+\renewcommand{\_}[2]{\underbrace{#1}_{#2}}
+\renewcommand{\^}[2]{\overbrace{#1}_{#2}}
+\newcommand{\curverightarrow}{\curvearrowright}
+
+\newcommand{\z}{\mathfrak{z}}
+\renewcommand{\sl}{\mathfrak{sl}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\RP}{\mathbb{RP}}
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\C}{\mathbb{C}}
+\renewcommand{\H}{\mathcal{H}}
+\newcommand{\Ind}{\operatorname{Ind}}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Orb}{\mathcal{O}}
+\renewcommand{\k}{\mbox{\Fontauri k}}
+\newcommand{\Ad}{\operatorname{Ad}}
+\newcommand{\ad}{\operatorname{ad}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\Ker}{\operatorname{Ker}}
+\newcommand{\End}{\operatorname{End}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\Stab}{\mbox{Stab}}
+\newcommand{\Lie}{\operatorname{Lie}}
+\newcommand{\GL}{\operatorname{GL}}
+\newcommand{\SL}{\operatorname{SL}}
+\newcommand{\Sp}{\operatorname{Sp}}
+\newcommand{\Mp}{\operatorname{Mp}}
+\renewcommand{\a}{\mathfrak{a}}
+\newcommand{\Wh}{\operatorname{Wh}}
+\newcommand{\Span}{\operatorname{Span}}
+\newcommand{\WF}{\operatorname{WF}}
+\newcommand{\AC}{\operatorname{AC}}
+\newcommand{\Lin}{\operatorname{Lin}}
+\newcommand{\Diff}{\operatorname{Diff}}
+\newcommand{\Gen}{\operatorname{Gen\, Hom}}
+\newcommand{\Her}{\operatorname{Her}}
+\newcommand{\pivot}{&}
+\newcommand{\sgn}{\operatorname{sgn}}
+%\newcommand{C^{\infty}}{DS}
+\newcommand{\vsp}{{\vspace{0.2in}}}
+
+
+
+\title{Notes}
+
+\author{Sudharshan K V}
+\begin{document}
+\maketitle
+
+\section*{Problem 1}
+(a) If $f: X \to Y$ is a submersion, then it is locally surjective. Let $W$ be any open subset of $X$. For some $p$ in $W$, by local surjectivity, there are neighborhoods $U$ of $p$ and $V$ of $f(p)$ such that $f: U \to V$ is surjective. Choose a small enough neighborhood $V'$ around $f(p)$ such that $f^{-1}(V')$ is contained in $W$: one can do this by passing through coordinates. Then, $f(W)$ contains $f(f^{-1}(V')) = V'$, an open set around $f(p)$. So, $f(W)$ is open.  \\
+
+(b) By (a), the image $f(X)$ is an open subset of $Y$. It is also compact since $f$ is continuous. Recall that a compact subspace of a Hausdorff space is closed. So $f(X)$ is an open and closed subset of $Y$. Since $X$ is non-empty $f(X)$ must be the whole codomain $Y$. 
+
+\section*{Problem 2}
+Since $X$ and $Y$ have the same dimension, (by preimage theorem) $f^{-1}(y)$ is a submanifold of $X$ of dimension $0$. So by definition, $f^{-1}(y)$ is discrete. It is also a closed subset of $X$ since $f$ is continuous, and hence is compact. A compact, discrete set must be finite.
+
+Say $x_1, \dots, x_n$ be the points which map to $y$. Choose neighborhoods $U_i$ around $x_i$ and neighborhoods $V_i$ around $y$ such that $f: U_i \to V_i$ is a diffeomorphism for all $i$. Shrink the $U_i$ (and consequently the $V_i$) so that the $U_i$ are disjoint. One achieves this by using Hausdorff-ness, since $\{x_i\}$ is a finite set in $X$. Let $\tilde V = \cap_i V_i$, an open neighborhood of $y$, and shrink the $U_i$ so that $U_i$ are diffeomorphic to $\tilde V$. Further assume that $\tilde V$ is completely within a chart around $y$ of $Y$. We therefore are now in the following setting:
+
+\begin{itemize}
+\item $\tilde V$ is a neighborhood of $y$ which is homeomorphic to an open subset of Euclidean space.
+\item $U_i$ are disjoint open subsets of $x_i$ which are homeomorphic to $\tilde V$ under $f$.
+\end{itemize}
+
+We claim that we can shrink $\tilde V$ so that $f^{-1}(\tilde V)$ is contained in the union of the $U_i$. Suppose otherwise, that there are points $p_i$ in $X':= X\setminus \cup U_i$ (a closed hence compact subset of $X$) for which $f(p_i)$ converges to $y$. Then compactness (hence sequential compactness)\footnote{For a Hausdorff, second countable topological space, compactness is equivalent to sequential compactness.} for $X'$ gives a subsequence of the $p_i$ which converges to some $p$ in $X'$. Clearly, $f(p)$ must be $y$ by continuity of $f$. But this violates the fact that $f^{-1}(y)$ is contained in $\cup U_i$. Therefore, there must be a small enough open subset $V$ of $\tilde V$ for which $f^{-1}(V)$ is contained in the $\cup U_i$. Replacing $U_i$ by the smaller open sets $f^{-1}(V) \cap U_i$ gives us the required finite-sheeted, covering map around $y$. 
+
+\section*{Problem 3}
+
+\section*{Problem 4}
+(a) We work in open subsets of $\R\P^3$. Consider the chart $U_0$ where the first coordinate $z_0$ is non-zero. Consider the smooth map $[1:a:b:c] \mapsto c - ab$. The derivative of this map in coordinates is $[*, *, 1]$, which is surjective. So the preimage of $0$, which is $U_0\cap H$ is a submanifold of $\R\P^3$. The argument for the other charts $U_{1,2,3}$ are similar, which shows that $U_i\cap H$ is a submanifold of $\R\P^3$. It follows that $H$ is a submanifold of $\R\P^3$. \\
+
+(b) We will compute the derivatives of the map in the coordinate chart $U_0 \times U_0$ around $x_0\neq 0, y_0 \neq 0$. On the codomain take the chart $U_0$ again. In these charts, the map becomes $(a,b) \mapsto (b,a,ab)$. Clearly this map is smooth. The image of this map lies in $H$. Furthermore, given some point $[z_0: z_1: z_2: z_3]$ in $U_0 \cap H$, the map $\sigma$ takes the point $[z_0:z_2],[z_0,z_1]$ to $[z_0^2: z_0z_1:z_0z_2:z_0z_3]$, where we have used $z_1z_2 = z_0z_3$. So the image of $\sigma$ contains $U_0\cap H$. The other charts have similar preimages, so image of $\sigma$ is $H$. 
+
+\end{document}

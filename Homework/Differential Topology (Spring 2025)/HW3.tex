@@ -1,0 +1,232 @@
+\documentclass{amsart}
+
+\usepackage{amsmath,amssymb,amsfonts,amscd}
+\usepackage[all,cmtip]{xy}
+\usepackage{enumerate}
+\usepackage{ amssymb, latexsym, amsmath}
+%\setcounter{MaxMatrixCols}{30}%
+\usepackage{fullpage}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{ marvosym }
+\usepackage{quiver}
+\usepackage{mathrsfs}
+
+
+\numberwithin{equation}{section}
+
+%\usepackage{cjw-latex}
+
+%\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem*{thm}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{criterion}[theorem]{Criterion}
+%\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{wildconjecture}[theorem]{Wild Conjecture}
+
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem*{dfn}{Definition}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{solution}[theorem]{Solution}
+
+
+
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{remarks}[theorem]{Remarks}
+\newtheorem{summary}[theorem]{Summary}
+\newtheorem{observation}[theorem]{Observation}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+
+
+
+\makeatletter
+\newcommand{\rmnum}[1]{\romannumeral #1}
+\newcommand{\Rmnum}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\Ext}{\operatorname{Ext}}
+\newcommand{\Tor}{\operatorname{Tor}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\osum}{\oplus}
+\newcommand{\aff}{\operatorname{Aff}}
+
+\newcommand{\Id}{\operatorname{Id}}
+\newcommand{\concat}{(\Id \to \Omega \Sigma)}
+\newcommand{\eval}{(\Sigma\Omega \to \Id)}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\g}{\mathfrak{g}}
+\newcommand{\n}{\mathfrak{n}}
+\newcommand{\h}{\mathfrak{h}}
+\newcommand{\p}{\mathfrak{p}}
+\newcommand{\q}{\mathfrak{q}}
+\newcommand{\m}{\mathfrak{m}}
+\newcommand{\e}{\mathfrak{e}}
+\newcommand{\f}{\mathfrak{f}}
+\newcommand{\V}{\mathscr{V}}
+\newcommand{\D}{\mathscr{D}}
+\renewcommand{\S}{\mathscr{S}}
+\newcommand{\Sch}{\mathscr{C}}
+\newcommand{\Y}{\mathscr{Y}}
+\renewcommand{\u}{\mathfrak{u}}
+\newcommand{\set}[2]{ \left\{ {#1} \, \left| \, {#2} \right\}\right.}
+\newcommand{\A}{\mathbb{A}}
+\newcommand{\X}{\mathcal{X}}
+\renewcommand{\Im}{\operatorname{Im}}
+\newcommand{\T}{\mathscr{T}}
+\newcommand{\HH}{\mathscr{H}}
+\newcommand{\PGL}{\operatorname{PGL}}
+\newcommand{\righthookarrow}{\hookrightarrow}
+\newcommand{\sign}{\operatorname{sign}}
+\renewcommand{\_}[2]{\underbrace{#1}_{#2}}
+\renewcommand{\^}[2]{\overbrace{#1}_{#2}}
+\newcommand{\curverightarrow}{\curvearrowright}
+
+\newcommand{\z}{\mathfrak{z}}
+\renewcommand{\sl}{\mathfrak{sl}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\RP}{\mathbb{RP}}
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\C}{\mathbb{C}}
+\renewcommand{\H}{\mathcal{H}}
+\newcommand{\Ind}{\operatorname{Ind}}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Orb}{\mathcal{O}}
+\renewcommand{\k}{\mbox{\Fontauri k}}
+\newcommand{\Ad}{\operatorname{Ad}}
+\newcommand{\ad}{\operatorname{ad}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\Ker}{\operatorname{Ker}}
+\newcommand{\End}{\operatorname{End}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\Stab}{\mbox{Stab}}
+\newcommand{\Lie}{\operatorname{Lie}}
+\newcommand{\GL}{\operatorname{GL}}
+\newcommand{\SL}{\operatorname{SL}}
+\newcommand{\Sp}{\operatorname{Sp}}
+\newcommand{\Mp}{\operatorname{Mp}}
+\renewcommand{\a}{\mathfrak{a}}
+\newcommand{\Wh}{\operatorname{Wh}}
+\newcommand{\Span}{\operatorname{Span}}
+\newcommand{\WF}{\operatorname{WF}}
+\newcommand{\AC}{\operatorname{AC}}
+\newcommand{\Lin}{\operatorname{Lin}}
+\newcommand{\Diff}{\operatorname{Diff}}
+\newcommand{\Gen}{\operatorname{Gen\, Hom}}
+\newcommand{\Her}{\operatorname{Her}}
+\newcommand{\pivot}{&}
+\newcommand{\Tau}{\mathbf{T}}
+\newcommand{\sgn}{\operatorname{sgn}}
+%\newcommand{C^{\infty}}{DS}
+\newcommand{\vsp}{{\vspace{0.2in}}}
+
+
+
+\title{Homework 3}
+
+\author{Sudharshan K V}
+\begin{document}
+\maketitle
+
+\section*{Problem 1}
+\begin{lemma}
+  Fix a chart $U, \varphi_U$ and a $u\in \R^n.$ Then for each chart $V,\varphi_V$, there is a unique $v\in \R^n$ for which $(U,\varphi_U) u \sim (V, \varphi_V, v)$. For fixed $U$ and $V$, the association $u\mapsto v$ is linear (it is the derivative of the transition map from $\varphi_U(U) \to \varphi_V(V)$).
+\end{lemma}
+There is an obvious vector space structure on $(U, \varphi_U) \times \R^n$. The elements $(U,\varphi_U, u)$ for $u\in \R^n$ are a set of representatives of $T_p(M)$ because of the lemma. We define addition and scalar multiplication of vectors in $T_p(M)$ by thus defining it on the equivalence classes $\{[U, \varphi_U, u]: u\in \R^n\}.$ This operation is well-defined, i.e., it depends only on the equivalence classes. Let $T$ be the derivative of the transition map between $\varphi_U(U)$ and $\varphi_V(V)$. Then \[[U, \varphi_U, u_1] + c[U, \varphi_U, u_2] := [U,\varphi_U, u_1+cu_2],\] \[[V,\varphi_V, Tu_1] + c[V, \varphi_V, Tu_2] = [V, \varphi_V, T(u_1 + cu_2)],\] since $T$ is linear. The dependence on only the equivalence class is now clear. We record this lemma we obtain from the above discussion. This is used later.
+
+\begin{lemma}
+  The choice of a chart $U, \varphi_U$ induces a vector space isomorphism $\Psi_U: T_p(M) \to \R^n$ given by $[(U, \varphi_U, u)] \mapsto u$. For a smooth map $f: X\to Y$, the induced map $Df_p: T_p(X) \to T_{f(p)}(Y)$ is equal to the map $\Psi_V^{-1}\circ D(\varphi_Vf\varphi_U^{-1})\circ\Psi_U$.
+\end{lemma}
+The last part needs proof. The map $Df_p$ sends the class of $(U, \varphi_U, u)$ to the class of $(V, \varphi_V, D(\varphi_Vf\varphi_U^{-1}) (u)$ by definition, from which the result follows immediately.
+
+\section*{Problem 2}
+(a) For $\epsilon > 0$, define $I_\epsilon = (-\epsilon, \epsilon)$. Fix a chart $U, \varphi_U$ around $p$. For any real number $r\neq 0,$ any (equivalence class of) curve $\gamma: I_\epsilon \to M \in T_p(M)$, define the curve $r\gamma: (-\epsilon/|r|, \epsilon/|r|)I_{\epsilon/|r|} \to M$ by \[r\gamma(t) = \gamma(rt).\] Define the zero-curve to be the equivalence class of the constant map $\gamma: I_\epsilon \to M$, $t\mapsto p$. One can check that if $\gamma_1 \sim \gamma_2$, then the equivalence class of $r\gamma_1$ and $r\gamma_2$ are the same by chain rule: $(\varphi_U \circ r\gamma)'_0 = r (\varphi_U\circ \gamma)'_0$, and the equivalence class of any $\gamma \in T_p$ is determined by the vector $(\varphi \circ \gamma)'_0$.\\
+
+Next we define addition of two curves. Let $\gamma_1, \gamma_2: I_{\epsilon_i} \to M \in T_p(M)$. Let $v_i = (\varphi_U \circ \gamma_i)'_0$. Let $v = v_1+v_2$. Choose $\epsilon>0$ small enough so that $\varphi_U(p) \pm \epsilon v$ lie inside a ball centered at $p$ inside $\varphi_U(U)$. Define the curve $\gamma:I_\epsilon \to M, t\mapsto \varphi_U^{-1}(tv)$. This map is defined because $tv \in \varphi_U(U)$ for all $t\in I_\epsilon$ because of our choice of $\epsilon$. Furthermore, one computes that $(\varphi \circ \gamma)'_0 = (t\mapsto tv)'_0 = v$. So, $[\gamma_1 + \gamma_2] := [\gamma]$ defines a commutative group operation on $T_p(M)$. Furthermore, we have:
+
+\begin{lemma}
+  A choice of chart $U, \varphi_U$ induces a vector space isomorphism $\Psi_U: T_p(M) \to \R^n$ given by $[\gamma] \mapsto (\varphi_U\circ \gamma)'_0$.
+\end{lemma}
+
+(b) Choose charts $U$, $V$ around $p$ and $f(p)$. We have the following commutative diagram due to the Lemma:
+\[\begin{tikzcd}
+	{T_p} & {T_{f(p)}} \\
+	{\R^n} & {\R^m}
+	\arrow["{Df_p}", from=1-1, to=1-2]
+	\arrow["{\Psi_U}", from=1-1, to=2-1]
+	\arrow["{\Psi_V}", from=1-2, to=2-2]
+	\arrow["\Phi"', from=2-1, to=2-2]
+\end{tikzcd}\]
+The induced map $\Phi$ takes vector $(\varphi_U \gamma)'_0$ to $(\varphi_V f \gamma)'_0$. We recognize this as just the differential of the transition map $\varphi_V f \varphi_U^{-1}$, since by chain rule, one has \[(\varphi_V f \gamma)'_0 = D(\varphi_V f \varphi_U^{-1} \varphi_U \gamma)_0 = D(\varphi_V f \varphi_U^{-1})_{\varphi_V(f(p))}\left((\varphi_U \gamma)'_0\right).\] Since $\Phi$ is now a derivative, $\Phi$ is linear, so $Df_p$ is linear on the tangent spaces. \\
+
+(c) Let us denote with $\square^c$ for the alternative description given in Problem 2 of any object $\square$ defined as in Problem 1. Define a map $\Tau_p: T_p^c(M) \to T_p^c(M)$ by $[\gamma] \mapsto [U, \varphi_U, (\varphi_U \gamma)'_0]$. This map clearly commutes with the maps $\Psi^c_U: T_p^c(M) \xrightarrow{\simeq} \R^n$ and $\Psi_U: T_p \xrightarrow{\simeq} \R^n$, making the following commutative triangle:
+\[\begin{tikzcd}
+	& {T_p(M)} \\
+	{\R^n} \\
+	& {T_p^c(M)}
+	\arrow["{\Psi_U}"', from=1-2, to=2-1]
+	\arrow["\Tau_p"', from=3-2, to=1-2]
+	\arrow["{\Psi_U^c}", from=3-2, to=2-1]
+      \end{tikzcd}\]
+    Since $\Psi_U, \Psi_U^c$ are isomorphisms of vector spaces, so is the map $\Tau_p$. Using the commutative square from (b), one has the following prism where all the arrows other than the horizontal arrows are isomorphisms. 
+\[\begin{tikzcd}
+	& {\R^n} &&& {\R^m} \\
+	\\
+	{T_p(X)} &&& {T_{f(p)}(Y)} \\
+	& {T_p^c(X)} &&& {T_{f(p)}^c(Y)}
+	\arrow["\Phi"{description}, from=1-2, to=1-5]
+	\arrow["{\Psi_U}"{description}, from=3-1, to=1-2]
+	\arrow["{Df_p}"{description}, from=3-1, to=3-4]
+	\arrow["{\Psi_V}"{description}, from=3-4, to=1-5]
+	\arrow["{\Psi_U^c}"{description}, from=4-2, to=1-2]
+	\arrow["{\Tau_p}"{description}, from=4-2, to=3-1]
+	\arrow["{Df_p^c}"{description}, from=4-2, to=4-5]
+	\arrow["{\Psi_V^c}"{description}, from=4-5, to=1-5]
+	\arrow["{\Tau_{f(p)}}"{description}, from=4-5, to=3-4]
+      \end{tikzcd}\]
+    Furthermore, the two faces different from the bottom face are known to be commutative from Problem 1 Lemma 2 and Problem 2 (b). So the bottom face must also be commutative (since the other arrows are isomorphisms), which yields the equivalence between the two descriptions of the tangent space at a point of a manifold.
+
+
+\section*{Problem 3}
+(a) The derivative of $F$ is $$Df_p =
+\begin{pmatrix}
+  1 & 0 \\ 0 & 1 \\ f_x(p) & f_y(p)
+\end{pmatrix},$$ where $f_x,f_y$ are the partial derivatives of $f$. Then $Df_p:\R^2 \to \R^3$ is injective because it has two linearly independent rows. For a vector $(a,b)^T$, we compute $Df_p((a,b)^T) = (a,b,af_x(p) + bf_y(p))^T$. So the image of $Df_p$ is the span of the vectors $(1,0,f_x(p))^T$ and $(0,1,f_y(p))^T$. \\
+
+(b) One can view $(1,f_x(p))^T$ as the tangent vector to the graph of $f(-,y)$, and one can view $(1,f_y(p))^T$ as the tangent vector to the graph of $f(x, -)$. So the vectors $(1,0,f_x(p))^T$ and $(0,1,f_y(p))^T$ can be thought of as the tangent vectors at the point $(p, f(p))$ to the graph of $f$, which is the image of $F$. The image of $Df_p$, being the span of these two tangent vectors can be thought of as the tangent plane to the graph of the multivariable function $f$ at the point $p$.
+
+\section*{Problem 4}
+Recall that the map induced by $f$ in the standard charts $U_0$ and $U_0$ is $t \mapsto (t,t^2)$. Consider the map $\delta: \R^2 \to \R^2$ given by $(x,y) \mapsto (x,y-x^2)$. This map is smooth, with smooth inverse $(x,y+x^2)$. So $\delta$ is a diffeomorphism of $\R^2$ to itself. Now twist the standard chart $\phi_0: [1,a,b] \mapsto (a,b)$ on $U_0$ by $\delta$. One obtains a new chart $\phi'_0:[1:a:b] \mapsto (a, b-a^2)$. The transition map between $\phi_0$ and $\phi'_0$ is just $\delta$, which is a diffeomorphism. So these two maps are compatible. Furthermore, $\phi_0$ and $\phi'_0$ have the same domain, which means $\phi'_0$ also is in the standard atlas on $\R\P^2$. In the coordinates given by $\phi'_0$, the map $f$ just becomes $t \stackrel{\phi_0}{\mapsto} (t,t^2) \stackrel{\delta}{\mapsto} (t,0)$, the canonical inclusion of $\R$ into $\R^2$. 
+
+\section*{Problem 5}
+
+Let $f: \R \to \R$ be given by the $f = xe^{-1/x^2}, f(0) = 0.$ This function is smooth but not analytic - its Taylor series is just zero. Further, this function is strictly increasing and unbounded in both directions. So $f$ is a bijection. Consider the map $F: \R \to \R^2$ given by $F(x) = (f(x), |f(x)|)$. We claim that $F$ is smooth. Indeed, the first coordinate is smooth with all derivatives $0$ at the origin. The second coordinate $|f(x)|$ equals $f(x)$ for $x>0$ and $-f(x)$ for $x<0$, so $|f|$ is smooth outside $0$. It remains to show smoothness at $0$, but this is immediate because all the derivatives of $f$ vanish at $0$. So $F$ is smooth. Now, It follows from $f(\R) = \R$ that the image of the smooth function $F$ is the set $S$.\\
+
+Let $F: \R \to \R^2$ be a smooth function whose image is $S$. WLOG suppose that $F(0) = (0,0)$. One finds from the description of $S$ that if $F = (F_1, F_2)$, then $F_2(x) = |F_1(x)|$ for all $x$. Suppose that $F_1'(0) \neq 0$. Then WLOG assume that $F_1'(0) > 0$ (otherwise consider the function $(-F_1, F_2)$). By definition, for all $\epsilon$ close enough to $0$, one has the following.
+\begin{align*}
+  F_1(\epsilon)>0, &\, F_1(\epsilon) = F_2(\epsilon),\\
+  F_1(-\epsilon)<0, &\, F_1(-\epsilon) = -F_2(\epsilon).
+\end{align*}
+Computing the derivatives of $F_i$ from the positive direction, we find that $F_1'(0) = F_2'(0)$, while computing it from the negative direction yields $F_1'(0) = -F_2'(0)$. This contradicts the assumption that $F_1'(0) \neq 0$, so if $S$ is the image of a smooth function $F$ then the derivative of $F$ at a point going to $0$ must be $0$. In particular, this means that $S$ cannot be the image of an immersion $\R \to \R^2$, since the derivative of an immersion is injective at all points.
+\end{document}
