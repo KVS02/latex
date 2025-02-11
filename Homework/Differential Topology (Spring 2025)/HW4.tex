@@ -9,7 +9,7 @@
 \usepackage{url}
 \usepackage{hyperref}
 \usepackage{ marvosym }
-
+\usepackage{quiver}
 
 
 
@@ -77,6 +77,7 @@
 \newcommand{\F}{\mathbb{F}}
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\g}{\mathfrak{g}}
+\newcommand{\gl}{\mathfrak{gl}}
 \newcommand{\n}{\mathfrak{n}}
 \newcommand{\h}{\mathfrak{h}}
 \newcommand{\p}{\mathfrak{p}}
@@ -137,9 +138,11 @@
 \newcommand{\Her}{\operatorname{Her}}
 \newcommand{\pivot}{&}
 \newcommand{\sgn}{\operatorname{sgn}}
+\newcommand{\ASym}{\operatorname{ASym}}
+\renewcommand{\d}{\mathrm{d}}
 %\newcommand{C^{\infty}}{DS}
 \newcommand{\vsp}{{\vspace{0.2in}}}
-
+\renewcommand{\Ad}{\operatorname{Ad}}
 
 
 \title{Notes}
@@ -156,20 +159,100 @@
 \section*{Problem 2}
 Since $X$ and $Y$ have the same dimension, (by preimage theorem) $f^{-1}(y)$ is a submanifold of $X$ of dimension $0$. So by definition, $f^{-1}(y)$ is discrete. It is also a closed subset of $X$ since $f$ is continuous, and hence is compact. A compact, discrete set must be finite.
 
-Say $x_1, \dots, x_n$ be the points which map to $y$. Choose neighborhoods $U_i$ around $x_i$ and neighborhoods $V_i$ around $y$ such that $f: U_i \to V_i$ is a diffeomorphism for all $i$. Shrink the $U_i$ (and consequently the $V_i$) so that the $U_i$ are disjoint. One achieves this by using Hausdorff-ness, since $\{x_i\}$ is a finite set in $X$. Let $\tilde V = \cap_i V_i$, an open neighborhood of $y$, and shrink the $U_i$ so that $U_i$ are diffeomorphic to $\tilde V$. Further assume that $\tilde V$ is completely within a chart around $y$ of $Y$. We therefore are now in the following setting:
+Say $x_1, \dots, x_n$ be the points which map to $y$. Choose neighborhoods $U_i$ around $x_i$ and neighborhoods $V_i$ around $y$ such that $f: U_i \to V_i$ is a diffeomorphism for all $i$. Shrink the $U_i$ (and consequently the $V_i$) so that the $U_i$ are disjoint. One achieves this by using Hausdorff-ness, since $\{x_i\}$ is a finite set in $X$. Let $\tilde V = \cap_i V_i$, an open neighborhood of $y$, and shrink the $U_i$ so that $U_i$ are diffeomorphic to $\tilde V$. We therefore are now in the following setting:
 
 \begin{itemize}
-\item $\tilde V$ is a neighborhood of $y$ which is homeomorphic to an open subset of Euclidean space.
+\item $\tilde V$ is a neighborhood of $y$.
 \item $U_i$ are disjoint open subsets of $x_i$ which are homeomorphic to $\tilde V$ under $f$.
 \end{itemize}
 
-We claim that we can shrink $\tilde V$ so that $f^{-1}(\tilde V)$ is contained in the union of the $U_i$. Suppose otherwise, that there are points $p_i$ in $X':= X\setminus \cup U_i$ (a closed hence compact subset of $X$) for which $f(p_i)$ converges to $y$. Then compactness (hence sequential compactness)\footnote{For a Hausdorff, second countable topological space, compactness is equivalent to sequential compactness.} for $X'$ gives a subsequence of the $p_i$ which converges to some $p$ in $X'$. Clearly, $f(p)$ must be $y$ by continuity of $f$. But this violates the fact that $f^{-1}(y)$ is contained in $\cup U_i$. Therefore, there must be a small enough open subset $V$ of $\tilde V$ for which $f^{-1}(V)$ is contained in the $\cup U_i$. Replacing $U_i$ by the smaller open sets $f^{-1}(V) \cap U_i$ gives us the required finite-sheeted, covering map around $y$. 
+Notice that since $X$ is compact, so is the closed subset $X':= X \setminus \bigcup U_i$. So $f(X')$ is compact, and hence closed in $Y$. But $f(X')$ does not contain $y$ since $f^{-1}(y)$ is contained in $\bigcup U_i$. So there is a neighborhood $V$ around $y$ for which $f(X')$ does not meet $V$. Taking $V$ to be small enough to be contained in $\tilde V$, we have obtained a neighborhood of $y$ for which $f^{-1}(V)$ is contained in the union of the $U_i$. Shrink the $U_i$ further so that $f$ restricts to a diffeomorphism $f:U_i \to V$ for each $i$. Then the neighborhood $V$ along with the open sets $U_i$ satisfy:
+
+\begin{itemize}
+\item $f^{-1}(V)$ is the disjoint union $\bigsqcup U_i$ of a finite number of opens.
+\item $f$ maps each $U_i$ diffeomorphicallly onto $V$. 
+\end{itemize}
 
 \section*{Problem 3}
+(a) By defintion of a submanifold, there is a chart $\varphi_U:U \to \R^n$ around $p$ for which $$\varphi_U|_{U\cap S}: U\cap S \stackrel{\simeq}{\to} \R^k \cap U \subset \R^n.$$ The last inclusion is the first $k$-coordinate inclusion of Euclidean spaces. Let $\pi: U\subset \R^n \to \R^{n-k}$ be the projection onto the last $n-k$ coordinates. Then $U\cap \R^k$ is the level set $\pi^{-1}(0)$. So, $U\cap S$ is the level set of the function $f = \pi \circ \varphi_U: U \to \R^{n-k}$.
 
+It is also clear that $Df$ is surjective everywhere on $U$ since $D\pi$ is surjective and $\varphi_U$ is a diffeomorphism. So in particular, $Df$ is surjective along $U\cap S$. \\
+
+(b) Consider the inclusion $i:S\to \R^2$. Then one computes $Di$ in the standard chart as $Di = (D\pi_x|_S, D\pi_y|_S)$. But $i$ is an inclusion of a submanifold so it is an immersion. Hence $Di$ is non-zero, so one of $D\pi_x|_S$ or $D\pi_y|_S$ must be non-zero. But $\pi_{x,y}|_S$ are maps of $1$-dimensional manifolds, where having a non-zero derivative means the funcion is a local diffeomorphism by the inverse function theorem. \\
+
+(c) Around the corner $(1,1)$ neither map $\pi_X$ or $\pi_Y$ is (locally) injective, so they cannot be local diffeomorphisms. Hence the square is not a submanifold of $\R^2$. 
 \section*{Problem 4}
 (a) We work in open subsets of $\R\P^3$. Consider the chart $U_0$ where the first coordinate $z_0$ is non-zero. Consider the smooth map $[1:a:b:c] \mapsto c - ab$. The derivative of this map in coordinates is $[*, *, 1]$, which is surjective. So the preimage of $0$, which is $U_0\cap H$ is a submanifold of $\R\P^3$. The argument for the other charts $U_{1,2,3}$ are similar, which shows that $U_i\cap H$ is a submanifold of $\R\P^3$. It follows that $H$ is a submanifold of $\R\P^3$. \\
 
-(b) We will compute the derivatives of the map in the coordinate chart $U_0 \times U_0$ around $x_0\neq 0, y_0 \neq 0$. On the codomain take the chart $U_0$ again. In these charts, the map becomes $(a,b) \mapsto (b,a,ab)$. Clearly this map is smooth. The image of this map lies in $H$. Furthermore, given some point $[z_0: z_1: z_2: z_3]$ in $U_0 \cap H$, the map $\sigma$ takes the point $[z_0:z_2],[z_0,z_1]$ to $[z_0^2: z_0z_1:z_0z_2:z_0z_3]$, where we have used $z_1z_2 = z_0z_3$. So the image of $\sigma$ contains $U_0\cap H$. The other charts have similar preimages, so image of $\sigma$ is $H$. 
+(b) We will compute the derivatives of the map in the coordinate chart $U_0 \times U_0$ around $x_0\neq 0, y_0 \neq 0$. On the codomain take the chart $U_0$ again. In these charts, the map becomes $(a,b) \mapsto (b,a,ab)$. Clearly this map is smooth. We note that the derivative of this map is injective.
 
+The image of this map lies in $H$. Furthermore, given some point $[z_0: z_1: z_2: z_3]$ in $U_0 \cap H$, the map $\sigma$ takes the point $[z_0:z_2],[z_0,z_1]$ to $[z_0^2: z_0z_1:z_0z_2:z_0z_3]$, where we have used $z_1z_2 = z_0z_3$. So the image of $\sigma$ contains $U_0\cap H$. The other charts have similar preimages, so image of $\sigma$ is $H$.
+
+We next show that $\sigma$ is injective. Given the point $[z_0:\dots:z_3] = [x_0y_0: \dots :x_1y_1]$ in the image of $\sigma$, one can recover the points $[x_0:x_1]$ and $[y_0:y_1]$. WLOG suppose $z_0 \neq 0$. Then $[x_0:x_1] = [z_0: z_2]$ and $[y_0:y_1] = [z_0:z_1]$. Therefore the map is injective.
+
+Recall that $\R\P^1$ is diffeomorphic to $S^1$. So we have an injective continuous map from a compact space $\R\P^1 \times \R\P^1$ to a Hausdorff space, and hence the map must be an embedding.\\
+
+(c) The map $\sigma$ is a smooth embedding, and also an immersion. Therefore, $\R\P^1\times \R\P^1$ is diffeomorphic to its image $H$. Since $\R\P^1$ is diffeomorphic to $S^1$, we see that $H$ is diffeomorphic to the torus.
+
+\section*{Problem 5}
+
+We realize $\Sp_{2n}$ as a submanifold of $\GL_{2n}(\R)$. Any matrix $A$ which satisfies $A^T\Omega A = \Omega$ must be invertible which is clear by taking determinants. Also, any matrix of the form $A^T\Omega A$ is antisymmetric, owing to the fact that $\Omega^T = -\Omega$. Let $\ASym_{2n}(\R)$ denote the manifold of anti-symmetric matrices of size $2n$. An anti-symmetric matrix is determined by its strictly upper triangular entries, and hence $\ASym_{2n}(\R)$ has dimension $2n(2n-1)/2$. \\
+
+Consider the map $F: \GL_{2n}(\R) \to \ASym_{2n}(\R)$ given by $A \mapsto A^T\Omega A$. This map is a polynomial map, and hence it is smooth. We compute the derivative in the usual way:
+\begin{align*}
+  DF_A(B) &= \frac{\d}{\d t} \left( F(A+tB) - F(A) \right) \\
+          &= \frac{\d}{\d t} \left( A^T \Omega B + B^T \Omega A \right) t + O(t^2) \\
+          &= A^T \Omega B + B^T \Omega A.
+\end{align*}
+We will show that for $F(A) = \Omega$, the map $DF_A$ is surjective onto the anti-symmetric matrices. (We have identified the tangent space of $\ASym_{2n}$ with the antisymmetric matrices.) Indeed, let $B = AC$ where $C$ is another matrix, written $
+\begin{pmatrix}
+  C_{11} & C_{12}\\
+  C_{21} & C_{22}
+\end{pmatrix}$ in blocks of $n\times n$ matrices. Then, $DF_A(B) = \Omega C + C^T \Omega$, which one computes by hand to be $$M_C: = 
+\begin{pmatrix}
+  C_{21} - C_{21}^T & C_{22} + C_{11}^T \\
+  -C_{22}^T - C_{11} & -C_{12} + C_{12}^T
+\end{pmatrix}.$$For any antisymmetric $2n\times 2n$ matrix $M'$, one can choose the blocks $C_{21}$ and $C_{12}$ so that the top right and bottom left $n\times n$ submatrices of $M_C$ and $M'$ coincide. Further, we may choose $C_{11}$ and $C_{22}$ freely so that $C_{11}^T + C_{22}$ is the top right $n\times n$ block of $M'$. The differential map is therefore surjective onto the antisymmetric matrices. By the preimage theorem, this means that $\Sp_{2n}(\R) = F^{-1}(\Omega)$ is a submanifold of $GL_{2n}(\R)$. The dimension of $\Sp_{2n}$ is $4n^2 - (2n^2 - n) = 2n^2 + n$.
+
+The tangent space at identity is the kernel of $DF_\mathrm{id}$. Consulting the above calculations, these are matrices $C$ for which $C_{12}, C_{21}$ are symmetric, and $C_{22} + C_{11}^T = 0$. The tangent space at $A$ is the set of such matrices $C$ multiplied by $A$.
+
+\section*{Problem 6}
+(a) The multiplication map on $M_n$ is a polynomial map, and is hence smooth. The inversion map on $GL_n$ is given by $\det ^{-1} \mathrm{Adj}$, where $\mathrm{Adj}$ takes the adjoint of a matrix. $\mathrm{Adj}$ is a polynomial map, and $\det$ is a smooth map, so the inversion map is smooth (since we are away from $\det = 0$). Hence $\GL_n$ is a Lie group.
+
+\begin{lemma}
+  Let $i:Z \to Y$ be the inclusion of a submanifold $Z$ into $Y$. Let $f:X \to Z$ be a map. Then $f$ is smooth if and only if $i\circ f$ is smooth.
+\end{lemma}
+\begin{proof}
+  One direction is obvious. Suppose $i\circ f$ is smooth. For $p \in X$, write $i$ in coordinates around $f(p)$ as the canonical inclusion of Euclidean space into a bigger Euclidean space. We can do this because $i$ is an immersion. Let $\pi$ be the projection which is the inverse of the inclusion of Euclidean spaces. Then, $f$ in coordinates is just $\pi \circ i\circ f$ in coordinates. The latter map is smooth since $\pi$ and $i\circ f$ are smooth. So $f$ is smooth. 
+\end{proof}
+
+Let $G$ be a submanifold and subgroup of $\GL_n$. Then consider multiplication and addition $\times: G\times G\to G$ and $[]^{-1}: G\to G$ as maps into $\GL_n$. Using the previous lemma and the fact that inversion and matrix multiplication are smooth, we see that $\times$ and $[]^{-1}$ are smooth maps, i.e. $G$ is a Lie group.\\
+
+(b) For a curve $\gamma \in T_a\GL_n$, the derivative $DL_g|_a$ takes $\gamma$ to $g \gamma$. If we take standard charts of $M_n$ around the points $a, ga$, this map just takes a matrix $M$ to $gM$, since $g$ is a linear map, its derivative is itself).\\
+
+(c) Let $i:G\to \GL_n$ be the inclusion map. Then we can identify $T_pG$ at any point $p$ with a subspace of $T_p\GL_n$. But $T_p\GL_n$ is identified with $M_n$ in the standard chart.
+
+The multiplication by $g$ map on $G$ extends to the multiplication by $g$ map on $\GL_n$, and induces the following commutative diagram on the tangent spaces.
+\[\begin{tikzcd}
+	{T_e\GL_n} && {T_g\GL_n} \\
+	\\
+	{T_eG} && {T_gG}
+	\arrow["{DL_g|_e}", from=1-1, to=1-3]
+	\arrow["Di"{description}, from=3-1, to=1-1]
+	\arrow["{DL_g|_e}", from=3-1, to=3-3]
+	\arrow["Di"{description}, from=3-3, to=1-3]
+      \end{tikzcd}.\]
+The top map was computed to be multiplication by $g$ on $M_n$, so as subspaces of $M_n$, $T_gG$ is obtained by (left) multiplying all elements of $T_eG$ by $g$.\\
+
+(d) Let $R_g$ denote right multiplication by $g^{-1}$. Then $C_g = L_gR_g$, and so we have $DC_g = DL_g DR_g$. By similar reasoning as (b), $DR_g$ is right multiplication by $g^{-1}$ on $M_n$, so we have $DC_g: \g \to \g$ to be the conjugation by $g$ map on $M_n$, where $\g$ is a subspace of $M_n$.\\
+
+(e) We compute the derivative of the adjoint representation for $\GL_n$. We can identify the Lie algebra $\gl_n$ of $\GL_n$ with $M_n$ and we have $D\Ad_e: M_n \to \End(M_n)$. 
+\begin{align*}
+  D\Ad_e(X) &= \left(\frac{\d }{\d t}\right)_{t=0} \left (Y \mapsto (I+tX) Y(I+tX)^{-1}\right ) \\
+            &= \left(Y \mapsto XY - Y\left(\frac{\d }{\d t}\right)_{t=0}(I+tX)^{-1}\right) \\
+            &= Y \mapsto XY - YX.
+\end{align*}
+The last equality is due to the derivative of $t\mapsto (I+tX)^{-1}$ around $0$ being $-X$. This follows immediately from the product rule on $t\mapsto (I+tx)^{-1}(I+tX)$. We thus have $D\Ad_e(X)(Y) = XY - YX$.
+
+For a Lie group $G \subset \GL_n$, we see that the adjoint representation of $G$ lifts to the adjoint representation of $\GL_n$. Therefore the map on the Lie algebra $\g$ induced by $\Ad_e$ must restrict from the map induced by $\Ad_e$ on $\gl_n$. Therefore, for $Y \in \g$, we have $D\Ad_e(X):\g \to \End \g$, $$D\Ad_e(X)(Y) = XY - YX.$$
 \end{document}
