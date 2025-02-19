@@ -1,0 +1,228 @@
+\documentclass{amsart}
+
+\usepackage{amsmath,amssymb,amsfonts,amscd}
+\usepackage[all,cmtip]{xy}
+\usepackage{enumerate}
+\usepackage{ amssymb, latexsym, amsmath}
+%\setcounter{MaxMatrixCols}{30}%
+\usepackage{fullpage}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{ marvosym }
+\usepackage{quiver}
+
+
+
+\numberwithin{equation}{section}
+
+%\usepackage{cjw-latex}
+
+%\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem*{thm}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{criterion}[theorem]{Criterion}
+%\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{wildconjecture}[theorem]{Wild Conjecture}
+
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem*{dfn}{Definition}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{solution}[theorem]{Solution}
+
+
+
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{remarks}[theorem]{Remarks}
+\newtheorem{summary}[theorem]{Summary}
+\newtheorem{observation}[theorem]{Observation}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+
+
+
+\makeatletter
+\newcommand{\rmnum}[1]{\romannumeral #1}
+\newcommand{\Rmnum}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\Ext}{\operatorname{Ext}}
+\newcommand{\Tor}{\operatorname{Tor}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\osum}{\oplus}
+\newcommand{\aff}{\operatorname{Aff}}
+
+\newcommand{\Id}{\operatorname{Id}}
+\newcommand{\concat}{(\Id \to \Omega \Sigma)}
+\newcommand{\eval}{(\Sigma\Omega \to \Id)}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\F}{\mathbb{F}}
+\renewcommand{\H}{\mathbb{H}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\g}{\mathfrak{g}}
+\newcommand{\n}{\mathfrak{n}}
+\newcommand{\h}{\mathfrak{h}}
+\newcommand{\p}{\mathfrak{p}}
+\newcommand{\q}{\mathfrak{q}}
+\newcommand{\m}{\mathfrak{m}}
+\newcommand{\e}{\mathfrak{e}}
+\newcommand{\f}{\mathfrak{f}}
+\newcommand{\V}{\mathscr{V}}
+\newcommand{\D}{\mathscr{D}}
+\renewcommand{\S}{\mathscr{S}}
+\newcommand{\Sch}{\mathscr{C}}
+\newcommand{\Y}{\mathscr{Y}}
+\renewcommand{\u}{\mathfrak{u}}
+\newcommand{\set}[2]{ \left\{ {#1} \, \left| \, {#2} \right\}\right.}
+\newcommand{\A}{\mathbb{A}}
+\newcommand{\X}{\mathcal{X}}
+\renewcommand{\Im}{\operatorname{Im}}
+\newcommand{\T}{\mathscr{T}}
+\newcommand{\HH}{\mathscr{H}}
+\newcommand{\PGL}{\operatorname{PGL}}
+\newcommand{\righthookarrow}{\hookrightarrow}
+\newcommand{\sign}{\operatorname{sign}}
+\renewcommand{\_}[2]{\underbrace{#1}_{#2}}
+\renewcommand{\^}[2]{\overbrace{#1}_{#2}}
+\newcommand{\curverightarrow}{\curvearrowright}
+
+\newcommand{\z}{\mathfrak{z}}
+\renewcommand{\sl}{\mathfrak{sl}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\RP}{\mathbb{RP}}
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\C}{\mathbb{C}}
+\renewcommand{\H}{\mathcal{H}}
+\newcommand{\Ind}{\operatorname{Ind}}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Orb}{\mathcal{O}}
+\renewcommand{\k}{\mbox{\Fontauri k}}
+\newcommand{\Ad}{\operatorname{Ad}}
+\newcommand{\ad}{\operatorname{ad}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\Ker}{\operatorname{Ker}}
+\newcommand{\End}{\operatorname{End}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\Stab}{\mbox{Stab}}
+\newcommand{\Lie}{\operatorname{Lie}}
+\newcommand{\GL}{\operatorname{GL}}
+\newcommand{\SL}{\operatorname{SL}}
+\newcommand{\Sp}{\operatorname{Sp}}
+\newcommand{\Mp}{\operatorname{Mp}}
+\renewcommand{\a}{\mathfrak{a}}
+\newcommand{\codim}{\operatorname{codim}}
+\newcommand{\Wh}{\operatorname{Wh}}
+\newcommand{\Span}{\operatorname{Span}}
+\newcommand{\WF}{\operatorname{WF}}
+\newcommand{\AC}{\operatorname{AC}}
+\newcommand{\Lin}{\operatorname{Lin}}
+\newcommand{\Diff}{\operatorname{Diff}}
+\newcommand{\Gen}{\operatorname{Gen\, Hom}}
+\newcommand{\Her}{\operatorname{Her}}
+\newcommand{\pivot}{&}
+\newcommand{\sgn}{\operatorname{sgn}}
+%\newcommand{C^{\infty}}{DS}
+\newcommand{\vsp}{{\vspace{0.2in}}}
+
+
+
+\title{Homework 5}
+
+\author{Sudharshan K V}
+\begin{document}
+\maketitle
+
+\section*{Problem 1}
+Being the level set of smooth functions which have surjective derivative everywhere on the zero sets, we see that $H$ and $S_a$ are two dimensional manifolds (for $a>0$). The tangent planes at a point $p = (x,y,z)$, when viewed as subspaces of $\R^3$ of $S_a$ and $H$ are respectively \[T_a = 2x+2y+2z = 0,\] and \[T_H = 2x+2y-2z = 0.\] This is because a tangent plane at a point of a level set is normal to the direction of the gradient.
+
+For $a>1$, every intersection point of $S_a$ and $H$ has $z\neq 0$, so the two tangent spaces are distinct. Being two dimensional subspaces of $\R^3$, the only way $T_a + T_H$ fails to span the whole space is when $T_a = T_H$. Consequently, for $a>1$, the intersection is transverse. For $a=1$, the spaces coincide since $z=0$ for every intersection point. In this case, the intersection is not transverse. Finally, for $a<1$, there is no intersection since $z^2 > 0$ always. So $a = 1$ is the only value at which $S_a$ and $H$ are not transverse. 
+
+\section*{Problem 2}
+(a) For point $p=(x,y)$ in $M:=X\times Y$, choose charts $\varphi_U$ in $X$ and $\varphi_V$ in $Y$ around $x,y$ respectively. Then the chart around $(x,y)$, $\varphi_U\times \varphi_V$ for each $x,y$ give a smooth structure on $M$. For each $x$, the map $i_x: Y\to X\times Y$ given by $y \mapsto (x,y)$ is a smooth embedding, for in the obvious charts the derivative $Di_x$ is just
+$\begin{pmatrix}
+  0 & I_m
+ \end{pmatrix}$, where $0$ is a $m\times n$ matrix and $n,m$ are the dimensions of $X, Y$. Therefore, we consider $T_yY$ as a subspace of $T_pM$ via the map $i_x$. Similarly, the map $i_y:x\mapsto (x,y)$ induces an inclusion of tangent spaces $T_xX\to T_pM$.
+
+ On the other hand, we have the projection maps $\pi_Y: M \to X$ given by $(x,y) \mapsto x$. This projection map is a submersion by a similar reasoning as before. It is also a smooth, one-sided inverse of $i_y$: $\pi_Y \circ i_y = 1$. Therefore the induced maps on tangent spaces by the embeddings and the projections are given in the diagram below. (I call the maps induced by $f$ by the same name instead of $Df$ for clarity of the diagram.)
+
+ \[\begin{tikzcd}
+	&& {T_pM} \\
+	\\
+	{T_xX} &&&& {T_yY}
+	\arrow["{\pi_Y}", shift left=3, two heads, from=1-3, to=3-1]
+	\arrow["{\pi_X}", two heads, from=1-3, to=3-5]
+	\arrow["{i_y}", hook, from=3-1, to=1-3]
+	\arrow["{i_x}", shift left=3, hook, from=3-5, to=1-3]
+ \end{tikzcd}\]
+
+ Observing that the image of $i_y$ contains the kernel of $\pi_X$, and that the maps $\pi_Y \circ i_x: X\to Y$ and $\pi_X \circ i_y:Y \to X$ are constant maps tells us that the sequence \[0\to T_xX \to T_pM \to T_yY \to 0\] is split exact. This is enough to conclude that $T_pM \simeq T_xX \osum T_yY$.\\
+
+ (b) I will do (c) first, and then come back to part (b).\\
+
+ (c) Let $i:Z\to Y$ be the inclusion of submanifolds $Z$. Let $f(x) = y$, $y$ a point in $Z$. Then, there is an inclusion $T_yZ \to T_yY$ of tangent spaces induced by $i$. Similarly there is an inclusion of tangent spaces $T_x(f^{-1}Z)$ into $T_xX$. These two inclusions have the same cokernel dimensions as a conseqeunce of the preimage theorem. There is also the map $Df: T_xX \to T_yY$. We claim that $Df^{-1}(T_yZ) = T_x(f^{-1}(Z))$. One inclusion is clear. We show the other by a dimension argument. This is just a linear algebra problem, and we do this by comparing dimensions.
+ \begin{lemma}
+   Let $f: V \to W$ be a map of vector spaces, and let $W' \subset W$ be a subspace such that $W'$ and the image of $f$ span the whole of $W$. Then, $\dim V - \dim f^{-1}(W') = \dim W - \dim W'$. 
+ \end{lemma}
+ \begin{proof}
+   Let $W''$ be the image of $f$. We know that the dimension of the Minkowski sum of vector spaces is given by \[\dim W = \dim (W'+W'') = \dim W' + \dim W'' - \dim W'\cap W''.\] Also, since $f$ is a linear map, we have \[\dim f^{-1}(W') = \dim f^{-1}(W'\cap W'') = \dim W'\cap W'' + \dim \ker f.\]
+   By rank-nullity theorem, and the above two equations, we see that
+   \begin{align*}
+     \dim f^{-1}(W') & = \dim W'\cap W'' + \dim V - \dim W''\\
+                     & = \dim W' + \dim V - \dim W.                       
+   \end{align*}
+   The result follows.
+ \end{proof}
+ Now set $V = T_xX$, $W = T_yY$ and $W' = T_yZ$. The transversality condition implies that $Df: V \to W$ satisfies the conditions of the Lemma above, so $\codim Df^{-1}(T_yZ) = \codim T_yZ$. But it is known from the preimage theorem that $\codim T_yZ = \codim T_xf^{-1}(Z)$, and it is clear that $T_xf^{-1}(Z) \subset Df^{-1}(T_yZ)$. Therefore, equality follows.\\
+
+ (b) This is just $X = Z_1$, $Z = Z_2$ in (c). The maps involved are the inclusions of the submanifolds. Here, $Df^{-1}(T_yZ)$ becomes $T_zZ_1 \cap T_zZ_2$, and $T_xf^{-1}(Z)$ is just $T_z(Z_1\cap Z_2)$. 
+\section*{Problem 3}
+Observe that the origin is an intersection point. If $\Gamma_A$ and $\Delta$ are transverse, then being linear maps, their tangent spaces as subspaces of $\R^{2n}$ are themselves. They both have dimension $n$, and hence transversality at $0$ is equivalent to the tangent spaces intersecting trivially. Hence, $\Gamma_A$ and $\Delta$ are transverse at $0$ if and only if $\Gamma_A \cap \Delta = 0$. This intersection condition is the same as no eigenvalue of $A$ being $1$. If no eigenvalue of $A$ is $1$, then there is no intersection point other than $0$. Transversality at $0$ has been discussed already, so there is nothing more to do.
+
+\section*{Problem 4}
+Let $\Gamma_f: X\to X\times X$ denote the map $x\mapsto (x,f(x))$ (the graph map). This map is smooth because it is smooth on each coordinate. Now let $\Delta$ be the diagonal in $X\times X$. then $\Delta$ is a submanifold of $X$. The preimage $\Gamma_f^{-1}(\Delta)$ is just the set of fixed points of $f$. We claim that $\Gamma_f$ is transverse to $\Delta$. This follows immediately from the previous problem. At any fixed point $x$ of $f$, the tangent space of $\Delta$ intersects the image of $D\Gamma_f|_x$ trivially: $D\Gamma_f|_x =
+\begin{pmatrix}
+  I_n\\
+  Df_x
+\end{pmatrix}$, and the tangent space of $\Delta$ is the image of $
+\begin{pmatrix}
+  I_n\\
+  I_n
+\end{pmatrix}$. The images of these two maps have no non-zero intersection since no eigenvalue of $Df_x$ is $1$.
+
+Now by the preimage theorem, $\Gamma_f^{-1}(\Delta)$, the fixed points of $f$, is a submanifold of $X$. The dimension of this set is $0$, and is therefore discrete. A discrete subspace of a compact space is finite.
+
+\section*{Problem 5}
+Let $g(x) = \frac{\sin(\pi x)}{1+x^2}$. Then $g$ is a smooth map from $\R\to \R$. Let $f(x) = (x,g(x))$ be the graph map of $g$. Let $Z = \R\times 0 \subset \R^2$. We claim that $f$ is transverse to $Z$. The points of intersection are when $x \in \Z$. The derivative of $f$ is computed to be non-zero at the integers. It follows that the image of $Df$ and the tangent space of $Z$ span $\R^2$, so $f$ is transverse to $Z$.
+
+We will show the existence of a sequence $a_n \to \infty$ such that $g'(a_n) = 0$ (and $g(a_n) \to 0$). Indeed, at each even integer $x$, we see that $g'(x)>0$ while at every odd integer $x$, $g'(x)<0$. There must thus be some $a_n$ between $n$ and $n+1$ for which $g'(a_n) = 0$ by the intermediate value theorem. See that $g(x) \to 0$ as $x \to \infty$, so $g(a_n) \to 0$. 
+
+Consider the homotopy $f_t(x) = f(x) - (0,t)$, and put $t_n = g(a_n)$. The function $f_{t_n}$ is not transverse to $Z$ at the point $a_n$. Hence the stability of transversality fails when compactness is not imposed.
+\section*{Problem 6}
+
+Let $f:C\to \R$ be extension smooth. Let $p \in C$. Extend $f$ to a smooth function $\tilde f: U\to \R$ around $p$. $U$ is a manifold since it is an open subset of $M$, and $C\cap U$ is a submanifold of $U$ by restricting charts. So $\tilde f: C\cap U \to \R$ is smooth in the usual sense. 
+
+Suppose now that $f:C\to \R$ is smooth as a map from a manifold. Let $p\in C$, and choose a neighborhood $W$ of $p$ and a chart $\varphi: W\to \varphi(W) \subset \R^n$ such that $\varphi(C) = \varphi(W) \cap \R^k$, where $k$ is the dimension of $C$. Let $\pi: \R^n \to \R^k$ be projection on the first $k$ coordinates. Then $\pi$ is an open map and a continuous map. Let $U = \varphi^{-1}(\varphi(W) \cap \pi^{-1}(\varphi(C)))$. Then $U$ is open in $W$. We extend $f$ to a function $\tilde f$ around $p$ via $\tilde f(x) = f(\varphi^{-1}(\pi(\varphi(x))))$. The way we defined $U$ makes this map well-defined. We immediately verify that $\tilde f$ is an extension of $f$, for if $x\in C$, $f(\varphi^{-1}(\pi(\varphi(x))) = f(x)$, since $\pi$ fixes $x$. The extension map is smooth, being a composition of smooth functions. Therefore, $f$ is extension smooth.
+
+\section*{Problem 7}
+We showed that $f$ maps the interior to the interior and the boundary to the boundary (homeomorphically). We know that the interior is an open subset of the manifold, and is a manifold without boundary. Therefore, $f$ in charts is a smooth map from $\R^n$ to $\R^n$ on the interior. So is the inverse, making $f$ a diffeomorphism.
+
+On the boundary, $f: \partial M \to \partial N$, we just need to show that $f$ is smooth, since it is known to be a homeomorphism already. Indeed, in charts, $f$ is just the composition \[\R^{n-1} \stackrel{i}\to \H^n \stackrel{f}{\to} \H^n \stackrel{\pi}\to \R^{n-1},\] where the first map is the inclusion and the last map is the projection. Both of these maps are smooth, and hence $f:\partial M \to \partial N$ is smooth. Analogous conclusion for $f^{-1}$ shows that $f$ restricts to a diffeomorphism on the boundary.
+\end{document}

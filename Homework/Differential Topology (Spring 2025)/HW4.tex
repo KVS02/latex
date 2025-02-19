@@ -145,7 +145,7 @@
 \renewcommand{\Ad}{\operatorname{Ad}}
 
 
-\title{Notes}
+\title{Homework 4}
 
 \author{Sudharshan K V}
 \begin{document}
@@ -214,10 +214,10 @@ We will show that for $F(A) = \Omega$, the map $DF_A$ is surjective onto the ant
   -C_{22}^T - C_{11} & -C_{12} + C_{12}^T
 \end{pmatrix}.$$For any antisymmetric $2n\times 2n$ matrix $M'$, one can choose the blocks $C_{21}$ and $C_{12}$ so that the top right and bottom left $n\times n$ submatrices of $M_C$ and $M'$ coincide. Further, we may choose $C_{11}$ and $C_{22}$ freely so that $C_{11}^T + C_{22}$ is the top right $n\times n$ block of $M'$. The differential map is therefore surjective onto the antisymmetric matrices. By the preimage theorem, this means that $\Sp_{2n}(\R) = F^{-1}(\Omega)$ is a submanifold of $GL_{2n}(\R)$. The dimension of $\Sp_{2n}$ is $4n^2 - (2n^2 - n) = 2n^2 + n$.
 
-The tangent space at identity is the kernel of $DF_\mathrm{id}$. Consulting the above calculations, these are matrices $C$ for which $C_{12}, C_{21}$ are symmetric, and $C_{22} + C_{11}^T = 0$. The tangent space at $A$ is the set of such matrices $C$ multiplied by $A$.
+The tangent space at identity is the kernel of $DF_I$. Consulting the above calculations, these are matrices $C$ for which $C_{12}, C_{21}$ are symmetric, and $C_{22} + C_{11}^T = 0$. The tangent space at $A$ is the set of such matrices $C$ multiplied by $A$.
 
 \section*{Problem 6}
-(a) The multiplication map on $M_n$ is a polynomial map, and is hence smooth. The inversion map on $GL_n$ is given by $\det ^{-1} \mathrm{Adj}$, where $\mathrm{Adj}$ takes the adjoint of a matrix. $\mathrm{Adj}$ is a polynomial map, and $\det$ is a smooth map, so the inversion map is smooth (since we are away from $\det = 0$). Hence $\GL_n$ is a Lie group.
+(a) The multiplication map on $M_n$ is a polynomial map, and is hence smooth. The inversion map on $GL_n$ is given by $\det ^{-1} \mathrm{Adj}$, where $\mathrm{Adj}$ takes the adjugate of a matrix. $\mathrm{Adj}$ is a polynomial map, and $\det$ is a smooth map, so the inversion map is smooth (since we are away from $\det = 0$). Hence $\GL_n$ is a Lie group.
 
 \begin{lemma}
   Let $i:Z \to Y$ be the inclusion of a submanifold $Z$ into $Y$. Let $f:X \to Z$ be a map. Then $f$ is smooth if and only if $i\circ f$ is smooth.
@@ -228,7 +228,7 @@ The tangent space at identity is the kernel of $DF_\mathrm{id}$. Consulting the 
 
 Let $G$ be a submanifold and subgroup of $\GL_n$. Then consider multiplication and addition $\times: G\times G\to G$ and $[]^{-1}: G\to G$ as maps into $\GL_n$. Using the previous lemma and the fact that inversion and matrix multiplication are smooth, we see that $\times$ and $[]^{-1}$ are smooth maps, i.e. $G$ is a Lie group.\\
 
-(b) For a curve $\gamma \in T_a\GL_n$, the derivative $DL_g|_a$ takes $\gamma$ to $g \gamma$. If we take standard charts of $M_n$ around the points $a, ga$, this map just takes a matrix $M$ to $gM$, since $g$ is a linear map, its derivative is itself).\\
+(b) For a curve $\gamma \in T_a\GL_n$, the derivative $DL_g|_a$ takes $\gamma$ to $g \gamma$. If we take standard charts of $M_n$ around the points $a, ga$, this map just takes a matrix $M$ to $gM$. (Since $g$ is a linear map, its derivative is itself).)\\
 
 (c) Let $i:G\to \GL_n$ be the inclusion map. Then we can identify $T_pG$ at any point $p$ with a subspace of $T_p\GL_n$. But $T_p\GL_n$ is identified with $M_n$ in the standard chart.
 
@@ -244,7 +244,7 @@ The multiplication by $g$ map on $G$ extends to the multiplication by $g$ map on
       \end{tikzcd}.\]
 The top map was computed to be multiplication by $g$ on $M_n$, so as subspaces of $M_n$, $T_gG$ is obtained by (left) multiplying all elements of $T_eG$ by $g$.\\
 
-(d) Let $R_g$ denote right multiplication by $g^{-1}$. Then $C_g = L_gR_g$, and so we have $DC_g = DL_g DR_g$. By similar reasoning as (b), $DR_g$ is right multiplication by $g^{-1}$ on $M_n$, so we have $DC_g: \g \to \g$ to be the conjugation by $g$ map on $M_n$, where $\g$ is a subspace of $M_n$.\\
+(d) Let $R_g$ denote right multiplication by $g^{-1}$. Then $C_g = L_gR_g$, and so we have $DC_g = DL_g DR_g$. By similar reasoning as (b), $DR_g$ is right multiplication by $g^{-1}$ on $M_n$, so we have $DC_g: \g \to \g$ to be the conjugation by $g$ map on $M_n$, where $\g$ is a subspace of $M_n$. We see that $C_g, C_{g^-1}$ are inverses, which makes the image $DC_g$ land in $\Aut(\g)$. Further, we note that $C_gC_h = C_{gh}$ so the Adjoint map $G \to \Aut \g$ is a group map, making it a representation of $G$ over the vector space $\g$.\\
 
 (e) We compute the derivative of the adjoint representation for $\GL_n$. We can identify the Lie algebra $\gl_n$ of $\GL_n$ with $M_n$ and we have $D\Ad_e: M_n \to \End(M_n)$. 
 \begin{align*}
