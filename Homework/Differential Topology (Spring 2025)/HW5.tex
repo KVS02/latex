@@ -75,7 +75,6 @@
 \newcommand{\eval}{(\Sigma\Omega \to \Id)}
 \newcommand{\Q}{\mathbb{Q}}
 \newcommand{\F}{\mathbb{F}}
-\renewcommand{\H}{\mathbb{H}}
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\g}{\mathfrak{g}}
 \newcommand{\n}{\mathfrak{n}}
@@ -110,7 +109,7 @@
 \newcommand{\RP}{\mathbb{RP}}
 \renewcommand{\P}{\mathbb{P}}
 \newcommand{\C}{\mathbb{C}}
-\renewcommand{\H}{\mathcal{H}}
+\renewcommand{\H}{\mathbb{H}}
 \newcommand{\Ind}{\operatorname{Ind}}
 \newcommand{\Tr}{\operatorname{Tr}}
 \newcommand{\Orb}{\mathcal{O}}
@@ -210,7 +209,7 @@ Let $\Gamma_f: X\to X\times X$ denote the map $x\mapsto (x,f(x))$ (the graph map
 Now by the preimage theorem, $\Gamma_f^{-1}(\Delta)$, the fixed points of $f$, is a submanifold of $X$. The dimension of this set is $0$, and is therefore discrete. A discrete subspace of a compact space is finite.
 
 \section*{Problem 5}
-Let $g(x) = \frac{\sin(\pi x)}{1+x^2}$. Then $g$ is a smooth map from $\R\to \R$. Let $f(x) = (x,g(x))$ be the graph map of $g$. Let $Z = \R\times 0 \subset \R^2$. We claim that $f$ is transverse to $Z$. The points of intersection are when $x \in \Z$. The derivative of $f$ is computed to be non-zero at the integers. It follows that the image of $Df$ and the tangent space of $Z$ span $\R^2$, so $f$ is transverse to $Z$.
+Let $g(x) = \frac{\sin(\pi x)}{1+x^2}$. Then $g$ is a smooth map from $\R\to \R$. Let $f(x) = (x,g(x))$ be the graph map of $g$. Let $Z = \R\times 0 \subset \R^2$. We claim that $f$ is transverse to $Z$. The points of intersection are when $x \in \Z$. The derivative of $g$ is computed to be non-zero at the integers. It follows that the image of $Df$ and the tangent space of $Z$ span $\R^2$, so $f$ is transverse to $Z$.
 
 We will show the existence of a sequence $a_n \to \infty$ such that $g'(a_n) = 0$ (and $g(a_n) \to 0$). Indeed, at each even integer $x$, we see that $g'(x)>0$ while at every odd integer $x$, $g'(x)<0$. There must thus be some $a_n$ between $n$ and $n+1$ for which $g'(a_n) = 0$ by the intermediate value theorem. See that $g(x) \to 0$ as $x \to \infty$, so $g(a_n) \to 0$. 
 
@@ -222,6 +221,17 @@ Let $f:C\to \R$ be extension smooth. Let $p \in C$. Extend $f$ to a smooth funct
 Suppose now that $f:C\to \R$ is smooth as a map from a manifold. Let $p\in C$, and choose a neighborhood $W$ of $p$ and a chart $\varphi: W\to \varphi(W) \subset \R^n$ such that $\varphi(C) = \varphi(W) \cap \R^k$, where $k$ is the dimension of $C$. Let $\pi: \R^n \to \R^k$ be projection on the first $k$ coordinates. Then $\pi$ is an open map and a continuous map. Let $U = \varphi^{-1}(\varphi(W) \cap \pi^{-1}(\varphi(C)))$. Then $U$ is open in $W$. We extend $f$ to a function $\tilde f$ around $p$ via $\tilde f(x) = f(\varphi^{-1}(\pi(\varphi(x))))$. The way we defined $U$ makes this map well-defined. We immediately verify that $\tilde f$ is an extension of $f$, for if $x\in C$, $f(\varphi^{-1}(\pi(\varphi(x))) = f(x)$, since $\pi$ fixes $x$. The extension map is smooth, being a composition of smooth functions. Therefore, $f$ is extension smooth.
 
 \section*{Problem 7}
+\begin{lemma}
+  $\R^n$ is not homeomorphic to $\H^n$ for any $n$. 
+\end{lemma}
+\begin{proof}
+  Suppose otherwise, that $\R^n$ is homeomorphic to $\H^n$. Taking a point $p$ from $\R^{n-1}$ outside of $\H^n$, we have homeomorphic spaces $\H^n-p$ and $\R^n-q$. The $\pi_{n-1}$ homotopy group of $\R^n-q$ is non-trivial ($\Z$), while that of $\H^n-p$ is trivial, a contradiction. 
+\end{proof}
+
+(a) A point $p \in \partial X$ has a chart $\varphi_U:U\to \H^n$ with $\varphi_U(p)$ in $\R^{n-1}$, by definition. If $p$ was in the interior of $X$ there is a chart $V$ around $p$ which is homeomorphic to $\R^n$. Then $U\cap V$ has a smaller neighborhood $W$ which is homeomorphic to both $\R^n$ and $\H^n$. This violates the Lemma. Therefore the boundary and the interior separate the manifold.
+
+(b) Suppose $p$ in the interior of $M$ maps to a point $f(p)$ in the boundary of $N$. Choosing charts around each point, we see that there is a neighborhood $U$ of $p$ homeomorphic to $\R^n$, a neighborhood $V$ of $f(p)$ homeomorphic to $\H^n$, and $f$ is a homeomorphism between neighborhoods of $p$ and $f(p)$ in $U$ and $V$. But there are smaller neighborhoods in $U$ and $V$ which are homeomorphic to $\R^n$ and $\H^n$, and are themselves homeomorphic via $f$. This is impossible. Therefore, $f$ maps the interior to the interior. Since $f^{-1}$ does the same, we conclude that $f$ maps the boundary to the boundary. These maps are homeomorphisms on the interior and on the boundary, since the topologies are inherited from the parent manifolds.
+
 We showed that $f$ maps the interior to the interior and the boundary to the boundary (homeomorphically). We know that the interior is an open subset of the manifold, and is a manifold without boundary. Therefore, $f$ in charts is a smooth map from $\R^n$ to $\R^n$ on the interior. So is the inverse, making $f$ a diffeomorphism.
 
 On the boundary, $f: \partial M \to \partial N$, we just need to show that $f$ is smooth, since it is known to be a homeomorphism already. Indeed, in charts, $f$ is just the composition \[\R^{n-1} \stackrel{i}\to \H^n \stackrel{f}{\to} \H^n \stackrel{\pi}\to \R^{n-1},\] where the first map is the inclusion and the last map is the projection. Both of these maps are smooth, and hence $f:\partial M \to \partial N$ is smooth. Analogous conclusion for $f^{-1}$ shows that $f$ restricts to a diffeomorphism on the boundary.

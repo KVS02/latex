@@ -1,0 +1,196 @@
+\documentclass{amsart}
+
+\usepackage{amsmath,amssymb,amsfonts,amscd}
+\usepackage[all,cmtip]{xy}
+\usepackage{enumerate}
+\usepackage{ amssymb, latexsym, amsmath}
+%\setcounter{MaxMatrixCols}{30}%
+\usepackage{fullpage}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{ marvosym }
+\usepackage{quiver}
+
+
+
+\numberwithin{equation}{section}
+
+%\usepackage{cjw-latex}
+
+%\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem*{thm}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{criterion}[theorem]{Criterion}
+%\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{wildconjecture}[theorem]{Wild Conjecture}
+
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem*{dfn}{Definition}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{solution}[theorem]{Solution}
+
+
+
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{remarks}[theorem]{Remarks}
+\newtheorem{summary}[theorem]{Summary}
+\newtheorem{observation}[theorem]{Observation}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+
+
+
+\makeatletter
+\newcommand{\rmnum}[1]{\romannumeral #1}
+\newcommand{\Rmnum}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\Ext}{\operatorname{Ext}}
+\newcommand{\Tor}{\operatorname{Tor}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\osum}{\oplus}
+\newcommand{\aff}{\operatorname{Aff}}
+
+\newcommand{\Id}{\operatorname{Id}}
+\newcommand{\concat}{(\Id \to \Omega \Sigma)}
+\newcommand{\eval}{(\Sigma\Omega \to \Id)}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\g}{\mathfrak{g}}
+\newcommand{\n}{\mathfrak{n}}
+\newcommand{\h}{\mathfrak{h}}
+\newcommand{\p}{\mathfrak{p}}
+\newcommand{\q}{\mathfrak{q}}
+\newcommand{\m}{\mathfrak{m}}
+\newcommand{\e}{\mathfrak{e}}
+\newcommand{\f}{\mathfrak{f}}
+\newcommand{\V}{\mathscr{V}}
+\newcommand{\D}{\mathscr{D}}
+\renewcommand{\S}{\mathscr{S}}
+\newcommand{\Sch}{\mathscr{C}}
+\newcommand{\Y}{\mathscr{Y}}
+\renewcommand{\u}{\mathfrak{u}}
+\newcommand{\set}[2]{ \left\{ {#1} \, \left| \, {#2} \right\}\right.}
+\newcommand{\A}{\mathbb{A}}
+\newcommand{\X}{\mathcal{X}}
+\renewcommand{\Im}{\operatorname{Im}}
+\newcommand{\T}{\mathscr{T}}
+\newcommand{\HH}{\mathscr{H}}
+\newcommand{\PGL}{\operatorname{PGL}}
+\newcommand{\righthookarrow}{\hookrightarrow}
+\newcommand{\sign}{\operatorname{sign}}
+\renewcommand{\_}[2]{\underbrace{#1}_{#2}}
+\renewcommand{\^}[2]{\overbrace{#1}_{#2}}
+\newcommand{\curverightarrow}{\curvearrowright}
+
+\newcommand{\z}{\mathfrak{z}}
+\renewcommand{\sl}{\mathfrak{sl}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\RP}{\mathbb{RP}}
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\C}{\mathbb{C}}
+\renewcommand{\H}{\mathbb{H}}
+\newcommand{\Ind}{\operatorname{Ind}}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Orb}{\mathcal{O}}
+\renewcommand{\k}{\mbox{\Fontauri k}}
+\newcommand{\Ad}{\operatorname{Ad}}
+\newcommand{\ad}{\operatorname{ad}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\Ker}{\operatorname{Ker}}
+\newcommand{\End}{\operatorname{End}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\Stab}{\mbox{Stab}}
+\newcommand{\Lie}{\operatorname{Lie}}
+\newcommand{\GL}{\operatorname{GL}}
+\newcommand{\SL}{\operatorname{SL}}
+\newcommand{\Sp}{\operatorname{Sp}}
+\newcommand{\Mp}{\operatorname{Mp}}
+\renewcommand{\a}{\mathfrak{a}}
+\newcommand{\Wh}{\operatorname{Wh}}
+\newcommand{\Span}{\operatorname{Span}}
+\newcommand{\WF}{\operatorname{WF}}
+\newcommand{\AC}{\operatorname{AC}}
+\newcommand{\Lin}{\operatorname{Lin}}
+\newcommand{\Diff}{\operatorname{Diff}}
+\newcommand{\Gen}{\operatorname{Gen\, Hom}}
+\newcommand{\Her}{\operatorname{Her}}
+\newcommand{\pivot}{&}
+\newcommand{\sgn}{\operatorname{sgn}}
+%\newcommand{C^{\infty}}{DS}
+\newcommand{\vsp}{{\vspace{0.2in}}}
+
+
+
+\title{Homework 6}
+
+\author{Sudharshan K V}
+\begin{document}
+\maketitle
+
+\section*{Problem 1}
+Let $f: \R \to \R$ be a smooth function such that $f(x) = 0$ when $x \leq 0$, and $f(x) > 0$ otherwise. For example, one can take $f(x) =  \exp (-1/x^2)$ when $x> 0$. Consider the map $(x,y)\mapsto -f(x)-f(y)$. Let $Z$ be the graph of this function, so that $Z$ is a submanifold of $\R^3$. For $Z$ intersects the $x$-$y$ plane at precisely those $(x,y)$ for which $x,y\leq 0$. Also, the $z$ coordinate of a point on $Z$ is always non-positive.
+
+Consider the manifold with boundary $X = \H^3$ in $\R^3$. Then, we see that $X$ is transverse to $Z$ at all points because of dimension reasons. However, $\partial X$ is not transverse to $Z$. Also, \[X \cap Z = \{(x,y,0) : x\leq 0, y\leq 0\}\] is not a submanifold of $\R^3$ (hence not a submanifold of $X$). 
+\section*{Problem 2}
+Consider the homotopy between $Z_1$ and the submanifold $Z_1'$ of $\R\P^2$ defined by the smooth embedding $[x:y]\mapsto [x:0:y]$, given by \[f_t: [x:y] \mapsto [x:y\cos \frac\pi 2 t: y\sin \frac \pi 2 t].\] Clearly, this map is smooth and is therefore a smooth homotopy between $Z_1$ and $Z_1'$. But notice that $Z_1'$ does not intersect $Z_2$, since the middle coordinate is zero on $Z_1'$. Therefore, $I_2(Z_1, Z_2) = I_2(Z_1', Z_2) = 0$. However, we saw that $I_2(Z_1, Z_1) = 1$. Consequently, $Z_1$ and $Z_2$ cannot be homotopic, for if they were, $I_2(Z_1, Z_2) = I_2(Z_1, Z_1)$.
+
+\section*{Problem 3}
+(a) Assume $f$ is a constant map to the point $p$, since the intersection number is homotopy invariant. If $p$ is not in $Z$, then $f$ is transverse to $Z$ vacuously and the intersection number is $0$. If $p$ is in $Z$, consider a chart around $p$ which sends $Z$ to a smaller dimensional subspace of Euclidean space. There is a perturbation of $p$ to a point $p$ in any orthogonal direction of the subspace so that $p'$ does not lie in $Z$ (the existence of this orthogonal direction is guaranteed by $\dim Z$ being strictly smaller than $\dim Y$). This perturbation induces a homotopy of constant maps to $p$ and $p'$. The constant map to $p'$ has intersection number $0$ as discussed. \\
+
+(b) Suppose $\dim X$ is positive. Then a point $p$ in $X$ is a closed submanifold of strictly smaller dimension, so by (a) we have $I_2(\Id, p) = 0$. But $\Id$ is transverse to $p$ because of dimension reasons, and $\Id^{-1}(p) = p$, so $I_2(\Id, p) = 1$. Hence $X$ is discrete. If $X$ has more than one point, then the identity map is not homotopic to the constant map. So a contractible boundaryless manifold must be a single point.
+
+\section*{Problem 4}
+
+(a) We first observe that $X\cup Z$ is not the whole space $S^n$. Indeed, choose a chart $U, \varphi$ around any point in $X$ for which $X$ maps to $\R^k$ inside $\R^n$. Then this chart makes $U\cap Z - X$ a submanifold of $\R^n - \R^k$ with smaller dimension. This shows that there is a point $p$ in $S^n$ which is away from $X, Z$. Since both $X$ and $Z$ are closed, we see that they are in fact away from an open neighborhood of $p$. Therefore, $X$ and $Z$ are still compact in $S^n - p$.
+
+Now, stereographic projection from $p$ gives a diffeomorphism $S^n - p \to \R^n$. Identify $X$ and $Z$ with their images under this diffeomorphism. Since they are compact, they are both bounded subsets of $\R^n$. So there is a homotopy, say a tranlation of $X$, which separates $X$ and $Z$ in $\R^n$. Pulling this homotopy back via the stereographic projection gives a homotopy of $X$ which separates $X$ and $Z$. So it follows that $I_2(X,Z) = 0$.\\
+
+(b) Suppose $M$ and $N$ are have non-trivial dimensions. Pick points $a, b$ in $M,N$ respectively. Then, the submanifolds $a\times N$ and $M\times b$ of $M\times N$ have transverse intersection (by a previous Homework Problem), and the intersection number is $1$. So $M\times N$ cannot be $S^n$ by (a). Therefore one of $M,N$ is discrete. A discrete set with more than one point is disconnected, while $S^n$ is connected. Hence if $S^n = M\times N$ then one of $M$ or $N$ must be trivial.\\
+
+(c) For $n \geq 2$, consider the submanifolds of $\R\P^n$ given by the sets $[x_0: \dots: x_{n-1} :0]$ and $[x_0: 0 :\dots : 0 : x_n]$. The first set is the image of $\R\P^{n-1}$ under a smooth embedding, while the second is the image of $\R\P^2$ under a smooth embedding, so they are indeed manifolds. The intersection of these two manifolds is the point $[1: 0: \dots : 0]$, and the intersection is transverse at this point because in the standard chart $U_0$, the tangent spaces of the two manifolds are respectively the sets $(x_1,\dots,x_{n-1}, 0)$ and $(0,\dots, 0, x_n)$ inside $\R^n$. Therefore the intersection number of two closed submanifolds of smaller dimension in $\R\P^n$ is $1$. By (a), $\R\P^n$ is not diffeomorphic to $S^n$.
+
+\section*{Problem 5}
+For $t$ a parameter between $0$ and $1$, define $f_t([x:y:z]) = [(2+t)x: (2+2t)y: 2z].$ The graph $\Gamma_t$ of $f_t$ is thus a submanifold of $\R\P^2 \times \R\P^2$. One can define a homotopy $\R\P^2 \times I \to \R\P^2 \times \R\P^2$ by $(p,t) \mapsto (p,f_t(p))$. Consider $(p,f_1(p)) \in \Gamma_1\cap \Delta$. Then $f_1(p) = p$. If $z = 0$, then $[x:y:0] \neq [x/2:2y:0]$. So $z \neq 0$ on the intersection. Then it follows that $x = y = 0$, making $[0:0:1]$ the only intersection point. Also, computing the derivative of $f_1$ at $[0:0:1]$ in the corresponding coordinate chart gives the matrix $
+\begin{pmatrix}
+  1/2 & 0 \\ 0 & 2
+\end{pmatrix}$, none of whose eigenvalues is $1$. Therefore, the intersection of $\Gamma_1$ with $\Delta$ is transverse (due to an older HW). So, $I_2(\Delta, \Delta) = I_2(\Gamma_1, \Delta) = 1$.
+
+\section*{Problem 6}
+
+Let $f_0:X_0 \to Y$ and $f_1: X_1 \to Y$ be bordant, i.e., there is a compact manifold $W$ for which $\partial W = X_1 \sqcup X_2$, and a smooth function $F: W \to Y$ which extends the $f_i$. Let $Z$ be a closed submanifold of $Y$ with appropriate dimension. We will show that $f_0^{-1}(Z) \equiv f_1^{-1}(Z) \bmod 2$. Indeed, perturbing $F$ relative to $X_0, X_1$ so that $F$ is transverse to $Z$ yields a compact $1$-dimensional submanifold $F^{-1}(Z)$ which has boundary $f_0^{-1}(Z) \sqcup f_1^{-1}(Z)$. It follows that the two preimages $f_0^{-1}(Z), f_1^{-1}(Z)$ have the same parity. The equality of intersection numbers follows.
+
+Let $X$ be a manifold, $f:X\to Y$. $W$ be a compact manifold with boundary $X$. Let $F:W \to Y$ extend $f:X\to Y$. Consider the manifold $X' = X\sqcup X$, with smooth map $f' = f\sqcup f : X' \to Y$. Clearly the intersection number of $f'$ is $0$. We also observe that $f$ and $f'$ are bordant ($X, X'$ have the same dimension), for the compact manifold $W\sqcup W \sqcup W$ has boundary $X\sqcup X'$ and the map $F\sqcup F\sqcup F$ extends $f$ and $f'$. Due to the equality of intersection numbers of bordant maps, have $I_2(f,Z) = 0$.
+
+\section*{Problem 7}
+(a) Let $Z = \{(x,0): -1<x<1\}$. This is a one dimensional non-closed manifold in $\R^2$. Let $X$ be a unit circle $(S^1)$ centered at $(1,0)$. Then $X \cap Z$ is a single point $(0,0)$, and the intersection is transverse. However, a homotopy translating the unit circle to having center $(2025, 0)$ will make $X \cap Z$ empty. The intersection number is therefore not preserved under homotopy.\\
+
+(b) Interchange $X$ and $Z$ in (a). \\
+
+(c) The example from (a) works again. The inclusion of $X$ into $\R^2$ extends to the inclusion of the closed unit disk in $\R^2$. \\
+
+(d) Here, $W$ cannot be compact since $X = \partial W$ is a closed subset of $W$. Interchange $X$ and $Z$ from (a). Then $X$ is the boundary of $(-1,1)\times \R_{\geq 0}$. \\
+
+(e) Let $X = S^1$ inside $Y = \R^2 - 0$. Let $Z = (0,\infty)$ be a ray. Observe that $Z$ is closed in $Y$. Also, $X$ is the boundary of the manifold $W = \{(x,y): x^2 + y^2 \geq 1\}$. The intersection number of $X$ and $Z$ is $1$. 
+
+\end{document}
