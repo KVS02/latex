@@ -69,6 +69,7 @@
   \newcommand{\Z}{\mathbb Z}
   \newcommand{\F}{\mathbb F}
   \newcommand{\R}{\mathbb R}
+  \newcommand{\C}{\mathbb C}
   \newcommand{\PP}{\mathscr P}
   \renewcommand{\P}{\mathbb P}
   \newcommand{\Aut}{\mathrm {Aut}}
@@ -181,7 +182,6 @@ Consequently, observe that $\pi$ is a submersion and the kernel of $D\pi_p$ is j
 \end{proof}
 
 Now we may choose a regular value of $\R\P^{n-1}$ due to Sard's theorem (even when $n = 1$!). This point yields a line in $\R^n$ which is transverse to $f$.
-
 \chapter*{Problem 3}
 
 All spaces we deal with will be locally Euclidean, hence locally path connected. So we will not distinguish path connectedness from connectedness. Let $\dim Y = n$, $\dim X = n-1$. 
@@ -190,9 +190,9 @@ All spaces we deal with will be locally Euclidean, hence locally path connected.
 
 We repeat the Jordan Brouwer argument, but modify the proof for non-emptiness of a certain set.\\
 
-Fix a point $z \in Y$ which is not in $X$. Consider the property $\PP$ on $X$ given by \[\PP: \text{ For all neighborhoods $U$ of $x$, there is a path connecting $z$ to some point in $U$ which does not meet $X$}.\] Let $x$ be a point of $X$ which satisfies $\PP$. Choose a chart $U$ around $X$ so that $X\subset Y$ in this chart is locally is $\R^{n-1} \subset \R^n$. Then $U-X$ has two (path) connected components, say $U_1$ and $U_2$. By $\PP$, there is some point in $U-X$ which is path connected to $z$ in $\R^n-X$. Say this point is in component $U_1$. Then all points of $U_1$ are path connected to $z$ in $\R^n-X$. For any neighborhood $V$ around any point in $U\cap X$, there is a point in $U_1 \cap V$, so every point of $U\cap X$ possesses property $\PP$. It follows that the subset of points of $X$ which satisfy $\PP$ is open.\\
+Fix a point $z \in Y$ which is not in $X$. Consider the property $\PP$ on $X$ given by \[\PP: \text{ For all neighborhoods $U$ of $x$, there is a path connecting $z$ to some point in $U$ which does not meet $X$}.\] Let $x$ be a point of $X$ which satisfies $\PP$. Choose a chart $U$ around $X$ so that $X\subset Y$ in this chart is locally is $\R^{n-1} \subset \R^n$. Then $U-X$ has two (path) connected components, say $U_1$ and $U_2$. By $\PP$, there is some point in $U-X$ which is path connected to $z$ in $Y-X$. Say this point is in component $U_1$. Then all points of $U_1$ are path connected to $z$ in $Y-X$. For any neighborhood $V$ around any point in $U\cap X$, there is a point in $U_1 \cap V$, so every point of $U\cap X$ possesses property $\PP$. It follows that the subset of points of $X$ which satisfy $\PP$ is open.\\
 
-Now if $x$ is a point which does not satisfy $\PP$, then there must be some open neighborhood $U$ of $x$ for which no point of $U$ is path connected to $z$ in $\R^n-X$. Taking $U$ itself as the neighborhood, we see that each point of $U\cap X$ does not satisfy property $\PP$. Therefore, the set of points $x$ which do not satisfy $\PP$ is an open set. The property $\PP$ therefore separates the set $X$ into two open complementary sets. Due to connectedness, one of these sets must be empty.\\
+Now if $x$ is a point which does not satisfy $\PP$, then there must be some open neighborhood $U$ of $x$ for which no point of $U$ is path connected to $z$ in $Y-X$. Taking $U$ itself as the neighborhood, we see that each point of $U\cap X$ does not satisfy property $\PP$. Therefore, the set of points $x$ which do not satisfy $\PP$ is an open set. The property $\PP$ therefore separates the set $X$ into two open complementary sets. Due to connectedness, one of these sets must be empty.\\
 
 Certainly, there is a point $x$ in $X$ for which $\PP$ holds. Choose an arbitrary point $x$ and a path $\sigma: [0,1]\to Y$ from $z$ to $x$. Let $t$ be the infimum of the set $\sigma^{-1}(X)$. Since $X$ is closed in $Y$, we see that $\sigma(t) \in X$. So clearly, $t>0$. Let $x' = \sigma(t)$ and $\sigma' = \sigma|_{[0,t]}$. Then for any open $U$ around $x'$, the set $\sigma'^{-1}(U)$ is an open set in $[0,t]$ around $t$. Hence, there is some point $p = \sigma'(t-\epsilon)$ in $U$ and a path $\sigma|_{[0,t-\epsilon]}$ from $z$ to $p$ which does not intersect $X$. Since $x'$ satisfies $\PP$, we see that all of $X$ satisfies $\PP$. \\
 
@@ -204,9 +204,14 @@ Consider the two points $z_1$ and $z_2$ from (a). In the chart $U$, there is cle
 
 Observe that $C\subset U$. Let $t$ be the infimum of $\sigma'^{-1}(C)$ and $z_1' = \sigma'(t)$. Let $s$ be the supremum of $\sigma^{-1}(C)$ and let $z_2' = \sigma'(s)$. These points are well defined since $C$ is closed. We chose these new points to avoid the intersection of the curves. Now $\sigma'' = \sigma'|_{[t,s]}$ is a curve, and $C'$ be the part of $C$ between $z_1'$ and $z_2'$. If $C''$ is the image of $\sigma''$, then $C'' \cup C'$ is a loop without self-intersection, so it is homeomorphic to $S^1$. We may perturb $C''\cup C'$  relative to $C'$ so that $C'' \cup C'$ is now diffeomorphic to $S^1$. Call this submanifold $Z$ (submanifold, since it is a smooth embedding of $S^1$). Then $Z\cap X$ is only one point and the intersection is transverse at that point, so $I_2(X,Z) = 1$.\\
 
-\textit{Note:} Let $\sigma:[0,1]\to M$ be a path from $z_1\neq z_2$ in a manifold $M$. We want an injective map $\sigma':[0,1] \to M$ whose image is contained in the image of sigma. For any $z$ in the image of $\sigma$, define $I_z = (a,b)$ where $a$ and $b$ are the infimum and supremum of $\sigma^{-1}(z)$. Consider the set $U = \cup_z I_z$. Then $U$ is open and is therefore a union of (countably many) $(a_i,b_i)$ with $\sigma(a_i) = \sigma(b_i)$. We may paste $\sigma$ along the complements of these intervals to get a map $\sigma': [0,1] \to M$ satisfying the required properties.
+\textit{Note:} A space $M$ is said to be arc connected if for any two points $p\neq q$ in $M$ there is some injective continuous map $\sigma: [0,1] \to M$ for which $\sigma(0) = p, \sigma (1) = q$. In other words, there is a path from $p$ to $q$ which is an embedding of the interval. The following are taken for granted. Maybe hard results!
 
-After some googles, we get result path connected implies arc connected in Hausdorff spaces. All arguments work.
+\begin{theorem}
+  If $M$ is Hausdorff, as in the case for manifolds, then $M$ is arc connected if and only if $M$ is path connected.
+\end{theorem}
+\begin{lemma}
+  A topological embedding $[0,1]\to M$ is homotopic to a smooth embedding $[0,1]\to M$.
+\end{lemma}
 
 \section*{(c)}
 Every compact $1$-dimensional manifold without boundary is diffeomorphic to disjoint copies of $S^1$. There must be only finitely many such copies because of compactness, since each connected component is open. \\
@@ -222,6 +227,37 @@ So for $Z$ diffeomorphic to $S^1$, we have $I_2(X,Z) = 0$. In general, $Z$ is di
 Consider $S^1 = \R\P^1 = [x_0:0:\dots:0:x_{n+1}]$ as a submanifold of $\R\P^{n+1}$. Then at the (only) intersection point $[1:0:\dots:0]$ of $\R\P^1$ and $\R\P^n$, we compute the tangent spaces in the standard chart to be $\R^n \times 0$ and $0\times 0 \times \dots \times \R$ as subspaces of $\R^{n+1}$. Clearly the intersection is transverse and $I_2(\R\P^n, \R\P^1) = 1$. Therefore, $\R\P^n$ does not split $\R\P^{n+1}$ into two components by virtue of (c). \\
 
 Alternatively it is straightforward (from the definition of the chart map) to show that $\R\P^{n+1} = \R^{n+1} \sqcup \R\P^n$, and since $\R^{n+1}$ is connected, the result follows.
+\chapter*{Problem 4}
+
+\section*{(a)}
+
+We begin with some relations between the complex and real derivatives of a holomorphic function $f: \C \to \C$. Let $f(z) = u(x,y) + iv(x,y)$ where $z=x+iy$ and $u,v$ are smooth functions $\R^2 \to \R$. The complex derivative of $f$ is \[f'(z) = u_x(x,y) + iv_x(x,y) =v_y(x,y) - i u_y(x,y).\] The real derivative of $f$ is \[Df_{(x,y)} =
+  \begin{pmatrix}
+    u_x & v_x \\ u_y & u_x
+  \end{pmatrix}.\] Therefore, given $f'(z) = \tilde u(x,y)+ i\tilde v(x,y)$, we may write $Df =
+\begin{pmatrix}
+  \tilde u & \tilde v\\
+  -\tilde v & \tilde u
+\end{pmatrix}$. It follows that $\det Df = |f'(z)|^2$. In particular, the derivative has non-negative determinant.\\
+
+Consider the complex transition map between charts $U_0$ and $U_1$. This is given by $(z_1, z_2) \mapsto (\frac 1{z_1}, \frac{z_2}{z_1})$. The complex derivative of this map is $ D\varphi_{(z_1, z_2)} = 
+\begin{pmatrix}
+  \frac{-1}{z_1^2} & 0 \\
+  \star & \frac{1}{z_1}
+\end{pmatrix}$. Each entry is a $2\times 2$ real matrix, and the determinant of this transition map is $\det (\frac{-1}{z_1^2}) \det (\frac{1}{z_1})$. Both of these determinants are positive from the previous discussion. It follows that the transition map has positive determinant. Similarly the other transition maps have positive determinant, and hence we may provide the standard orientation in all charts to get an orientation of $\C\P^2$. 
+
+\section*{(b)}
+$X$ is homotopic to the manifold $X' = \{[z_1:0:z_2]\} \subset \C\P^2$, via the map $f_t([z_1:z_2]) = [z_1: (1-t)z_2: tz_2]$. One calculates the only intersection point of $X,X'$ to be $p = [1:0:0]$. Furthermore, in the standard chart, the tangent spaces $T_pX, T_pX'$ are $\C\times 0, 0\times \C$ respectively (as subspaces of $\C^2$, so we get transversality. Let $e_1, \dots, e_4$ be the standard basis of $\C^2$. This has a positive orientation due to our choice. Orient $X$ such that $e_1, e_2$ is a positive basis of $X$. In the homotopy $X\to X'$, this basis is transformed to the basis $(e_3, e_4)$. Therefore in $X'$ we must give $(e_3, e_4)$ the positive orientation. See that the change of basis matrix $(e_3,e_4,e_1,e_2) \to (e_1,e_2,e_3,e_4)$ has determinant $1$, so \[T_xX'\oplus T_xX = \C^4\] as oriented vector spaces. We must give the intersection point a $+$ orientation.\\
+
+It follows that $I(X,X) = I(X',X) = 1$.
+
+\section*{(c)}
+
+Suppose we change the orientation on $\C\P^2$ to the negative of the standard orientation on all charts. We keep the orientation on $X$ from before, so $X'$ has the same orientation as before too. The oriented vector space equality now becomes \[T_xX' \oplus T_xX = -\C^4,\] since $(e_3,e_4,e_1,e_2)$ is now a negatively oriented basis in the new orientation on $\C\P^2$. The intersection point gets a $-$ orientation and so $I(X,X) = -1$ in this case.
+
+\section*{(d)}
+EASY.
+
 
 
 % ------------------------------------------------------------------------------
