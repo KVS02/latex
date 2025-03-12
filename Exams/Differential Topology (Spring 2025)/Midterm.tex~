@@ -1,0 +1,224 @@
+\documentclass{amsbook}
+
+\usepackage{amsmath, amsthm, amssymb, amsfonts}
+\usepackage{thmtools}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{geometry}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{framed}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tcolorbox}
+\usepackage{mathrsfs}
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+  \hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{#1}}
+\makeatother
+
+
+\colorlet{LightGray}{White!90!Periwinkle}
+\colorlet{LightOrange}{Orange!15}
+\colorlet{LightGreen}{Green!15}
+
+\newcommand{\HRule}[1]{\rule{\linewidth}{#1}}
+
+\declaretheoremstyle[name=Theorem,]{thmsty}
+\declaretheorem[style=thmsty,numberwithin=section]{theorem}
+\tcolorboxenvironment{theorem}{colback=LightGray}
+
+\declaretheoremstyle[name=Lemma,]{lemsty}
+\declaretheorem[style=lemsty,numberwithin=section]{lemma}
+\tcolorboxenvironment{lemma}{colback=LightGray}
+
+\newenvironment{solution}[1][Solution]{\proof[#1]\renewcommand{\qedsymbol}{$\blacksquare$}}{\endproof}
+
+\theoremstyle{theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+
+\theoremstyle{plain}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{corollary}{Corollary}[theorem]
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{remarks}[theorem]{Remarks}
+
+\setstretch{1.2}
+\geometry{
+    textheight=9in,
+    textwidth=5.5in,
+    top=1in,
+    left=1in,
+    right=1in,
+    headheight=12pt,
+    headsep=25pt,
+    footskip=30pt
+  }
+
+  \newcommand{\Q}{\mathbb Q}
+  \newcommand{\Z}{\mathbb Z}
+  \newcommand{\F}{\mathbb F}
+  \newcommand{\R}{\mathbb R}
+  \newcommand{\PP}{\mathscr P}
+  \renewcommand{\P}{\mathbb P}
+  \newcommand{\Aut}{\mathrm {Aut}}
+  \newcommand{\Gal}{\mathrm {Gal}}
+  \newcommand{\GL}{\operatorname{GL}}
+  \newcommand{\stab}{\operatorname{Stab}}
+  \newcommand{\p}{\mathfrak p}
+  \newcommand{\m}{\mathfrak m}
+  \renewcommand{\d}{\operatorname d}
+  \newcommand{\cbrt}[1]{\sqrt[3]{#1}}
+
+
+
+
+
+  
+
+% ------------------------------------------------------------------------------
+
+\begin{document}
+
+% ------------------------------------------------------------------------------
+% Cover Page and ToC
+% ------------------------------------------------------------------------------
+
+\title{ \normalsize \textsc{}
+		\\ [2.0cm]
+		\HRule{1.5pt} \\
+		\LARGE \textbf{\uppercase{Midterm}
+		\HRule{2.0pt} \\ [0.6cm] \LARGE{Differential Topology} \vspace*{10\baselineskip}}
+		}
+\date{}
+\author{\textbf{Sudharshan K V} \\ 
+		\today}
+
+\maketitle
+\chapter*{Problem 1}
+Any matrix $A$ for which $A^TDA = D$ must be invertible, as taking determinants shows. Therefore, it suffices to show $\stab(D)$ is a submanifold of $\GL_n(\R)$. We will show this using the preimage theorem. Note that $A^TDA$ is always symmetric.\\
+
+Consider the map $F: A \mapsto A^TDA$ from $\GL_n(\R)$ to the set of symmetric matrices. This map is a polynomial map, hence smooth. We will show that $D$ is a regular value for this map. Indeed, at a point $A$, we may compute the derivative of $F$ as follows.
+
+\begin{align*}
+  DF_A(B) &= \frac{\d}{\d t} |_{t=0}\left( F(A+tB) - F(A)\right)\\
+          &= \frac{\d}{\d t} |_{t=0}\left( t B^TDA + t A^TDB + t^2 B^TDB \right)\\
+          &= B^TDA + A^TDB.    
+\end{align*}
+One can see that the tangent space of symmetric matrices is the subspace of symmetric matrices in $M_n(\R)$, owing to the submanifold of symmetric matrices itself being a linear subspace of $M_n(\R)$. We will show that the image of $DF_A$ is the whole tangent space when $A^TDA = D$. \\
+
+Indeed, let $M$ be any symmetric matrix. Choose \[B = D^{-1}(A^T)^{-1} \frac M 2.\] One then computes
+
+\begin{align*}
+  DF_A(B) &= B^TDA + A^TDB\\
+          &= \frac{M^T} 2 + \frac M 2\\
+          &= M.
+\end{align*}
+Therefore the derivative of $F$ is surjective at all points of $F^{-1}(D)$. By the preimage theorem, $\stab(D) = F^{-1}(D)$ is a submanifold of $\GL_n(\R)$ with dimension $n^2 - \frac{n(n+1)}2 = \frac{n(n-1)}2$, since $\frac{n(n+1)}2$ is the dimension of the space of symmetric matrices. \\
+
+One also computes that $DF_A(D^{-1}(A^T)^{-1}C) = C^T + C$, so the kernel of $DF_A$ is the space of skew symmetric matrices multiplied by $A^TD$ (when identified as a subspaces of $\R^{n^2}$). The kernel of the differential is the tangent space of $\stab (D)$. \\
+
+We exhibit two matrices $D_1, D_2 $ of the same size for which $\stab D_1$ and $\stab D_2$ are not diffeomorphic. Let \[D_1 =
+  \begin{pmatrix}
+    1& 0\\ 0& 1
+  \end{pmatrix}, D_2 =
+  \begin{pmatrix}
+    1& 0 \\ 0 & -1
+  \end{pmatrix}.\]
+Then $\stab(D_1) = \{A\in M_2(\R): A^TA = I\}$ is compact, since it is closed and bounded. The boundedness comes from computing $A^TA$, which forces the columns to have norm $1$, bounding all entries of the matrix between $\pm 1$.\\
+
+Let $c,d$ be large positive real numbers such that $d^2 - c^2 = 1$ (note that such choices can be arbitrarily large). Let $a,b$ be the positive real roots of $c^2+1$ and $d^2 - 1$. Then one has the relation \[(c^2 + 1)(d^2 - 1) = c^2d^2,\] so we have
+\begin{itemize}
+\item $a^2b^2 = c^2d^2$, hence $ab = cd$.
+\item $a^2-c^2 = 1$.
+\item $b^2 - d^2 = -1$.
+\end{itemize}
+When $A =
+\begin{pmatrix}
+  a&b\\c&d
+\end{pmatrix}$, one computes using the three listed relations that $A^TD_2A = D_2$. Therefore, $\stab (D_2)$ is an unbounded closed subset of $\R^{n^2}$.
+\chapter*{Problem 2}
+\section*{(a)}
+We will provide a counter example to show that $p$ need not be a regular value of $f$. Let $X$ be the $2$-sphere, \[X = \{(x,y,z) \in \R^3 : x^2 + y^2 + z^2 = 1 \}.\] Let $\pi: \R^3 \to \R$ be the square of the $z$-coordinate map, i.e., $\pi(x,y,z) = z^2$. Let $Y = \R$ (so $n = 1$), and let $f$ be the restriction of $\pi$ to $X$. So $f = \pi i$, where $i:X\to \R^3$ is the inclusion. Let $p = 0$. In this case, $f^{-1}(p)$ is the circle in $X$ along the $xy$ plane, and is therefore a submanifold of positive dimension with codimension $n$. 
+
+Observe that \[D\pi_{x,y,z} =
+  \begin{pmatrix}
+    0 \\ 0 \\ 2z
+  \end{pmatrix}\] in standard coordinates. Therefore, at any point $x\in X$ with $z$-coordinate $0$, one has that $Df_x = Di_x D\pi_x = 0$. In particular, this means that $p = 0$ is not a regular value of $f$.
+\section*{(b)}
+Since $X$ is compact, one has $f(X)$ bounded. Therefore, if $v$ is a vector in some orthogonal direction of $W$, then for some large real number $c$, $W + cv$ does not meet $f(X)$. In this case, $f^{-1}(W+cv)$ is the empty set which is a submanifold of $X$.
+
+\section*{(c)}
+Let $f:X \to \R^n - 0$ miss the origin. Let $\pi: \R^n - 0 \to \R\P^n$ be the natural map, given by \[\pi(x_1, \dots, x_n) = [x_1:\dots:x_n].\] We will show that $\ell$ is transverse to $f$ if and only if $\pi (\ell)$ is a regular value of $\pi \circ f$. This is similar to how one shows that a ray $r$ is transverse to $f$ iff the direction of $r$ is a regular value in $S^{n-1}$ (in the proof of Jordan Brower Theorem, HW7).
+
+\begin{lemma}
+  Let $v = (v_1,\dots, v_n)$ be a vector in $T_p(\R^n - 0)$, where $p = (p_1, \dots, p_n)$. Then, \[D\pi_p(v) = 0 \text{ if and only if there is some } c \in \R, v = cp.\]
+\end{lemma}
+\begin{proof}
+  Assume $p_1 \neq 0$ without losing generality. We do this in the standard chart around $\pi(p)$. The chart around $[p_1:\dots:p_n]$ is $[x_1:\dots:x_n] \mapsto (x_2/x_1, \dots, x_n/x_1)$. In this chart, we compute the derivative map to be \[D\pi_p =
+    \frac{1}{p_1}\begin{pmatrix}[c|ccc]
+                   -\tfrac{p_2}{p_1} & &&\\
+                   \vdots &  & I &\\
+                   -\tfrac{p_n}{p_1}&&&
+    \end{pmatrix},\] where $I$ is the size $n-1$ identity matrix. Then evaluating at $v$ and setting $c = v_1/x_1$ (which is well-defined), we find that $D\pi_p(v) = 0$ if and only if $v = cp$.
+\end{proof}
+Consequently, observe that $\pi$ is a submersion and the kernel of $D\pi_p$ is just the line $\ell$ passing through $0$ and $p$. 
+\begin{lemma}
+  Let $\ell$ be a line through the origin in $\R^n$. Then, $\pi(\ell)$ is a regular value of $\pi\circ f$ if and only if $f$ is transverse to $\ell$. 
+\end{lemma}
+\begin{proof}
+  Let $x$ be a point in $x$ such that $f(x) \in \ell$. Transversality of $\ell$ and $f$ is equivalent to $Df_x(T_xX) + \ell = \R^n$ for all such $x$. Let $T$ be the tangent space of $\R\P^n$ at $\pi(f(x))$. The condition $Df_x(T_xX) + \ell = \R^n$ implies $D(\pi\circ f)_x(T_xX) = T$, since $\pi$ is a submersion, and $\ell$ is the kernel of $D\pi_{f(x)}$. Conversely, if $D(\pi\circ f)_x(T_xX) = T$ then $Df_x(T_xX) + \ell = \R^n$ for the exact same reason. Furthermore, $f(x) \in \ell$ if and only if $\pi(f(x)) = \pi(\ell)$. So transversality at all such $x$ is equivalent to the regularity of $f(\ell)$. 
+\end{proof}
+
+Now we may choose a regular value of $\R\P^{n-1}$ due to Sard's theorem (even when $n = 1$!). This point yields a line in $\R^n$ which is transverse to $f$.
+
+\chapter*{Problem 3}
+
+All spaces we deal with will be locally Euclidean, hence locally path connected. So we will not distinguish path connectedness from connectedness. Let $\dim Y = n$, $\dim X = n-1$. 
+
+\section*{(a)}
+
+We repeat the Jordan Brouwer argument, but modify the proof for non-emptiness of a certain set.\\
+
+Fix a point $z \in Y$ which is not in $X$. Consider the property $\PP$ on $X$ given by \[\PP: \text{ For all neighborhoods $U$ of $x$, there is a path connecting $z$ to some point in $U$ which does not meet $X$}.\] Let $x$ be a point of $X$ which satisfies $\PP$. Choose a chart $U$ around $X$ so that $X\subset Y$ in this chart is locally is $\R^{n-1} \subset \R^n$. Then $U-X$ has two (path) connected components, say $U_1$ and $U_2$. By $\PP$, there is some point in $U-X$ which is path connected to $z$ in $\R^n-X$. Say this point is in component $U_1$. Then all points of $U_1$ are path connected to $z$ in $\R^n-X$. For any neighborhood $V$ around any point in $U\cap X$, there is a point in $U_1 \cap V$, so every point of $U\cap X$ possesses property $\PP$. It follows that the subset of points of $X$ which satisfy $\PP$ is open.\\
+
+Now if $x$ is a point which does not satisfy $\PP$, then there must be some open neighborhood $U$ of $x$ for which no point of $U$ is path connected to $z$ in $\R^n-X$. Taking $U$ itself as the neighborhood, we see that each point of $U\cap X$ does not satisfy property $\PP$. Therefore, the set of points $x$ which do not satisfy $\PP$ is an open set. The property $\PP$ therefore separates the set $X$ into two open complementary sets. Due to connectedness, one of these sets must be empty.\\
+
+Certainly, there is a point $x$ in $X$ for which $\PP$ holds. Choose an arbitrary point $x$ and a path $\sigma: [0,1]\to Y$ from $z$ to $x$. Let $t$ be the infimum of the set $\sigma^{-1}(X)$. Since $X$ is closed in $Y$, we see that $\sigma(t) \in X$. So clearly, $t>0$. Let $x' = \sigma(t)$ and $\sigma' = \sigma|_{[0,t]}$. Then for any open $U$ around $x'$, the set $\sigma'^{-1}(U)$ is an open set in $[0,t]$ around $t$. Hence, there is some point $p = \sigma'(t-\epsilon)$ in $U$ and a path $\sigma|_{[0,t-\epsilon]}$ from $z$ to $p$ which does not intersect $X$. Since $x'$ satisfies $\PP$, we see that all of $X$ satisfies $\PP$. \\
+
+For $x$ in $X$, choose a small chart $U$ around $x$ where $X\subset Y$ in the chart is $\R^{n-1}\subset \R^n$. Then $U-X$ has two connected components. Choose $z_1, z_2$ in different components. For any point $z$ outside $X$, there is some point in $U-X$ connected to $z$ by a path outside $X$. This point is connected (away from $X$) to either $z_1$ or $z_2$ depending on the component of $U-X$ it lies in. So every point $z$ outside $X$ is connected to either $z_1$ or $z_2$ via a path in $Y - X$. There are thus at most two connected components of $Y-X$.
+
+\section*{(b)}
+
+Consider the two points $z_1$ and $z_2$ from (a). In the chart $U$, there is clearly the straight line path (in $\R^n$) from $z_1$ and $z_2$ which intersects $X$ exactly once (and is transverse). Pulling this back via the chart yields an embedding $\sigma:[0,1] \to Y$ from $z_1$ to $z_2$ which is transverse to $X$ and intersects $X$ exactly once. Call this path $C$. Since $Y-X$ has only one component, we may find a different path $\sigma'$ from $z_1$ to $z_2$ which does not intersect $X$. Assume $\sigma'$ has no self-intersection: One can do this by perturbing a piecewise smooth function obtained from a general $\sigma'$. See note at the end of the solution, since I feel this is slightly derailing. \\
+
+Observe that $C\subset U$. Let $t$ be the infimum of $\sigma'^{-1}(C)$ and $z_1' = \sigma'(t)$. Let $s$ be the supremum of $\sigma^{-1}(C)$ and let $z_2' = \sigma'(s)$. These points are well defined since $C$ is closed. We chose these new points to avoid the intersection of the curves. Now $\sigma'' = \sigma'|_{[t,s]}$ is a curve, and $C'$ be the part of $C$ between $z_1'$ and $z_2'$. If $C''$ is the image of $\sigma''$, then $C'' \cup C'$ is a loop without self-intersection, so it is homeomorphic to $S^1$. We may perturb $C''\cup C'$  relative to $C'$ so that $C'' \cup C'$ is now diffeomorphic to $S^1$. Call this submanifold $Z$ (submanifold, since it is a smooth embedding of $S^1$). Then $Z\cap X$ is only one point and the intersection is transverse at that point, so $I_2(X,Z) = 1$.
+
+\textit{Note:} Let $\sigma:[0,1]\to M$ be a path from $z_1\neq z_2$ in a manifold $M$. We want an injective map $\sigma':[0,1] \to M$ whose image is contained in the image of sigma. For any $z$ in the image of $\sigma$, define $I_z = (a,b)$ where $a$ and $b$ are the infimum and supremum of $\sigma^{-1}(z)$. Consider the set $U = \cup_z I_z$. Then $U$ is open and is therefore a union of (countably many) $(a_i,b_i)$ with $\sigma(a_i) = \sigma(b_i)$. We may paste $\sigma$ along the complements of these intervals to get a map $\sigma': [0,1] \to M$ satisfying the required properties.  
+\section*{(c)}
+
+
+
+
+% ------------------------------------------------------------------------------
+
+% ------------------------------------------------------------------------------
+% Reference and Cited Works
+% ------------------------------------------------------------------------------
+
+% \bibliographystyle{IEEEtran}
+% \bibliography{References.bib}
+
+% ------------------------------------------------------------------------------
+
+\end{document}

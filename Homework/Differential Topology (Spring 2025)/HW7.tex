@@ -1,0 +1,219 @@
+\documentclass{amsart}
+
+\usepackage{amsmath,amssymb,amsfonts,amscd}
+\usepackage[all,cmtip]{xy}
+\usepackage{enumerate}
+\usepackage{ amssymb, latexsym, amsmath}
+%\setcounter{MaxMatrixCols}{30}%
+\usepackage{fullpage}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{ marvosym }
+\usepackage{quiver}
+\usepackage{mathrsfs}
+
+
+\numberwithin{equation}{section}
+
+%\usepackage{cjw-latex}
+
+%\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem*{thm}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{criterion}[theorem]{Criterion}
+%\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{wildconjecture}[theorem]{Wild Conjecture}
+
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem*{dfn}{Definition}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{solution}[theorem]{Solution}
+
+
+
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{remarks}[theorem]{Remarks}
+\newtheorem{summary}[theorem]{Summary}
+\newtheorem{observation}[theorem]{Observation}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+
+
+
+\makeatletter
+\newcommand{\rmnum}[1]{\romannumeral #1}
+\newcommand{\Rmnum}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\Ext}{\operatorname{Ext}}
+\newcommand{\Tor}{\operatorname{Tor}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\osum}{\oplus}
+\newcommand{\aff}{\operatorname{Aff}}
+
+\newcommand{\Id}{\operatorname{Id}}
+\newcommand{\concat}{(\Id \to \Omega \Sigma)}
+\newcommand{\eval}{(\Sigma\Omega \to \Id)}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\g}{\mathfrak{g}}
+\newcommand{\n}{\mathfrak{n}}
+\newcommand{\h}{\mathfrak{h}}
+\newcommand{\p}{\mathfrak{p}}
+\newcommand{\q}{\mathfrak{q}}
+\newcommand{\m}{\mathfrak{m}}
+\newcommand{\e}{\mathfrak{e}}
+\newcommand{\f}{\mathfrak{f}}
+\newcommand{\V}{\mathscr{V}}
+\newcommand{\D}{\mathscr{D}}
+\newcommand{\B}{\mathcal B}
+\newcommand{\PP}{\mathscr{P}}
+\renewcommand{\S}{\mathscr{S}}
+\newcommand{\Sch}{\mathscr{C}}
+\newcommand{\Y}{\mathscr{Y}}
+\renewcommand{\u}{\mathfrak{u}}
+\newcommand{\set}[2]{ \left\{ {#1} \, \left| \, {#2} \right\}\right.}
+\newcommand{\A}{\mathbb{A}}
+\newcommand{\X}{\mathcal{X}}
+\renewcommand{\Im}{\operatorname{Im}}
+\newcommand{\T}{\mathscr{T}}
+\newcommand{\HH}{\mathscr{H}}
+\newcommand{\PGL}{\operatorname{PGL}}
+\newcommand{\righthookarrow}{\hookrightarrow}
+\newcommand{\sign}{\operatorname{sign}}
+\renewcommand{\_}[2]{\underbrace{#1}_{#2}}
+\renewcommand{\^}[2]{\overbrace{#1}_{#2}}
+\newcommand{\curverightarrow}{\curvearrowright}
+
+\newcommand{\z}{\mathfrak{z}}
+\renewcommand{\sl}{\mathfrak{sl}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\RP}{\mathbb{RP}}
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\C}{\mathbb{C}}
+\renewcommand{\H}{\mathbb{H}}
+\newcommand{\Ind}{\operatorname{Ind}}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Orb}{\mathcal{O}}
+\renewcommand{\k}{\mbox{\Fontauri k}}
+\newcommand{\Ad}{\operatorname{Ad}}
+\newcommand{\ad}{\operatorname{ad}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\Ker}{\operatorname{Ker}}
+\newcommand{\End}{\operatorname{End}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\Stab}{\mbox{Stab}}
+\newcommand{\Lie}{\operatorname{Lie}}
+\newcommand{\GL}{\operatorname{GL}}
+\newcommand{\SL}{\operatorname{SL}}
+\newcommand{\Sp}{\operatorname{Sp}}
+\newcommand{\Mp}{\operatorname{Mp}}
+\renewcommand{\a}{\mathfrak{a}}
+\newcommand{\Wh}{\operatorname{Wh}}
+\newcommand{\Span}{\operatorname{Span}}
+\newcommand{\WF}{\operatorname{WF}}
+\newcommand{\AC}{\operatorname{AC}}
+\newcommand{\Lin}{\operatorname{Lin}}
+\newcommand{\Diff}{\operatorname{Diff}}
+\newcommand{\Gen}{\operatorname{Gen\, Hom}}
+\newcommand{\Her}{\operatorname{Her}}
+\newcommand{\codim}{\operatorname{codim}}
+\newcommand{\pivot}{&}
+\newcommand{\sgn}{\operatorname{sgn}}
+%\newcommand{C^{\infty}}{DS}
+\newcommand{\vsp}{{\vspace{0.2in}}}
+
+
+
+\title{Homework 7}
+
+\author{Sudharshan K V}
+\begin{document}
+\maketitle
+
+\section*{Problem 0}
+The spaces we deal with are locally Euclidean, hence locally path connected. So we will not make a distinction between connectedness and path connectedness. We also assume $n>1$ so we can modify charts when necessary.
+
+(a) Let $z$ be a point not in $X$. Consider the property $\PP$ on $X$ given by \[\PP: \text{ For all neighborhoods $U$ of $x$, there is a path connecting $z$ to some point in $U$ which does not meet $X$}.\] Let $x$ be a point of $X$ which satisfies $\PP$. Choose a chart $U$ around $X$ so that $X$ in this chart is locally is $\R^{n-1} \subset \R^n$. Then $U-X$ has two (path) connected components, say $U_1$ and $U_2$. By $\PP$, there is some point in $U-X$ which is path connected to $z$ in $R^n-X$. Say this point is in component $U_1$. Then all points of $U_1$ are path connected to $z$ in $\R^n-X$. For any neighborhood $V$ around any point in $U\cap X$, there is a point in $U_1 \cap V$, so every point of $U\cap X$ possesses property $\PP$. It follows that the subset of points of $X$ which satisfy $\PP$ is open.
+
+Now if $x$ is a point which does not satisfy $\PP$, then there must be some open neighborhood $U$ of $x$ for which no point of $U$ is path connected to $z$ in $\R^n-X$. Taking $U$ itself as the neighborhood, we see that each point of $U\cap X$ does not satisfy property $\PP$. Therefore, the set of points $x$ which do not satisfy $\PP$ is an open set. The property $\PP$ therefore separates the set $X$ into two open complementary sets. Due to connectedness, one of these sets must be empty.
+
+Certainly, there is a point $x$ in $X$ for which $\PP$ holds: the closest point to $z$. There is a straight line path from $z$ to $x$ (which does not meet $X$ anywhere else) and every neighborhood of $x$ contains a point in this straight line segment. Therefore $\PP$ holds for all of $X$.\\
+
+(b) For $x$ in $X$, choose a small chart $U$ around $x$ where $X$ in the chart is $\R^{n-1}\subset \R^n$. Then $U-X$ has two connected components. Choose $z_1, z_2$ in different components. For any point $z$ outside $X$, there is some point in $U-X$ connected to $z$ by a path outside $X$. This point is connected (away from $X$) to either $z_1$ or $z_2$ depending on the component of $U-X$ it lies in. So every point $z$ outside $X$ is connected to either $z_1$ or $z_2$ via a path in $\R^n - X$. There are thus at most two connected components of $\R^n-X$. \\
+
+(c) Let $\gamma:[0,1] \to \R^n - X$ be a path from $z_0$ to $z_1$. Then $f_t: X \to S^{n-1}$ given by \[f_t(x) = \frac{x - \sigma(t)}{||x-\sigma(t)||}\] is a homotopy from the functions defining the winding numbers around $z_0$ and $z_1$. Since intersection numbers are homotopy invariant, it follows that the winding numbers around $z_0$ and $z_1$ are the same.\\
+
+(d) We think of tangent spaces as subspaces of $\R^n$. Let $x$ be a common point of the ray and $X$. One has maps $X \to \R^n - z \to S^{n-1}$, where the first map is inclusion and the second map is the direction map. One can see that at $x$, the first map induces an inclusion $T_xX \to \R^n$, and the second map induces a surjection $\R^n \to R^{n-1}$, which is the projection along the $x-z = \vec v$ axis. We observe that for dimension reasons, the ray $r$ is transverse to $X$ at $x$ if and only if $\vec v$ does not lie in $T_xX$. Also, $\vec v$ is a regular value of the composite map $X \to S^{n-1}$ iff projection along $\vec v$ preserves the dimension of $T_xX$. This in turn is same as $\vec v$ not being in $T_xX$. So $r$ is transverse to $X$ if and only if $\vec v$ is a regular value of $X \to S^{n-1}$. \\
+
+(e) We know that the winding number around $z$ is equal to the number of times a transverse ray emanating from $z$ intersects $X$. Considering a ray in the same direction as $r$ starting at $z_1$ shows immediately that \[W_2(X,z_0) = W_2(X, z_1) + l\bmod 2.\] 
+
+(f) Choose a point $x\in X$. Take some line passing through $x$ which is transverse to $X$. Take points $z_1, z_2$ on either side of $x$ on the line such that $z_1z_2$ intersects $X$ at precisely one point $x$. Take the (transverse!) ray starting at $z_0$ passing through $z_1$. The winding numbers of $z_0$ and $z_1$ differ by $1$ due to (e). Therefore the two sets \[D_i = \{z: W_2(X,z) = i\}, i = 0,1\] are non-empty. Furthermore, combining (b) and (c) shows that the $D_i$ must be the connected components of $\R^n - X$.\\
+
+(g) We can choose a point $z$ large enough so that there is a hyperplane $H$ passing through $z$ for which $X$ lies completely on one side of $H$. Then the ray starting at $z$ towards the other side of $H$ is vacuously transverse to $X$, and the winding number around $z$ is therefore $0$.\\
+
+(h) For $z$ large enough, we showed that $z$ is in $D_0$. Therefore, $D_1$ is a bounded set. We know that both the $D_i$ are open because they are components of an open set $\R^n-X$. Because of boundedness, $D_1$ has compact closure. In fact, $D_1 \cup X$ is closed since $D_0$ is open. Every point of $X$ must be in the closure of $D_1$ due to the construction in (b). Hence the topological boundary of $D_1$ is $X$. Since $D_1$ is an open subset of $\R^n$ it is a $n$-dimensional manifold. For every point in $X$, there is a chart where $X$ locally looks like $\R^{n-1} \subset \R^n$. Referring to the construction of the components in (b), we see that this chart restricted to $D_1 \cup X$ maps to $\mathbb H^n$. Therefore, the closure of $D_1$ is a compact manifold with boundary $X$. 
+
+\section*{Problem 1}
+(a) Let $x\in S$ and $y = f(x)$. Let $\B$ be a basis of $T_xS$. Let $N_i$ be two complements of $T_xS$ in $T_xX$, $i = 1,2$. Let $\B'$ be a basis of $T_yZ$. Let $\B_i$ be bases of $N_i$ such that $Df(\B_i) \cup \B'$ have same orientation in $T_yY$. The change of basis matrix written in $Df(\B_1) \cup \B'$ is a block matrix, \[
+  \begin{pmatrix}
+    A & 0\\ \star & I
+  \end{pmatrix},\] where $I$ is the identity matrix of size $|\B'|$. Since the bases have same orientation, we see that $\det A > 0$. We would like to show that $\B_i \cup \B$ have the same orientation in $T_xX$, so the induced orientation on $\B$ is independent of $i$. Indeed the change of basis matrix written in pasis $\B_1 \cup \B$ is another block matrix \[
+  \begin{pmatrix}
+    A & 0\\ \star & I
+  \end{pmatrix},\] where $I$ is the identity matrix of size $|\B|$. Here, $A$ is the same matrix as before. Since $\det A>0$, the result follows.\\
+
+(b) When $S$ is zero dimensional, we may choose the complement to be $T_xX$ itself, so we have an isomorphism of vector spaces \[T_xX \oplus T_yZ = T_yY, (v,w) \mapsto Df_x(v) + w.\] If this isomorphism preserves orientation, then $T_xS$ is given the positive orientation, and negative orientation otherwise.
+
+When $Z$ is zero dimensional, we have an isomorphism $T_yY \oplus T_xS = T_xS$, where $T_yY$ is identified via $Df$ to some subspace of $T_xX$ complementary to $T_xS$. We give an orientation on $T_xS$ so that the map preserves orientation when $T_yZ$ has positive orientation, and reverses orientation when $T_yZ$ has negative orientation.\\
+
+(c) If $X,Z$ are submanifolds, we consider all tangent spaces as subspaces of $T_yY$. Under the complementary dimension assumption, we have the case when $S$ is zero dimensional from (b). So under the inclusion $X\to Y$, we identify $T_xX$ with $T_yX$. So we give $y$ positive orientation when $T_yX\oplus T_yZ = T_yY$ as oriented vector spaces, and give $y$ the negative orientation otherwise.
+
+\section*{Problem 2}
+We use the notation from 1(a). Let $S = X\cap Z$ as a manifold without orientation. Considering all tangent spaces as subspaces of $T_yY$, we have the following equalities of oriented vector spaces.
+\begin{align*}
+  N_y(S;X) \oplus T_yZ &= T_yY,\\
+  N_y(S;Z) \oplus T_yX &= T_yY.
+\end{align*}
+If we orient $T_yS$ via the inclusion $i_X:X\to Y$, then we have \[N_y(S;X) \oplus T_yS = T_yX\] as oriented vector spaces. Combining this with the second equation above shows \[N_y(S;Z) \oplus N_y(S;X) \oplus T_yS = T_yY\] as oriented vector spaces. On the other hand, orienting $T_yS$ via the other inclusion $i_Z: Z\to Y$ gives \[N_y(S;X) \oplus N_y(S;Z) \oplus \tilde T_yS = T_yY,\] where we use $\tilde T_yS$ to differentiate the orientations obtained in different ways. These two orientations clearly differ by a factor of $(-1)^{\dim N(X) \dim N(Z)}$. Since $\dim N(S; X) = \codim Z$ and $\dim N(S;Z) = \codim X$, the orientations of $X\cap Z$ and $Z\cap X$ differ by a factor of $(-1)^{\codim X \codim Z}$. 
+\section*{Problem 3}
+
+We will first show that $\R\P^n$ is not orientable for even $n$ ($>0$). Assume otherwise, and consider the standard charts around point $[x_0:\dots:x_n]$. Suppose that $x_0$ and $x_1$ are both non-zero. Then one computes the derivative of the transition map from $U_0$ to $U_1$ to have determinant $\left(\frac{x_0}{x_1}\right)^{n+1}$, which is positive when $x_0$ and $x_1$ have the same sign and negative when they have different signs.
+
+On the connected charts $U_0$ and $U_1$, the orientation must be constant. The orientation provided by $U_0$ and $U_1$ (which is some choice of standard or the negative of the standard orientation) must agree. The transition map flips the orientation of the tangent space at some point in $U_0\cap U_1$ while it preserves orientation at another point, according to the sign of $\frac{x_0}{x_1}$. This is a contradiction.
+
+In the case when $n$ is odd, the (derivatives of) transition maps from $U_i$ to $U_{i+1}$ all have negative determinant at all points. Therefore modifying the charts $U_i$ for odd $i$ to change the sign of one coordinate, we see that now all transition maps $U_i$ to $U_{i+1}$ have positive determinant everywhere. So all transition maps $U_i$ to $U_j$ have positive determinant, so it is an orientation on $\R\P^n$. \\
+
+For $n$ even ($>0$), $\R\P^n$ cannot be a hypersurface in $\R^{n+1}$. In fact we will show that any compact connected hypersurface in $\R^{n}$ is orientable by using the Jordan Brower separation theorem.
+
+Let $X$ be a compact connected hypersurface in $\R^n$, $n>1$. Let $\overline D_1$ be the compact connected manifold as constructed in Problem 0 with boundary $X$. $D_1$ itself is a chart into $\R^n$. For any point $x \in X$, one can choose a (connected) chart sending some neighborhood $U$ in $\overline D_1$ to $\H^n$. Since this chart has an intersection with $D_1$, we can modify it so that the transition map $D_1 \to U$ has positive determinant everywhere ($n>1$). Choosing such charts for all points $x\in X$ gives us an orientation on $\overline D_1$, since we now have all transition maps between all charts to have positive determinant everywhere.
+
+\begin{lemma}
+  The boundary of an orientable manifold is orientable.
+\end{lemma}
+\begin{proof}
+  We choose charts on the manifold which send the boundary to $\R^{n-1}\subset \H^n$ such that all transition maps have positive determinant. Restrict these charts to the boundary. Since the transition maps take $\H^n$ to $\H^n$, the determinant of the maps restricted to $\R^{n-1}$ is still positive. So we get an orientation on the boundary.
+\end{proof}
+
+Since $\R\P^n$ is compact, connected but not orientable for even $n$, we see that it cannot be a hypersurface in $\R^{n+1}$. (Here, $n\geq 2$.)
+\end{document}
