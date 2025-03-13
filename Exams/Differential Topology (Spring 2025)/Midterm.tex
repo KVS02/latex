@@ -200,12 +200,11 @@ For $x$ in $X$, choose a small chart $U$ around $x$ where $X\subset Y$ in the ch
 
 \section*{(b)}
 
-Consider the two points $z_1$ and $z_2$ from (a). In the chart $U$, there is clearly the straight line path (in $\R^n$) from $z_1$ and $z_2$ which intersects $X$ exactly once (and is transverse). Pulling this back via the chart yields an embedding $\sigma:[0,1] \to Y$ from $z_1$ to $z_2$ which is transverse to $X$ and intersects $X$ exactly once. Call this path $C$. Since $Y-X$ has only one component, we may find a different path $\sigma'$ from $z_1$ to $z_2$ which does not intersect $X$. Assume $\sigma'$ is an embedding (injective, immersion): See note at the end of the solution, since I feel this is slightly derailing. \\
+Consider the two points $z_1$ and $z_2$ from (a). In the chart $U$, there is clearly the straight line path (in $\R^n$) from $z_1$ and $z_2$ which intersects $X$ exactly once (and is transverse). Pulling this back via the chart yields an embedding $\sigma:[0,1] \to Y$ from $z_1$ to $z_2$ which is transverse to $X$ and intersects $X$ exactly once. Call this path $C$. Since $Y-X$ has only one component, we may find a different path $\sigma'$ from $z_1$ to $z_2$ which does not intersect $X$. Assume $\sigma'$ is a smooth embedding (injective, immersion): See note at the end of the solution, since I feel this is slightly derailing. \\
 
 Observe that $C\subset U$. Let $t$ be the infimum of $\sigma'^{-1}(C)$ and $z_1' = \sigma'(t)$. Let $s$ be the supremum of $\sigma^{-1}(C)$ and let $z_2' = \sigma'(s)$. These points are well defined since $C$ is closed. We chose these new points to avoid the intersection of the curves. Now $\sigma'' = \sigma'|_{[t,s]}$ is a curve, and $C'$ be the part of $C$ between $z_1'$ and $z_2'$. If $C''$ is the image of $\sigma''$, then $C'' \cup C'$ is a loop without self-intersection, so it is homeomorphic to $S^1$. We may perturb $C''\cup C'$  relative to $C'$ so that $C'' \cup C'$ is now diffeomorphic to $S^1$. Call this submanifold $Z$ (submanifold, since it is a smooth embedding of $S^1$). Then $Z\cap X$ is only one point and the intersection is transverse at that point, so $I_2(X,Z) = 1$.\\
 
-\textit{Note:} A space $M$ is said to be arc connected if for any two points $p\neq q$ in $M$ there is some injective continuous map $\sigma: [0,1] \to M$ for which $\sigma(0) = p, \sigma (1) = q$. In other words, there is a path from $p$ to $q$ which is an embedding of the interval. The following are taken for granted. Maybe hard results!
-
+\textit{Note:} The following are taken for granted.
 \begin{theorem}
   If $M$ is Hausdorff, as in the case for manifolds, then $M$ is arc connected if and only if $M$ is path connected.
 \end{theorem}
@@ -229,8 +228,6 @@ Consider $S^1 = \R\P^1 = [x_0:0:\dots:0:x_{n+1}]$ as a submanifold of $\R\P^{n+1
 Alternatively it is straightforward (from the definition of the chart map) to show that $\R\P^{n+1} = \R^{n+1} \sqcup \R\P^n$, and since $\R^{n+1}$ is connected, the result follows.
 \chapter*{Problem 4}
 
-\section*{(a)}
-
 We begin with some relations between the complex and real derivatives of a holomorphic function $f: \C \to \C$. Let $f(z) = u(x,y) + iv(x,y)$ where $z=x+iy$ and $u,v$ are smooth functions $\R^2 \to \R$. The complex derivative of $f$ is \[f'(z) = u_x(x,y) + iv_x(x,y) =v_y(x,y) - i u_y(x,y).\] The real derivative of $f$ is \[Df_{(x,y)} =
   \begin{pmatrix}
     u_x & v_x \\ u_y & u_x
@@ -238,16 +235,18 @@ We begin with some relations between the complex and real derivatives of a holom
 \begin{pmatrix}
   \tilde u & \tilde v\\
   -\tilde v & \tilde u
-\end{pmatrix}$. It follows that $\det Df = |f'(z)|^2$. In particular, the derivative has non-negative determinant.\\
+\end{pmatrix}$. It follows that $\det Df = |f'(z)|^2$. In particular, the derivative has non-negative determinant.
+
+\section*{(a)}
 
 Consider the complex transition map between charts $U_0$ and $U_1$. This is given by $(z_1, z_2) \mapsto (\frac 1{z_1}, \frac{z_2}{z_1})$. The complex derivative of this map is $ D\varphi_{(z_1, z_2)} = 
 \begin{pmatrix}
   \frac{-1}{z_1^2} & 0 \\
   \star & \frac{1}{z_1}
-\end{pmatrix}$. Each entry is a $2\times 2$ real matrix, and the determinant of this transition map is $\det (\frac{-1}{z_1^2}) \det (\frac{1}{z_1})$. Both of these determinants are positive from the previous discussion. It follows that the transition map has positive determinant. Similarly the other transition maps have positive determinant, and hence we may provide the standard orientation in all charts to get an orientation of $\C\P^2$. 
+\end{pmatrix}$. Each entry is a $2\times 2$ real matrix, and the determinant of this transition map is $\det (\frac{-1}{z_1^2}) \det (\frac{1}{z_1})$. Both of these determinants are positive from the earlier discussion. It follows that the transition map has positive determinant. Similarly the other transition maps have positive determinant, and hence we may provide the standard orientation in all charts to get an orientation of $\C\P^2$. 
 
 \section*{(b)}
-$X$ is homotopic to the manifold $X' = \{[z_1:0:z_2]\} \subset \C\P^2$, via the map $f_t([z_1:z_2]) = [z_1: (1-t)z_2: tz_2]$. One calculates the only intersection point of $X,X'$ to be $p = [1:0:0]$. Furthermore, in the standard chart, the tangent spaces $T_pX, T_pX'$ are $\C\times 0, 0\times \C$ respectively (as subspaces of $\C^2$, so we get transversality. Let $e_1, \dots, e_4$ be the standard basis of $\C^2$. This has a positive orientation due to our choice. Orient $X$ such that $e_1, e_2$ is a positive basis of $X$. In the homotopy $X\to X'$, this basis is transformed to the basis $(e_3, e_4)$. Therefore in $X'$ we must give $(e_3, e_4)$ the positive orientation. See that the change of basis matrix $(e_3,e_4,e_1,e_2) \to (e_1,e_2,e_3,e_4)$ has determinant $1$, so \[T_xX'\oplus T_xX = \C^4\] as oriented vector spaces. We must give the intersection point a $+$ orientation.\\
+See that $X = \C\P^1$ is orientable due to similar reasons: there is only one transition map whose derivative has positive determinant. $X$ is homotopic to the manifold $X' = \{[z_1:0:z_2]\} \subset \C\P^2$, via the map $f_t([z_1:z_2]) = [z_1: (1-t)z_2: tz_2]$. One calculates the only intersection point of $X,X'$ to be $p = [1:0:0]$. Furthermore, in the standard chart, the tangent spaces $T_pX, T_pX'$ are $\C\times 0, 0\times \C$ respectively (as subspaces of $\C^2$, so we get transversality). Let $e_1, \dots, e_4$ be the standard basis of $\C^2$. This has a positive orientation due to our choice. Orient $X$ such that $e_1, e_2$ is a positive basis of $X$. In the homotopy $X\to X'$, this basis is transformed to the basis $(e_3, e_4)$. Therefore in $X'$ we must give $(e_3, e_4)$ the positive orientation. See that the change of basis matrix $(e_3,e_4,e_1,e_2) \to (e_1,e_2,e_3,e_4)$ has determinant $1$, so \[T_xX'\oplus T_xX = \C^4\] as oriented vector spaces. We must give the intersection point a $+$ orientation.\\
 
 It follows that $I(X,X) = I(X',X) = 1$.
 
@@ -256,9 +255,13 @@ It follows that $I(X,X) = I(X',X) = 1$.
 Suppose we change the orientation on $\C\P^2$ to the negative of the standard orientation on all charts. We keep the orientation on $X$ from before, so $X'$ has the same orientation as before too. The oriented vector space equality now becomes \[T_xX' \oplus T_xX = -\C^4,\] since $(e_3,e_4,e_1,e_2)$ is now a negatively oriented basis in the new orientation on $\C\P^2$. The intersection point gets a $-$ orientation and so $I(X,X) = -1$ in this case.
 
 \section*{(d)}
-EASY.
+Consider the function $F: \C\P^2 \to \C$, given by $F([x:y:z]) = - x^3 + y^3 + z^3$. See that $F$ is a homogeneous polynomial, so it is well-defined and holomorphic. Let $Z = F^{-1}(0)$. \\
 
+First, observe that $0$ is a regular value of $F$. Consider the chart around $z \neq 0$. In this chart, $F(x,y) = -x^3+y^3-1$. If $F(x,y) = 0$, then $DF = (-3x^2, 3y^2)$ is non-zero. So, as a complex map, $DF$ is surjective, which means it is surjective as a $2\times 4$ real matrix. Consequently, $0$ is a regular value of $F$ so that $Z$ is a submanifold of $\C\P^2$. It is closed, and is hence compact. Furthermore, it is orientable because $0$, $\C$, and $\C\P^2$ are orientable. We may thus consider $I(X,Z)$ (note that $X,Z$ are of complementary dimension). We will orient $Z$ later!\\
 
+Note that $Z\cap X$ is three points: $[1:y:0]$ where $y^3 = 1$. We will show $X$ and $Z$ are transverse at that intersection. All the points lie in the chart around $[1:0:0]$ so we will work in this chart. The tangent space of $\C\P^2$ at $[1:y:0]$ is $\C^2$, and the tangent space of $X$ is $\C \times 0$, with the standard orientation, say. The tangent space to $Z$ at $p = [1:y:z]$ is (complex-) orthogonal to the $\C$ span of $(3y^2, 3z^2)$ (the gradient of $F$). This is a smoothly-varying vector so we may orient $Z$ (i.e, there is a choice of orientation of the regular value $0$) so that \[\C(y^2, z^2) \oplus T_pZ = \C^2.\] Here, $\C$ is given the standard orientation. Importantly, from the discussion before (a), any orientation on $\C$ obtained from a holomorphic chart must agree with the standard orientation. All transition maps in $Z$ are holomorphic, hence have positive determinant derivative. So an orientation in this chart defines an orientation on all of $Z$. \\
+
+At the intersection points $p=[1:y:0]$, we see that $T_pX = \C \times 0$ with the standard orientation, while $T_pZ = 0\times \C$ oriented such that \[T_pX\oplus T_pZ = \C^4\] as oriented vector spaces. Therefore the intersection is transverse, and each intersection point is given an orientation of $+$. It follows that $I(X,Z) = 3$.
 
 % ------------------------------------------------------------------------------
 
