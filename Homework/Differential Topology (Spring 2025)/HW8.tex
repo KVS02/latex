@@ -1,0 +1,191 @@
+\documentclass{amsart}
+
+\usepackage{amsmath,amssymb,amsfonts,amscd}
+\usepackage[all,cmtip]{xy}
+\usepackage{enumerate}
+\usepackage{ amssymb, latexsym, amsmath}
+%\setcounter{MaxMatrixCols}{30}%
+\usepackage{fullpage}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{ marvosym }
+\usepackage{quiver}
+
+\numberwithin{equation}{section}
+
+%\usepackage{cjw-latex}
+
+%\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem*{thm}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{criterion}[theorem]{Criterion}
+%\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{wildconjecture}[theorem]{Wild Conjecture}
+
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem*{dfn}{Definition}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{solution}[theorem]{Solution}
+
+
+
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{remarks}[theorem]{Remarks}
+\newtheorem{summary}[theorem]{Summary}
+\newtheorem{observation}[theorem]{Observation}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+
+
+
+\makeatletter
+\newcommand{\rmnum}[1]{\romannumeral #1}
+\newcommand{\Rmnum}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\Ext}{\operatorname{Ext}}
+\newcommand{\Tor}{\operatorname{Tor}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\osum}{\oplus}
+\newcommand{\aff}{\operatorname{Aff}}
+
+\newcommand{\Id}{\operatorname{Id}}
+\newcommand{\concat}{(\Id \to \Omega \Sigma)}
+\newcommand{\eval}{(\Sigma\Omega \to \Id)}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\g}{\mathfrak{g}}
+\newcommand{\n}{\mathfrak{n}}
+\newcommand{\h}{\mathfrak{h}}
+\newcommand{\p}{\mathfrak{p}}
+\newcommand{\q}{\mathfrak{q}}
+\newcommand{\m}{\mathfrak{m}}
+\newcommand{\e}{\mathfrak{e}}
+\newcommand{\f}{\mathfrak{f}}
+\newcommand{\V}{\mathscr{V}}
+\newcommand{\D}{\mathscr{D}}
+\renewcommand{\S}{\mathscr{S}}
+\newcommand{\Sch}{\mathscr{C}}
+\newcommand{\Y}{\mathscr{Y}}
+\renewcommand{\u}{\mathfrak{u}}
+\newcommand{\set}[2]{ \left\{ {#1} \, \left| \, {#2} \right\}\right.}
+\newcommand{\A}{\mathbb{A}}
+\newcommand{\X}{\mathcal{X}}
+\renewcommand{\Im}{\operatorname{Im}}
+\newcommand{\T}{\mathscr{T}}
+\newcommand{\HH}{\mathscr{H}}
+\newcommand{\PGL}{\operatorname{PGL}}
+\newcommand{\righthookarrow}{\hookrightarrow}
+\newcommand{\sign}{\operatorname{sign}}
+\renewcommand{\_}[2]{\underbrace{#1}_{#2}}
+\renewcommand{\^}[2]{\overbrace{#1}_{#2}}
+\newcommand{\curverightarrow}{\curvearrowright}
+
+\newcommand{\z}{\mathfrak{z}}
+\renewcommand{\sl}{\mathfrak{sl}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\RP}{\mathbb{RP}}
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\C}{\mathbb{C}}
+\renewcommand{\H}{\mathcal{H}}
+\newcommand{\Ind}{\operatorname{Ind}}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Orb}{\mathcal{O}}
+\renewcommand{\k}{\mbox{\Fontauri k}}
+\newcommand{\Ad}{\operatorname{Ad}}
+\newcommand{\ad}{\operatorname{ad}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\Ker}{\operatorname{Ker}}
+\newcommand{\End}{\operatorname{End}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\Stab}{\mbox{Stab}}
+\newcommand{\Lie}{\operatorname{Lie}}
+\newcommand{\GL}{\operatorname{GL}}
+\newcommand{\SL}{\operatorname{SL}}
+\newcommand{\Sp}{\operatorname{Sp}}
+\newcommand{\Mp}{\operatorname{Mp}}
+\renewcommand{\a}{\mathfrak{a}}
+\newcommand{\Wh}{\operatorname{Wh}}
+\newcommand{\Span}{\operatorname{Span}}
+\newcommand{\WF}{\operatorname{WF}}
+\newcommand{\AC}{\operatorname{AC}}
+\newcommand{\Lin}{\operatorname{Lin}}
+\newcommand{\Diff}{\operatorname{Diff}}
+\newcommand{\Gen}{\operatorname{Gen\, Hom}}
+\newcommand{\Her}{\operatorname{Her}}
+\newcommand{\pivot}{&}
+\newcommand{\sgn}{\operatorname{sgn}}
+%\newcommand{C^{\infty}}{DS}
+\newcommand{\vsp}{{\vspace{0.2in}}}
+
+
+
+\title{Homework 8}
+
+\author{Sudharshan K V}
+\begin{document}
+\maketitle
+
+\section*{Problem 3}
+
+(a) Let $p\in Z$ be a regular value of $g$. Then $g^{-1}(p)$ is a discrete set of size $\deg g$. Perturb $f$ to map $f'$ so that $f'$ is regular at each point of $g^{-1}(p)$. One can do this because $g^{-1}(p)$ is finite and closed in $Y$. The homotopy of $f$ induces a homotopy of $g\circ f$ to $g \circ f'$ in the obvious way, and $p$ is a regular value of $g \circ f'$ by construction. It follows that \[\deg (g\circ f) = \deg (g\circ f') = \deg f' \cdot \deg g = \deg f \cdot \deg g.\] We use the fact that the degree is the size of the preimage of any regular value to get the equality in the middle.\\
+
+(b) The Euler characteristic is the Lefschetz number of the identity. Let $f$ and $g$ be Lefschetz maps homotopic to the identity maps on $X,Y$. The map $f\times g$ is homotopic to the identity on $X\times Y$, and one has that the fixed points of $f\times g$ are of the form $(x,y)$ where $x$ is fixed by $f$ and $y$ is fixed by $g$. The equality $L(f\times g) = L(f)L(g)$ follows, and this is exactly the multiplicativity of the Euler characteristic.\\
+
+(c) Let $G$ be a compact Lie group of positive dimension. We will show that $G$ admits a non-vanishing vector field. Indeed, let $\g = T_eG$ be the Lie algebra of $G$. Choose a vector $v \in \g$ which is non-zero. Recall that $T_gG = gT_eG$ for $g\in G$. Then the assignment $\vec v: g \mapsto gv$ is therefore a non-vanishing vector field on $G$. It follows that the Euler characteristic of $G$ must be $0$.
+
+\section*{Problem 4}
+
+(a) If two of the $\lambda_i$ are equal, say $\lambda_1 = \lambda_2$, then all points $[x:1:0:0]$ are fixed by $f$. These points are not isolated. If no two are equal there are exactly four fixed points: $p_0 = [1:0:0:0], p_1 = [0:1:0:0], \dots$. These points are isolated, and in the charts around the points $p_i$, $f$ is linear and the derivative is given by the diagonal matrix with diagonal entries $\lambda_j/\lambda_i$ for $j\neq i$. Since no two of the $\lambda_i$ are equal, $1$ is not an eigenvalue of the derivative of $f$. So $f$ is Lefschetz iff no two of the $\lambda_i$ are equal.\\
+
+(b) Continuing the previous discussion, the determinant of $Df_{p_i} - \id$ has the same sign as $\lambda_i^3\prod_j (\lambda_j - \lambda_i)$. The sign is also the sign given to the fixed point $p_i$: \[\text{Orientation of $p_i$} = \sgn(\lambda_i^3)\prod_j (\lambda_j - \lambda_i)\]. Since the expressions are symmetric, we may assume that $\lambda_0 < \dots < \lambda_3$. Depending on the signs of the $\lambda_i$, we calculate the Lefschetz numbers as follows: (assuming increasing $\lambda_i$.) If $0<\lambda_0$ the points get orientations $(-,+,-,+)$, and the Lefschetz number is $0$. If $\lambda_0 < 0 < \lambda_1$ then the points get orientations $(+, +, - , +)$ so the Lefschetz number is $2$. If $\lambda_1 < 0 <\lambda_2$, the points get orientations $(+,-,-,+)$ and the Lefschetz number of $f$ is $0$. The other cases can be obtained similarly. If $0$ is between $\lambda_i, \lambda_{i+1}$, then the Lefschetz number of $f$ is $2 (i-1\bmod 2)$. (Put $\lambda_{-1} = -\infty, \lambda_4 = \infty$.)\\
+
+(c) The identity map is easily seen to be homotopic to the map $f$ when $\lambda_i = 2^i$, via the homotopy \[[x_0:\dots:x_3] \mapsto [x_0:(1+t)x_1:(1+(2^2-1)tx_2:(1+(2^3-1)t)x_3].\] Using the previous calculation, the Lefschetz number of such a map is $0$, hence the Euler characteristic of $\R\P^3$ is $0$.\\
+
+(d) The maps corresponding to $(\lambda_i) = (1,2,3,4)$ and $(\lambda_i) = (-1,2,3,4)$ have different Lefschetz numbers, so they are not homotopic.
+
+\section*{Problem 5}
+
+(a) If $f(z) = z$, then $z^m = 0$. The only fixed point of $f$ is thus $0$ and the first result follows. The derivative of $f$ at $0$ is $1$ (in complex numbers, which is the identity matrix over reals) unless $m = 1$, whence the derivative is twice the identity. Therefore $0$ is not Lefschetz unless $m = 1$.\\
+
+(b) Use (c). The sum of local Lefschetz numbers is the global Lefschetz number.\\
+
+(c) Consider the perturbation $f'$ of $f$ to $z\mapsto f(z) + \epsilon$. Observe that $z$ is a fixed point of $f'$ if and only if it satisfies $z^m = -\epsilon \neq 0$, and this polynomial has $m$ distinct solutions in $\C$. Furthermore, the derivative of $f'$ at this point is $mz^{m-1} + 1$, which is never equal to $1$ since $z$ is non-zero. The complex derivative not equal to $1$ is the same as the real derivative having no eigenvalue $1$.
+
+\section*{Problem 6}
+See that $f$ is not Lefschetz since it has non isolated fixed points: all points $[r:1]$ for $r\in \R$ are fixed by $f$. However, $f:[z_1:z_2] \mapsto [\overline z_1: \overline z_2]$ is homotopic to the map $[z_1:z_2] \mapsto [2\overline z_1: \overline z_2]$. The new map has only two fixed points $[0:1]$ and $[1:0]$. These points are isolated, and in charts, the maps are given by $(x,y) \mapsto (2x, -2y)$ and $(x,y) \mapsto (\frac x2,-\frac y2)$ (after converting a complex map to a real map). It follows that the matrix of the differentials of these maps are just \[
+  \begin{pmatrix}
+    2 & 0 \\ 0 & -2
+  \end{pmatrix} \text{ and }
+  \begin{pmatrix}
+    \frac12 & 0 \\ 0 & -\frac12
+  \end{pmatrix}.
+\]
+The map $f'$ is therefore Lefschetz, and the local Lefschetz numbers at these two points are $1$ and $-1$ respectively. It follows that $L(f) = 0$. 
+
+\section*{Problem 7}
+For $n$ even, the Euler characteristic of $S^n$ is non-zero, so $S^n$ does not admit a non-vanishing vector field.\\
+
+For $n$ odd, consider $S^n \subset \R^{n+1}$. The tangent space $T_xS^n$ can be identified with the subspace of $\R^{n+1}$ which is orthogonal to $x$. Therefore the assignment \[(x_1, \dots, x_{n+1}) \mapsto (x_2, -x_1, x_4, -x_3, \dots, x_{n+1}, -x_n)\] (Recall that $n$ is odd, so this definition makes sense.) is a vector field which is non-vanishing everywhere. 
+y
+\end{document}
