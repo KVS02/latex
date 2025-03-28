@@ -135,6 +135,7 @@
 \newcommand{\Her}{\operatorname{Her}}
 \newcommand{\pivot}{&}
 \newcommand{\sgn}{\operatorname{sgn}}
+\newcommand{\id}{\operatorname{id}}
 %\newcommand{C^{\infty}}{DS}
 \newcommand{\vsp}{{\vspace{0.2in}}}
 
@@ -146,6 +147,67 @@
 \begin{document}
 \maketitle
 
+\section*{Problem 1}
+Let $M$ be a simply connected manifold. Choose a point $p$ in $M$. Fixing an orientation of $T_pM$, we will assign orientations to the other points $q$ via paths from $p$. Given an orientation at a point, and a connected chart around the point, one can assign orientations to the tangent spaces at all points in the connected chart compatible with the given orientation. \\
+
+Let $s:[0,1] \to M$ be a (continuous) path from $p$ to $q$. Cover the image of $s$ with finitely many (due to compactness) connected charts. For convenience, let us call a covering by connected charts a connected cover. Let $\delta$ be the Lebesgue number for the pullback of this covering to $[0,1]$. Choose a partition $t_1, \dots, t_n$ such that the width of the sub-intervals is smaller than $\delta$. Then the image of each $[t_i, t_{i+1}]$ lies entirely within a connected chart. We will say a partition is \emph{associated} to the open cover if the image of every subinterval lies inside one of the open sets of the cover. So starting from $s(t_1) = s(0) = p$, one can successively assign orientations at the points $s(t_1), \dots, s(t_n) = q$ through the connected charts. Therefore, one obtains an orientation on $T_q$ via the path $s$. \\
+
+We will show that the assignment is well-defined. First, given an open cover and a partition, it is easy to see that the assignment is well-defined, for the assignment of $T_iM := T_{s(t_i)}M$ uniquely determines the orientation of $T_{i+1}M$ independent of the chart chosen from the cover. Let $U_i$ be a (finite) connected cover. We say a connected cover $V_j$ \emph{refines} the cover $U_i$ if for all $j$ there is some $i$ for which $V_j \subset U_i$. A partition $t_i'$ is said to \emph{refine} the partition $t_i$ if we have as sets $\{ t_i'\} \subset \{ t_i\}$. 
+\setcounter{section}{1}
+  \begin{lemma}
+    Let $U_i$ be a connected cover and $t_i$ be a partition of $[0,1]$ associated to the cover $U_i$. Let $V_j$ be a (connected) refinement of $U_i$, and let $t_j'$ be a partition which refines $t_i$ and is also associated to $V_j$. Then the orientations of $q$ obtained from the pair $(U_i, t_i)$ and $(V_j, t_j')$ coincide.
+  \end{lemma}
+  \begin{proof}
+    This is easy. Let $t'_j = t_i$. Suppose the orientations determined at $t_i$ in the two ways agree. The orientation at $s(t'_{j+1})$ determined by $s(t_j') = s(t_i)$ agrees with the orientation determined on $s([t_i,t_{i+1}])$ since they both lie in a connected chart. Continuing, one sees that the orientation at $t'_{j+m} = t_{i+1}$ is the same when obtained in both ways. The result follows.
+  \end{proof}
+
+  \begin{lemma}
+    The orientation provided on $T_qM$ via a fixed path $s$ is independent of the open cover or the parition associated to it.
+  \end{lemma}
+  \begin{proof}
+    Let $U_i$, $V_j$ be connected open covers of the image of $s$. Let $t_i$ and $t_j'$ be associated paritions. Consider all possible intersections $U_i \cap V_j$ and consider the connected components $W_k$ of these intersections. The $W_k$ form a connected open cover of the image of $s$. Make this cover a finite cover by compactness. Observe that one can choose a partition $t_k''$ associated to $W_k$ which also refines both $t_i$ and $t_j'$. By the previous lemma, the orientations assigned by $U_i$ and $V_j$ agree with the orientation assigned by $W_k$. 
+  \end{proof}
+
+  Finally, we will show that this orientation is independent of the path $s$. This uses the fact that $M$ is simply connnected. Let $s_0, s_1$ be two paths from $p$ to $q$. Let $s_t$ be a homotopy from $s_0$ to $s_1$. Cover the image of the homotopy (i.e. image of all the $s_t$) by (finitely many) connected open charts. Let $U_i$ be the pullback of this cover to the unit square. Let $\delta$ be the Lebesgue number of the cover $U_i$. Choose a partition $t_i$ of $[0,1]$ with width $\delta/2$. The partition $t_i$ also suits the paths $s_{t\pm\epsilon}$ for $\epsilon << \delta$, and furthermore, each of the rectangles $[t_i,t_{i+1}] \times [t-\epsilon, t+\epsilon]$ lies inside one of the charts $U_i$. Consider these charts which cover these rectangles. These charts correspond to a connected open cover of the image of $s_r$ for any $r$ between $t\pm \epsilon$. One can now see that the orientation obtained on $q$ is the same for all such $r$, since the choice of cover is the same. (More precisely, the orientation of $s_r(t_i)$ agrees (in the connected chart containing both) with the orientation of $s_t(t_i)$ for all $i$.)\\
+
+  It follows that the assignment of orientation through $s_t$ for each $t$ is locally constant in $t$. Due to $[0,1]$ being connected, the orientations on $T_qM$ obtained through $s_0, s_1$ must agree. Therefore the process assigns a well-defined orientation to $T_q$ at each point $q$ in $M$. It is easy to see that the orientations are compatible: Let $q'$ be a point inside an open connected chart around $q$. Let $s$ be a path from $p$ to $q$ which passes through $q'$. (Such a path always exists.) The orientation assigned at $q$ must be compatible with the orientation assigned at $q'$ through the same path. So the orientation assigned by the process is smoothly varying (i.e. locally constant), meaning $M$ is orientable.
+  
+\section*{Problem 2}
+Let $m,n$ be the dimensions of $X,Z$ respectively. The dimension of $Y$ is $m+n$. \\
+
+(a) A homotopy of $f$ to $f'$ and a homotopy of $g$ to $g'$ induce a homotopy of $f\times g$ to $f'\times g'$ in the obvious way. So $I(f,g)$ is unaltered by homotopy of either $f$ or $g$. \\
+
+(b) Let $g$ be the inclusion $Z\hookrightarrow Y$. First observe the correspondence between $(f\times g)^{1}(\Delta)$ and $f^{-1}(Z)$, given by $(x,z) \mapsto x$.
+
+Next, we show that transversality of $f$ and $Z$ is the equivalent to the transversality of $f\times g$ and $\Delta$. Let $W$ be the image of $Df_x$, and let $z = f(x)$. Suppose now that $f$ is transverse to $Z$. Then, $W + T_zZ = T_zY$. For $(a,b) \in T_{(f(x),z)}Y\times Y = T_zY \oplus T_zY$, let $u = \frac12 (a+b)$ and choose $w, v$ in $W, T_zZ$ such that $w-v = a-b$ (from transversality). Then we have \[(w,v) + (u-\tfrac12 (w+v), u -\tfrac12 (w+v)) = (u + \tfrac12 (w-v), u - \tfrac12 (w-v)) = (a,b),\] which is transversality of $f\times g$ and $\Delta$ at $(x,z)$.
+
+Conversely, suppose $f\times g$ is transverse to $\Delta$. Then, for any $a$ in $T_zY$, one has $w, v$ in $W, T_zZ$ for which $(w,-v) + (u,u) = (\frac a2,-\frac a2)$. This is equivalent to
+\begin{align*}
+  w + u & = \frac a 2\\
+  -v + u & = -\frac a 2.\\
+\end{align*}
+Subtracting shows $w+v = a$, which is transversality of $f,Z$. Combined with the correspondence of intersection points, one has the equivalence of transversality.\\
+
+Next we will show equality of intersection numbers. We have the equality of vector spaces \[T_xX \oplus T_zZ = T_yY.\] Let $(x_1\dots x_m)$, $(z_1 \dots z_n)$ be bases of $X,Z$. Suppose that the basis of $Z$ is oriented positively and that the basis $(x_1, \dots, x_m, z_1, \dots ,z_n)$ is positively oriented in $T_yY$. The orientation of the $x$ is decided by whether $(x_1, \dots ,x_m)$ is a positive or a negative basis of $T_xX$. \\
+
+Now consider the equality obtained from transversality of $f\times g$: \[T_xX \oplus T_zZ \oplus T_{(z,z)}Z = T_zY \oplus T_zY.\] One computes the change of basis matrix for \[\left( (x_1,0,0) \dots, (x_m,0,0),(0,0,z_1), \dots ,(0,0,z_n), (x_1,x_1), \dots (z_n,z_n)\right ) \text{ wrt } \left( (x_1, 0), \dots, (z_n,0), (0,x_1), \dots , (0,z_n) \right ) \,\,\,\,\, \star \] to be
+\[\begin{pmatrix}
+  I_m & 0 & I_m & 0\\
+  0 & 0 & 0 & I_n\\
+  0 & 0 & I_m & 0\\
+  0 & I_n & 0 & I_n
+\end{pmatrix}.\]
+Using row operations (it takes $n$ swaps to make this upper triangular), one finds the determinant of this matrix to be $(-1)^n$. Furthermore, all the bases above except that of $T_xX$ are positive, so the sign given to the point $(x,z)$ is the same as $(-1)^n$ times the sign of $x$ when given the orientation on the preimage $f^{-1}(Z)$. The factor $(-1)^n$ is offset by the definition of $I(f,g) = (-1)^n I(f\times g, \Delta)$, so it follows that $I(f,Z) = I(f, g = i_Z)$. \\
+
+(c) Use the same notation as above, identifying $T_zZ$ with its image under $Dg_z$. Let $f(x) = g(z) = y$. We have an equality of vector spaces \[T_xX \oplus T_zZ \oplus T_{(y,y)}\Delta = T_yY\oplus T_yY.\] Assume that $(x_1,\dots, z_n)$ is still a positive basis of $Y$. One finds that swapping $X,Z$ modifies the change of basis matrix to \[
+  \begin{pmatrix}
+    0 & 0 & I_m & 0\\
+    I_n & 0 & 0 & I_n\\
+    0 & I_m & I_m & 0\\
+    0 & 0 & 0 & I_n.
+  \end{pmatrix}
+\]
+Swap the middle two block rows and the first and third block columns. The resulting matrix is upper triangular. This shows that the determinant of this change of basis is $(-1)^m (-1)^{mn}$. It follows that \[(-1)^{mn}(-1)^m I(g\times f, \Delta)= I(f,g),\] after which it is immediate that $I(f,g) = (-1)^{mn} I(g,f)$. 
 \section*{Problem 3}
 
 (a) Let $p\in Z$ be a regular value of $g$. Then $g^{-1}(p)$ is a discrete set of size $\deg g$. Perturb $f$ to map $f'$ so that $f'$ is regular at each point of $g^{-1}(p)$. One can do this because $g^{-1}(p)$ is finite and closed in $Y$. The homotopy of $f$ induces a homotopy of $g\circ f$ to $g \circ f'$ in the obvious way, and $p$ is a regular value of $g \circ f'$ by construction. It follows that \[\deg (g\circ f) = \deg (g\circ f') = \deg f' \cdot \deg g = \deg f \cdot \deg g.\] We use the fact that the degree is the size of the preimage of any regular value to get the equality in the middle.\\
@@ -158,9 +220,9 @@
 
 (a) If two of the $\lambda_i$ are equal, say $\lambda_1 = \lambda_2$, then all points $[x:1:0:0]$ are fixed by $f$. These points are not isolated. If no two are equal there are exactly four fixed points: $p_0 = [1:0:0:0], p_1 = [0:1:0:0], \dots$. These points are isolated, and in the charts around the points $p_i$, $f$ is linear and the derivative is given by the diagonal matrix with diagonal entries $\lambda_j/\lambda_i$ for $j\neq i$. Since no two of the $\lambda_i$ are equal, $1$ is not an eigenvalue of the derivative of $f$. So $f$ is Lefschetz iff no two of the $\lambda_i$ are equal.\\
 
-(b) Continuing the previous discussion, the determinant of $Df_{p_i} - \id$ has the same sign as $\lambda_i^3\prod_j (\lambda_j - \lambda_i)$. The sign is also the sign given to the fixed point $p_i$: \[\text{Orientation of $p_i$} = \sgn(\lambda_i^3)\prod_j (\lambda_j - \lambda_i)\]. Since the expressions are symmetric, we may assume that $\lambda_0 < \dots < \lambda_3$. Depending on the signs of the $\lambda_i$, we calculate the Lefschetz numbers as follows: (assuming increasing $\lambda_i$.) If $0<\lambda_0$ the points get orientations $(-,+,-,+)$, and the Lefschetz number is $0$. If $\lambda_0 < 0 < \lambda_1$ then the points get orientations $(+, +, - , +)$ so the Lefschetz number is $2$. If $\lambda_1 < 0 <\lambda_2$, the points get orientations $(+,-,-,+)$ and the Lefschetz number of $f$ is $0$. The other cases can be obtained similarly. If $0$ is between $\lambda_i, \lambda_{i+1}$, then the Lefschetz number of $f$ is $2 (i-1\bmod 2)$. (Put $\lambda_{-1} = -\infty, \lambda_4 = \infty$.)\\
+(b) Continuing the previous discussion, the determinant of $Df_{p_i} - \id$ has the same sign as $\lambda_i^3\prod_j (\lambda_j - \lambda_i)$. The sign is also the sign given to the fixed point $p_i$: \[\text{Orientation of $p_i$} = \sgn\left (\lambda_i\prod_j (\lambda_j - \lambda_i)\right).\] Since the expressions are symmetric, we may assume that $\lambda_0 < \dots < \lambda_3$. Depending on the signs of the $\lambda_i$, we calculate the Lefschetz numbers as follows: (assuming increasing $\lambda_i$.) If $0<\lambda_0$ the points get orientations $(-,+,-,+)$, and the Lefschetz number is $0$. If $\lambda_0 < 0 < \lambda_1$ then the points get orientations $(+, +, - , +)$ so the Lefschetz number is $2$. If $\lambda_1 < 0 <\lambda_2$, the points get orientations $(+,-,-,+)$ and the Lefschetz number of $f$ is $0$. The other cases can be obtained similarly. If $0$ is between $\lambda_i, \lambda_{i+1}$, then the Lefschetz number of $f$ is $2 (i-1\bmod 2)$. (Put $\lambda_{-1} = -\infty, \lambda_4 = \infty$.)\\
 
-(c) The identity map is easily seen to be homotopic to the map $f$ when $\lambda_i = 2^i$, via the homotopy \[[x_0:\dots:x_3] \mapsto [x_0:(1+t)x_1:(1+(2^2-1)tx_2:(1+(2^3-1)t)x_3].\] Using the previous calculation, the Lefschetz number of such a map is $0$, hence the Euler characteristic of $\R\P^3$ is $0$.\\
+(c) The identity map is easily seen to be homotopic to the map $f$ when $\lambda_i = 2^i$, via the homotopy \[[x_0:\dots:x_3] \mapsto [x_0:(1+t)x_1:(1+(2^2-1)t)x_2:(1+(2^3-1)t)x_3].\] Using the previous calculation, the Lefschetz number of such a map is $0$, hence the Euler characteristic of $\R\P^3$ is $0$.\\
 
 (d) The maps corresponding to $(\lambda_i) = (1,2,3,4)$ and $(\lambda_i) = (-1,2,3,4)$ have different Lefschetz numbers, so they are not homotopic.
 
