@@ -1,0 +1,215 @@
+\documentclass{amsart}
+
+\usepackage{amsmath,amssymb,amsfonts,amscd}
+\usepackage[all,cmtip]{xy}
+\usepackage{enumerate}
+\usepackage{ amssymb, latexsym, amsmath}
+%\setcounter{MaxMatrixCols}{30}%
+\usepackage{fullpage}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{ marvosym }
+\usepackage{quiver}
+
+
+
+\numberwithin{equation}{section}
+
+%\usepackage{cjw-latex}
+
+%\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem*{thm}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{criterion}[theorem]{Criterion}
+%\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{wildconjecture}[theorem]{Wild Conjecture}
+
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem*{dfn}{Definition}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{solution}[theorem]{Solution}
+
+
+
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{remarks}[theorem]{Remarks}
+\newtheorem{summary}[theorem]{Summary}
+\newtheorem{observation}[theorem]{Observation}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+
+
+
+\makeatletter
+\newcommand{\rmnum}[1]{\romannumeral #1}
+\newcommand{\Rmnum}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\Ext}{\operatorname{Ext}}
+\newcommand{\Tor}{\operatorname{Tor}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\osum}{\oplus}
+\newcommand{\aff}{\operatorname{Aff}}
+
+\newcommand{\Id}{\operatorname{Id}}
+\newcommand{\concat}{(\Id \to \Omega \Sigma)}
+\newcommand{\eval}{(\Sigma\Omega \to \Id)}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\g}{\mathfrak{g}}
+\newcommand{\n}{\mathfrak{n}}
+\newcommand{\h}{\mathfrak{h}}
+\newcommand{\p}{\mathfrak{p}}
+\newcommand{\q}{\mathfrak{q}}
+\newcommand{\m}{\mathfrak{m}}
+\newcommand{\e}{\mathfrak{e}}
+\newcommand{\f}{\mathfrak{f}}
+\newcommand{\V}{\mathscr{V}}
+\newcommand{\D}{\mathscr{D}}
+\renewcommand{\S}{\mathscr{S}}
+\newcommand{\Sch}{\mathscr{C}}
+\newcommand{\Y}{\mathscr{Y}}
+\renewcommand{\u}{\mathfrak{u}}
+\newcommand{\set}[2]{ \left\{ {#1} \, \left| \, {#2} \right\}\right.}
+\newcommand{\A}{\mathbb{A}}
+\newcommand{\X}{\mathcal{X}}
+\renewcommand{\Im}{\operatorname{Im}}
+\newcommand{\T}{\mathscr{T}}
+\newcommand{\HH}{\mathscr{H}}
+\newcommand{\PGL}{\operatorname{PGL}}
+\newcommand{\righthookarrow}{\hookrightarrow}
+\newcommand{\sign}{\operatorname{sign}}
+\renewcommand{\_}[2]{\underbrace{#1}_{#2}}
+\renewcommand{\^}[2]{\overbrace{#1}_{#2}}
+\newcommand{\curverightarrow}{\curvearrowright}
+
+\newcommand{\z}{\mathfrak{z}}
+\renewcommand{\sl}{\mathfrak{sl}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\RP}{\mathbb{RP}}
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\C}{\mathbb{C}}
+\renewcommand{\H}{\mathbb{H}}
+\newcommand{\Ind}{\operatorname{Ind}}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Orb}{\mathcal{O}}
+\renewcommand{\k}{\mbox{\Fontauri k}}
+\newcommand{\Ad}{\operatorname{Ad}}
+\newcommand{\ad}{\operatorname{ad}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\Ker}{\operatorname{Ker}}
+\newcommand{\End}{\operatorname{End}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\Stab}{\mbox{Stab}}
+\newcommand{\Lie}{\operatorname{Lie}}
+\newcommand{\GL}{\operatorname{GL}}
+\newcommand{\SL}{\operatorname{SL}}
+\newcommand{\Sp}{\operatorname{Sp}}
+\newcommand{\Mp}{\operatorname{Mp}}
+\renewcommand{\a}{\mathfrak{a}}
+\newcommand{\Wh}{\operatorname{Wh}}
+\newcommand{\Span}{\operatorname{Span}}
+\newcommand{\WF}{\operatorname{WF}}
+\newcommand{\AC}{\operatorname{AC}}
+\newcommand{\Lin}{\operatorname{Lin}}
+\newcommand{\Diff}{\operatorname{Diff}}
+\newcommand{\Gen}{\operatorname{Gen\, Hom}}
+\newcommand{\Her}{\operatorname{Her}}
+\newcommand{\pivot}{&}
+\newcommand{\sgn}{\operatorname{sgn}}
+%\newcommand{C^{\infty}}{DS}
+\newcommand{\vsp}{{\vspace{0.2in}}}
+
+
+
+\title{Homework 9}
+
+\author{Sudharshan K V}
+\begin{document}
+\maketitle
+
+\section*{Problem 1}
+The topological manifold structure on $TX$ is given by the charts $\pi^{-1}(U)$ where $U$ is a chart on $X$. The homeomorphism to Euclidean space is given by the maps $h$. \\
+
+Let $p$ in $X$, and let $U$, and $V$ be charts around $p$. We compute the transition map between charts $\pi^{-1}(U)$ and $\pi^{-1}(V)$. Let $f$ denote the transition map between $U$ and $V$ (i.e., from $\varphi_U(U\cap V)$ to $\varphi_V(U\cap V)$). For each $q$ in $U \cap V$, the charts $\varphi_U, \varphi_V$ give (two) isomorphisms of $T_qX$ to $\R^n$. The transition map between these isomorphisms is $Df_q$.
+
+Now for $q$ in $U \cap V$ and a vector $v \in T_q$, we see that the transition map between the two (topological) charts $h$ wrt $U$ and $V$ takes \[(\varphi_U(q), D\varphi_U(v)) \mapsto (\varphi_V(q), D\varphi_V(v)).\] One therefore computes the transition map to be $(a, w) \mapsto (f(a), Df_a(w))$, which is clearly smooth. (The transition maps also induce isomorphisms of vector spaces at each fiber and hence $TX$ is a vector bundle).
+
+\section*{Problem 2}
+(a) The transition map in complex coordinates between the charts is given by $z \mapsto \frac1z$. The derivative of this map at $z$ is $-\frac1{z^2}$. Restricting the derivative to the points $z \in \C$ for which $|z| = 1$, one sees that the absolute value of the complex derivative is $1$. The complex absolute value of the derivative is equal to $MM^T$, where $M$ is the real derivative (see Midterm, Problem 4). This means that the image of $S^1$ under the derivative map to $\GL_2(\R)$ lands in $SO_2(\R)$ ($\det M>0$). Note that $SO_2$ is diffeomorphic to $S^1$ as Lie groups via the map \[
+  \begin{pmatrix}
+    a & -b\\
+    b & a
+  \end{pmatrix} \mapsto a+ib.\]
+The composition of the map $z \mapsto Df_z$ and the above isomorphism is just $z \mapsto -\frac1{z^2}$. Consider the fixed point $-1$ of $S^1$ under this transformation. One can immediately see that this map represents multiplication by $2$ on the fundamental group $\Z$ with base point $-1$. \\
+
+(b) Consider the $\R$-algebra of quarternion group $\H = \R[1,i,j,k]$, with the standard multiplication laws. There is an embedding of $S^3$ into $\H$ since $\H$ is diffeomorphic to $\R^4$ in the obvious way. Furthermore, one observes that for $x_1,x_2 \in S^3$ with $s_l = (a_l,b_l,c_l,d_l)$ in $\H$, one has that
+\begin{align*}
+  s_1s_2 = &(a_1a_2 -b_1b_2 -c_1c_2 -d_1d_2)^2 + (a_1b_2 + a_2b_1 + c_1d_2 - c_2d_1)^2 \\
+          &+(a_1c_2 + a_2c_1 -b_1d_2 + b_2d_1)^2 + (a_1d_2 + a_2d_1 + b_1c_2 - b_2c_1)^2 \\
+\end{align*}
+The final expression equals to $(a_1^2 + b_1^2 + c_1^2 + d_1^2)(a_2^2+b_2^2+c_2^2+d_2^2) = 1$. Therefore multiplication of quarternions restricts to a multiplication on $S^3$, and so does inversion: $\H$ is a skew field, so non-zero elements have inverses. If $s$ has an inverse $s'$ then $|s|\cdot |s'| = 1$. \\
+
+Hence $S^3$ is a Lie group. Any Lie group has trivial tangent bundle, since a basis of the Lie algebra can be translated by group elements to bases of other tangent spaces yielding linearly independent sections of maximum rank.
+
+\section*{Problem 3}
+Suppose $v_1, \dots, v_k$ are linearly independent. This automatically means $k \leq n$. Extend these vectors to a basis $\mathcal B$ of $V$. Consider the map $\det_m: V^k \to \R$ which takes any tuple of vectors $(w_1, \dots, w_k)$ to the determinant of the first $k\times k$ minor (recall, $k\leq n$) of the $n\times k$ matrix of $(w_1,\dots,w_k)$ written in the basis $\mathcal B$. Clearly, this map is multilinear and alternating in the $k$ arguments, since taking determinant is multilinear and alternating in the columns. It follows that $\det_m$ factors through $\Lambda^k V$. Also observe that $\det_m(v_1,\dots, v_k) = 1$ by definition, so $v_1, \dots, v_k$ cannot map to $0$ in $\Lambda^k V$. This means if $v_1, \dots, v_k$ are linearly independent then $v_1 \wedge \dots \wedge v_k$.\\
+
+If $v_1, \dots, v_k$ are linearly dependent, then write one of the $v_i$ as a linear combination of the other $v_j$'s and use multilinearity to expand the wedge $v_1\wedge \dots \wedge v_k$ at the $i$-th place. In this expansion, each wedge has two same entries and is hence zero. Therefore, $v_1 \wedge \dots \wedge v_k = 0$. 
+
+\section*{Problem 4}
+Let $A = A_{ij}$ in the bases $v_1, \dots, v_n$ and $w_1, \dots, w_n$. Then $Av_i = \sum_j A_{ij}w_j$. Using multilinearity at each coordinate and removing terms which have two same $w_j$'s, one has that
+
+\begin{align*}
+  Av_1 \wedge \dots \wedge Av_n &= \bigwedge_{i=1}^n\left (\sum_j A_{ij}w_j\right )\\
+                                &= \sum_\sigma \bigwedge_{i=1}^n A_{i\sigma(i)}w_{\sigma(i)} \\
+                                &= \sum_\sigma \left (\mathrm{sgn}(\sigma)\prod_i A_{i\sigma(i)} w_1 \wedge \dots \wedge w_n \right)\\
+                                &= \det (A)\cdot w_1\wedge \dots \wedge w_n.
+\end{align*}
+
+\section*{Problem 5}
+(a) We will show that the first form does not extend to all of $\C\P^1$. The argument for the other form is similar.
+
+Consider the change of coordinates between the charts: \[(x,y) \mapsto \left( \frac x{x^2 + y^2}, \frac{-y}{x^2+y^2} \right ).\] Therefore, in the second chart $(u,v)$, the same form must be the form (after some simple calculations) \[ \gamma = \frac {u^2 - v^2}{(1+u^2+v^2)(u^2+v^2)}du + \frac{-2uv}{(1+u^2+v^2)(u^2+v^2)}dv.\] However, this form does not extend (continuously) to the point $(u,v) = (0,0)$ since different directions towards $(0,0)$ give different values of the limit of $\gamma$.\\
+
+(b) Suppose otherwise that there are $1$-forms $\alpha, \beta$ for which $\omega = \alpha \wedge \beta$. Since $\omega$ is non-vanishing, $\alpha, \beta$ must be linearly independent on each fiber. Choosing dual bases of $\alpha, \beta$ at each tangent space, one obtains vector fields $\alpha^*, \beta^*$ which are linearly independent on each fiber. In particular, that means $\alpha^*$ is a non-vanishing vector field on $S^2$ which does not exist for Euler characteristic reasons.
+
+\section*{Problem 6}
+We claim that the differential form in complex coordinates $(w_1,w_2)$ of $U_1$ is given by
+\begin{align*}                                                                                                                                                                                                                                              
+\omega = \dfrac{i}{2} \left( \dfrac{1}{(1 + |w_1|^2 + |w_2|^2)^2} \right) &\Big((1 + |w_2|^2)dw_1 \wedge d\bar{w}_1 + (1 + |w_1|^2)dw_2 \wedge d\bar{w}_2 \\                                                                                                           
+&- \bar{w}_1w_2 dw_1 \wedge \bar{w}_2 - \bar{w}_2 w_1 dw_2 \wedge d\bar{w}_1)\Big).                                                                                                                                                                           
+\end{align*}
+
+We will only compute the coefficients of wedges $dw_1 \wedge d\bar w_1$ and $dw_1\wedge d\bar w_2$. The other two computations are similar. One has that $z_1 = \frac 1{w_1}$, $z_2 = \frac{w_2}{w_1}$. Under this change of coordinates, we have
+\begin{align*}
+  dz_1 & = -\frac1{w_1^2} dw_1,\\
+  dz_2 &= -\frac{w_2}{w_1^2} dw_1 + \frac1{w_1}dw_2,\\
+  d\bar z_1 &= \frac1{\bar w_1^2} d\bar w_1,\\
+  d\bar z_2 &= -\frac{\bar w_2}{\bar w_1^2} d\bar w_1 - \frac1{\bar w_1}d\bar w_2.
+\end{align*}
+Using these expressions, we painfully compute the coefficient of $dw_1 \wedge d\bar w_1$ in $\omega$ to be \[\frac i2 \frac{1}{(1+|w_1|^2+|w_2|^2)^2}\left(1 + \frac{|w_2|^2}{|w_1|^2} + |w_2|^2 + \frac{|w_2|^2}{|w_1|^2} - 2 \frac{|w_2|^2}{|w_1|^2}\right) = \frac i2 \frac{1}{(1+|w_1|^2+|w_2|^2)^2} \left(1 + |w_2|^2\right).\]
+Also, the coefficient of $dw_1 \wedge d\bar w_2$ is computed to be \[\frac i2 \frac{1}{(1+|w_1|^2+|w_2|^2)^2}\left((-w_2\bar w_1)\left(1+\frac{1}{|w_1^2|}\right) - \frac{w_2}{|w_1^2|} (-\bar w_1)\right) = \frac i2 \frac{1}{(1+|w_1|^2+|w_2|^2)^2}(-\bar w_1w_2).\]
+
+
+\end{document}

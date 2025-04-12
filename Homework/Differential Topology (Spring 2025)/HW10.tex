@@ -1,0 +1,200 @@
+\documentclass{amsart}
+
+\usepackage{amsmath,amssymb,amsfonts,amscd}
+\usepackage[all,cmtip]{xy}
+\usepackage{enumerate}
+\usepackage{ amssymb, latexsym, amsmath}
+%\setcounter{MaxMatrixCols}{30}%
+\usepackage{fullpage}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{ marvosym }
+\usepackage{quiver}
+
+
+
+\numberwithin{equation}{section}
+
+%\usepackage{cjw-latex}
+
+%\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem*{thm}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{criterion}[theorem]{Criterion}
+%\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{wildconjecture}[theorem]{Wild Conjecture}
+
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem*{dfn}{Definition}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{solution}[theorem]{Solution}
+
+
+
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{remarks}[theorem]{Remarks}
+\newtheorem{summary}[theorem]{Summary}
+\newtheorem{observation}[theorem]{Observation}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+
+
+
+\makeatletter
+\newcommand{\rmnum}[1]{\romannumeral #1}
+\newcommand{\Rmnum}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\Ext}{\operatorname{Ext}}
+\newcommand{\Tor}{\operatorname{Tor}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\osum}{\oplus}
+\newcommand{\aff}{\operatorname{Aff}}
+
+\newcommand{\Id}{\operatorname{Id}}
+\newcommand{\concat}{(\Id \to \Omega \Sigma)}
+\newcommand{\eval}{(\Sigma\Omega \to \Id)}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\g}{\mathfrak{g}}
+\newcommand{\n}{\mathfrak{n}}
+\newcommand{\h}{\mathfrak{h}}
+\newcommand{\p}{\mathfrak{p}}
+\newcommand{\q}{\mathfrak{q}}
+\newcommand{\m}{\mathfrak{m}}
+\newcommand{\e}{\mathfrak{e}}
+\newcommand{\f}{\mathfrak{f}}
+\newcommand{\V}{\mathscr{V}}
+\newcommand{\D}{\mathscr{D}}
+\renewcommand{\S}{\mathscr{S}}
+\newcommand{\Sch}{\mathscr{C}}
+\newcommand{\Y}{\mathscr{Y}}
+\renewcommand{\u}{\mathfrak{u}}
+\newcommand{\set}[2]{ \left\{ {#1} \, \left| \, {#2} \right\}\right.}
+\newcommand{\A}{\mathbb{A}}
+\newcommand{\X}{\mathcal{X}}
+\renewcommand{\Im}{\operatorname{Im}}
+\newcommand{\T}{\mathscr{T}}
+\newcommand{\HH}{\mathscr{H}}
+\newcommand{\PGL}{\operatorname{PGL}}
+\newcommand{\righthookarrow}{\hookrightarrow}
+\newcommand{\sign}{\operatorname{sign}}
+\renewcommand{\_}[2]{\underbrace{#1}_{#2}}
+\renewcommand{\^}[2]{\overbrace{#1}_{#2}}
+\newcommand{\curverightarrow}{\curvearrowright}
+
+\newcommand{\z}{\mathfrak{z}}
+\renewcommand{\sl}{\mathfrak{sl}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\RP}{\mathbb{RP}}
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\C}{\mathbb{C}}
+\renewcommand{\H}{\mathcal{H}}
+\newcommand{\Ind}{\operatorname{Ind}}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Orb}{\mathcal{O}}
+\renewcommand{\k}{\mbox{\Fontauri k}}
+\newcommand{\Ad}{\operatorname{Ad}}
+\newcommand{\ad}{\operatorname{ad}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\Ker}{\operatorname{Ker}}
+\newcommand{\End}{\operatorname{End}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\Stab}{\mbox{Stab}}
+\newcommand{\Lie}{\operatorname{Lie}}
+\newcommand{\GL}{\operatorname{GL}}
+\newcommand{\SL}{\operatorname{SL}}
+\newcommand{\Sp}{\operatorname{Sp}}
+\newcommand{\Mp}{\operatorname{Mp}}
+\renewcommand{\a}{\mathfrak{a}}
+\newcommand{\Wh}{\operatorname{Wh}}
+\newcommand{\Span}{\operatorname{Span}}
+\newcommand{\WF}{\operatorname{WF}}
+\newcommand{\AC}{\operatorname{AC}}
+\newcommand{\Lin}{\operatorname{Lin}}
+\newcommand{\Diff}{\operatorname{Diff}}
+\newcommand{\Gen}{\operatorname{Gen\, Hom}}
+\newcommand{\Her}{\operatorname{Her}}
+\newcommand{\pivot}{&}
+\newcommand{\sgn}{\operatorname{sgn}}
+%\newcommand{C^{\infty}}{DS}
+\newcommand{\vsp}{{\vspace{0.2in}}}
+
+
+
+\title{Homework 10}
+
+\author{Sudharshan K V}
+\begin{document}
+\maketitle
+
+\section*{Problem 1}
+(a) Let $\omega$ be a form. Let $U_i$, $\rho_i$ be a cover (with standard orientation) and an associated partition of unity. Let $V_j, \psi_j$ be another cover, partition of unity. We use without proof that in $\R^n$, the integration of a function is the sum over integrating the function over a partition of unity. Then, one has
+\begin{align*}
+  \sum_i \int_{U_i}\rho_i\omega &= \sum_i \int_{U_i} \sum_j\psi_j\rho_i\omega\\
+                                &= \sum_i \sum_j \int_{U_i\cap V_j} \rho_i\psi_j \omega.\\
+                                &= \sum_{i,j} \int_{U_i\cap V_j} \rho_i\psi_j\omega.
+\end{align*}
+The final expression is symmetric in $i,j$ so the integral of $\omega$ defined wrt $U_i, \rho_i$ is equal to that with respect to $V_j, \psi_j$. 
+\\
+
+(b) For $0$-dim manifolds, this is clear. Assume dimension of $X$ is positive. First observe that for a top form $f(x) dx_1\wedge \dots \wedge dx_n$ on $\R^n$, changing the orientation of $\R^n$ means that the form on $\R^n$ in the chart $x_1 \mapsto -x_1$ is just $f(-x_1, \dots, x_n) dx_1 \wedge \dots \wedge dx_n$. Therefore, in charts, one has $\int_U \omega$ = $-\int_{-U}\omega$. Extending to all of $X$ follows from definition.
+
+\section*{Problem 2}
+For dimension $0$ this is clear. So we do for positive dimension $X$. Suppose there is a non-vanishing top form $\omega$ on $X$. For a chart $U$ on $X$, $\omega$ in coordinates $U$ is of the form $f(x) dx_1 \wedge \dots \wedge dx_n$, where $f(x)$ is always positive or always negative. Modify the chart so that $f(x)$ is always positive. Consider the collection of all such charts. Now the transition map between any two charts has positive determinant, for in both charts in the standard coordinates the form $\omega$ is positive and it changes by the determinant under the change of coordinates. This shows $X$ is orientable.\\
+
+Conversely, suppose that $X$ is orientable, so choose a cover $U_i$ of $X$ so that all transition maps have positive determinant. Choose a partition of unity $\rho_i$ subordinate to $U_i$, and consider the forms $\omega_i = \rho_i dx_1 \wedge \dots \wedge dx_n$. One can extend these forms to all of $X$ by setting $\omega_i$ to be $0$ outside $U_i$. Thus we have a set of globally defined forms $\omega_i$. Consider $\omega = \sum_i \omega_i$. This is a finite sum at each point due to para-compactness. Furthermore, at any point, choosing a chart with standard orientation, all the $\omega_i$ have non-negative coefficient. Also, $\sum rho_i = 1$ so $\omega$ has a positive coefficient. This shows $\omega$ is non-vanishing top form on $X$.
+
+\section*{Problem 3}
+Under the coordinates $(0,2\pi) \to S^1$, $\theta \mapsto (\cos\theta, \sin \theta)$, one computes that the form given is just $\sin^2\theta d\theta + \cos^2 \theta d\theta = d\theta$. The integral of this form on $S^1$ is $2\pi$. (The chart misses one point which does not contribute to the integral.) See Problem 9(c) where a similar form gives $d\theta$ on circles.
+
+\section*{Problem 4}
+
+Let $\omega$ be the two form we integrate over $S^2$. We compute $d\omega = 3 dx\wedge dy \wedge dz$. Let $B$ be the closed unit ball in $\R^3$. Giving $S^2$ the standard orientation, we see that $S^2 = \partial B$. By Stokes' theorem, \[\int_B d\omega = \int_{S^2}\omega.\] The first integral is just thrice the volume of the unit sphere, which is $3\times \frac 43 \pi = 4\pi$.
+
+\section*{Problem 5}
+The only form which pulls back to something non-trivial on $\C\P^1$ is $dz_1 \wedge d\bar z_1$, and on the standard copy, $z_2= 0$. Removing a point $[0:1:0]$ from this allows us to change coordinates to $\R^2$ with $[1:x+iy:0] \mapsto (x,y)$. This preserves orientation by definition of orientation on $\C\P^1$. The integral of this form is \[\int_{\R^2} \frac{1}{(1+x^2+y^2)^2} dx\wedge dy = \int_0^{2\pi}\int_0^\infty \frac{r}{(1+r^2)^2} drd\theta.\] The final integral evaluates to $2\pi$ by M 408D.
+
+\section*{Problem 6}
+
+Consider the function $\ell: V^k \to \R$ given by \[(v_1 \dots v_k) \mapsto \sum_\sigma \sgn(\sigma) \prod_i (\alpha_i(v_{\sigma(i)})).\] This is clearly multilinear on the coordinates $v_i$, and is alternating too since swapping two of the $v_i$ translates the sum over $\sigma$ by a transposition, which contributes a $-1$ to the sign. Hence this map descends to $\wedge^k V \to \R$. Similarly, one observes that these coordinates are multilinear and alternating in the $\alpha_i$ too, so the map $\eta$ is well-defined.\\
+
+We will show that the map $\eta$ is injective. Due to the spaces being equidimensional, $\eta$ becomes an isomorphism. Choose $\alpha_1 \wedge \dots \wedge \alpha_k \neq 0$ in $\wedge^kV^*$. This means $\alpha_i$ are linearly independent. Extend the $\alpha_i$ to a basis of $V^*$, and let $v_i$ be the dual basis. Then evaluating the map $\ell = \eta(\alpha_i)$ on $v_1, \dots , v_k$ gives us $1$ since the only permutation which contributes is the identity. So $\ell$ is not the $0$ map. Therefore $\eta$ is injective and the isomorphism follows.\\
+
+WLOG assume that in the coordinates of $U$, $Z \subset X$ is the first $k$-coordinates inclusion $\R^k \subset \R^n$. Writing $\omega$ as a linear combination of standard $k$-forms, the only form which non-trivially pulls back to $Z$ is the form $g(x_1, \dots, x_k, 0, 0,...) dx_1 \wedge \dots \wedge dx_k$. Also note that $f(p) = \eta(\omega|_p) (\partial/\partial x_1 \wedge \dots \partial/\partial x_k)$ since there are no other pullbacks. But this just evaluates to \[f(p) = g(p,0,..,0),\] since the only  permutation which gives a non-zero value is the identity permutation, and that evaluates to $1$. Now the equality of integrals is by definition. 
+
+\section*{Problem 7}
+(a) For $0$-forms, this statement is obvious. Take a $1$-form $\omega = g(y) dy_1$ in coordinates $y_1$. In the change of coordinates under the map $f: x_1, \dots, x_n \mapsto y_1, \dots, y_n$, this form is given by \[\omega = g(f(x))\sum_i f_i(x) dx_i,\] where $f_i$ is the partial of $f$ wrt $x_i$. Computing $d\omega$ in the first coordinate system, one has $d\omega = \sum_j g_j dy_j \wedge dy_1$. In the second coordinate system, one has \[d\omega = \sum_i \sum_j \partial/\partial x_j (g(f(x)) f_i(x) dx_j\wedge dx_i.\] Swapping the summations, one finds that this form is exactly the form $d\omega$ in coordinates $y$ written in the coordinates $x$ due to the chain rule. Therefore, on $1$-forms, $d$ is well-defined on the coordinates. Also note that the definition of $d$ for higher forms is determined by $d$ defined on the lower forms since in (some) coordinates, $d(\omega_1 \wedge \omega_2) = d\omega_1 \wedge \omega_2 + (-1)^k \omega_1 \wedge d\omega_2$. Since $d$ is coordinate independent on $1$-forms, we see that $d$ is coordinate independent on all higher forms.\\
+
+(b) For $0$-forms, this statement is obvious. Indeed, for a function $g$, we have $df^*(g)$ = $d(f(g)) = \sigma (f(g))_i(x) dx_i$ and this is equal by chain rule and linearity of pullback to $f^*(dg)$. We follow a similar approach to part (a). In fact, in (a) we just proved that the pullback along a transition map (change of coordinates) commutes with $d$. Indeed we never used the fact that $f$ was a diffeomorphism anywhere; we only used that it was a differentiable map. So for $1$-forms $\omega$, we thus have $f^*(d\omega) = df^*(\omega)$. However, for higher forms, we just need to note that $f^*(\omega_1 \wedge \omega_2) = f^*(\omega_1) \wedge f^*(\omega_2).$ This follows from the abstract definition of $f^*$, since the natural maps $\bigwedge^k V \times \bigwedge^l V \to \bigwedge^{k+l}V$ for $V = T^*_xX,T^*_{f(x)}Y$ commute with the maps induced by $f$ on the exterior power of the cotangent spaces. Due to a similar argument, we find that for forms $\omega$ of all order, $f^*d\omega = df^*\omega$.
+\section*{Problem 8}
+The pullback commutes with the exterior derivative, so one has $\gamma^*(df) = d(\gamma^*f)$. But $\gamma^*f = f\circ \gamma$ since $f$ is a $0$-form. Thus, \[\int_a^b \gamma^*(df) = \int_a^b d(f\gamma) = f(\gamma(b)) - f(\gamma(a)) = f(q)-f(p),\] by the fundamental theorem of calculus. 
+
+\section*{Problem 9}
+(a) A simple calculation yields \[d\omega = \frac{1}{(x^2+y^2)^2} \left( (y^2-x^2) dy \wedge dx + (y^2 - x^2)dx \wedge dy\right) = 0.\]\\
+
+(b) Consider the function $f(x,y) = \arctan (y/x)$ ranging in $(-\tfrac\pi2, \tfrac\pi2)$. This is a well-defined smooth function on the right half-plane. One computes that \[df = \frac{1}{x^2+y^2} \left(-y dx + x dy \right).\]
+
+(c) The integral of $\omega$ over $S^1$ is $2\pi$. (See that the pullback of $\omega$ via the inclusion map $S^1 \to \R^2-0$ is just the form $d\theta$; this also motivates the selection of the function $f$ in part (b), which returns $\theta$ given $(x,y)$.) It follows that $\omega$ is not exact.
+
+\end{document}
