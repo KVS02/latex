@@ -161,9 +161,15 @@ Let $W = Z\times [0,1]$, and let $H: W \to X$ be the homotopy between $f_0, f_1$
 (b) Recall from Jordan Brower separation theorem that $S$ is the boundary of some compact manifold $B$. By Stokes' theorem, one has $\int_S \omega = \int_B d\omega$. The translation is a homotopy and $d\omega$ is closed, so we have $\int_B d\omega = \int_{T_v(B)} d\omega$. Since $T_v(S)$ is the boundary of $T_v(B)$, the result follows after another application of Stokes' theorem.
 
 \section*{Problem 5}
+Let $h:(-1,1) \to \R$ be a compactly supported function such that $\int_{(-1,1)}h(t)dt = 1$. For instance, we may choose a bump function normalized so that the integral is $1$. We claim that the form $\beta = h(t)dt$ is a Poincare dual for $S^1$.\\
+
+Let $\alpha = f d\theta + gdt$ be a closed form on $X$. First, we observe that \[\int_{S^1\times t} \alpha = \int_{S^1\times t} f(\theta,t)d\theta = \int_0^{2\pi}f(\theta,t)d\theta,\] for any $t\in (-1,1)$. Now, see that for all such $t$, the circles $S^1\times t$ are homotopic. Therefore the integrals of $\alpha$ over these circles are the same. Consequently, $\int_0^{2\pi} f d\theta$ is independent of $t$.\\
+
+By Fubini's theorem, it follows that \[\int_X \alpha \wedge \beta = \int_{-1}^1 h(t)\int_0^{2\pi}f(\theta,t) d\theta dt = \int_0^{2\pi}f(\theta,0)d\theta \times \int_{-1}^1 h(t).\] The last product of integrals equals to $\int_Z \alpha$ due to the choice of $h$.
+
 
 \section*{Problem 6}
-
+Let $m$ be the unique integer so that $\gamma$ is homotopic to the map $f_m: z\mapsto z^m$. From the proof of Problem 1, we find that \[\int_{S^1} \gamma^*\omega = \int_{S^1} f_m^*\omega.\] But $\omega$ restricted to the unit circle is the form $d\theta$. Pullback of $d\theta$ along $f_m: S^1 \to S^1$ is $md\theta$. It follows that $\int_{S^1}f_m^*\omega = 2\pi m$. Also $m$ is the winding number of $f_m$ which is also the winding number of $\gamma$. The result follows.
 
 
 \section*{Problem 7}
@@ -171,7 +177,6 @@ Let $W = Z\times [0,1]$, and let $H: W \to X$ be the homotopy between $f_0, f_1$
 
 (b) Consider the map $[\omega] \mapsto \int_X \omega$ for top forms $\omega$. Because of Stokes' theorem, integral of exact top forms on $X$ is zero. Therefore, the map yields a well-defined linear map on the cohomology classes. Combining this with the map from (a), the integration of a wedge is well-defined on cohomology.\\
 
-(c) LATER.
-
+(c) The $1$-forms on the torus are ($S^1$-function) linear combinations of $dx,dy$, where these forms arise from the usual forms on $\R^2$ as a quotient. Recall that these two forms generate the first dR cohomology group of $T$. The intersection pairing is thus given by $(dx,dy) = \int_T dx \wedge dy = 1$, where we normalize $dx,dy$ so that the integral is $1$. It follows that $(dy,dx) = -1$. The other pairings $(dx,dx)$ and $(dy,dy)$ are both zero.
 
 \end{document}
