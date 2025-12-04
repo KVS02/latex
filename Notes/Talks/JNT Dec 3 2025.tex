@@ -1,0 +1,340 @@
+\documentclass{amsart}
+
+\usepackage{amsmath,amssymb,amsfonts,amscd}
+\usepackage[all,cmtip]{xy}
+\usepackage{enumerate}
+\usepackage{ amssymb, latexsym, amsmath}
+%\setcounter{MaxMatrixCols}{30}%
+\usepackage{fullpage}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{ marvosym }
+\usepackage{quiver}
+~
+
+
+\numberwithin{equation}{section}
+
+%\usepackage{cjw-latex}
+
+%\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem*{thm}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{criterion}[theorem]{Criterion}
+%\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{wildconjecture}[theorem]{Wild Conjecture}
+
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem*{dfn}{Definition}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{solution}[theorem]{Solution}
+
+
+
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{remarks}[theorem]{Remarks}
+\newtheorem{summary}[theorem]{Summary}
+\newtheorem{observation}[theorem]{Observation}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+
+
+
+\makeatletter
+\newcommand{\rmnum}[1]{\romannumeral #1}
+\newcommand{\Rmnum}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\Ext}{\operatorname{Ext}}
+\newcommand{\Tor}{\operatorname{Tor}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\osum}{\oplus}
+\newcommand{\aff}{\operatorname{Aff}}
+
+\newcommand{\Id}{\operatorname{Id}}
+\newcommand{\concat}{(\Id \to \Omega \Sigma)}
+\newcommand{\eval}{(\Sigma\Omega \to \Id)}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\g}{\mathfrak{g}}
+\newcommand{\n}{\mathfrak{n}}
+\newcommand{\h}{\mathfrak{h}}
+\newcommand{\p}{\mathfrak{p}}
+\newcommand{\q}{\mathfrak{q}}
+\newcommand{\m}{\mathfrak{m}}
+\newcommand{\e}{\mathfrak{e}}
+\newcommand{\f}{\mathfrak{f}}
+\newcommand{\V}{\mathscr{V}}
+\newcommand{\D}{\mathscr{D}}
+\renewcommand{\S}{\mathscr{S}}
+\newcommand{\Sch}{\mathscr{C}}
+\newcommand{\Y}{\mathscr{Y}}
+\renewcommand{\u}{\mathfrak{u}}
+\newcommand{\set}[2]{ \left\{ {#1} \, \left| \, {#2} \right\}\right.}
+\newcommand{\A}{\mathbb{A}}
+\newcommand{\X}{\mathcal{X}}
+\renewcommand{\Im}{\operatorname{Im}}
+\newcommand{\T}{\mathscr{T}}
+\newcommand{\HH}{\mathscr{H}}
+\newcommand{\PGL}{\operatorname{PGL}}
+\newcommand{\righthookarrow}{\hookrightarrow}
+\newcommand{\sign}{\operatorname{sign}}
+\renewcommand{\_}[2]{\underbrace{#1}_{#2}}
+\renewcommand{\^}[2]{\overbrace{#1}_{#2}}
+\newcommand{\curverightarrow}{\curvearrowright}
+
+\newcommand{\z}{\mathfrak{z}}
+\renewcommand{\sl}{\mathfrak{sl}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\RP}{\mathbb{RP}}
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\C}{\mathbb{C}}
+\renewcommand{\H}{\mathcal{H}}
+\newcommand{\Ind}{\operatorname{Ind}}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Orb}{\mathcal{O}}
+\renewcommand{\k}{\mbox{\Fontauri k}}
+\newcommand{\Ad}{\operatorname{Ad}}
+\newcommand{\ad}{\operatorname{ad}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\Ker}{\operatorname{Ker}}
+\newcommand{\End}{\operatorname{End}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\Stab}{\mbox{Stab}}
+\newcommand{\Lie}{\operatorname{Lie}}
+\newcommand{\GL}{\operatorname{GL}}
+\newcommand{\SL}{\operatorname{SL}}
+\newcommand{\Sp}{\operatorname{Sp}}
+\newcommand{\Mp}{\operatorname{Mp}}
+\renewcommand{\a}{\mathfrak{a}}
+\newcommand{\Wh}{\operatorname{Wh}}
+\newcommand{\Span}{\operatorname{Span}}
+\newcommand{\WF}{\operatorname{WF}}
+\newcommand{\AC}{\operatorname{AC}}
+\newcommand{\Lin}{\operatorname{Lin}}
+\newcommand{\Diff}{\operatorname{Diff}}
+\newcommand{\Gen}{\operatorname{Gen\, Hom}}
+\newcommand{\Her}{\operatorname{Her}}
+\newcommand{\pivot}{&}
+\newcommand{\sgn}{\operatorname{sgn}}
+%\newcommand{C^{\infty}}{DS}
+\newcommand{\vsp}{{\vspace{0.2in}}}
+
+
+
+\title{Notes}
+
+\author{Sudharshan K V}
+\begin{document}
+\maketitle
+
+\section*{Some general results}
+
+\subsection*{Structure theory}
+
+$M$ is a finitely generated torsion $\Lambda$-module.
+
+1. The $\Lambda$-rank of $M$ is well defined $\Rightarrow$ there is an injection with torsion cokernel.
+
+2. $M_\Gamma$ is finite if and only if $M^\Gamma$ is finite for $M$ torsion.
+
+\subsection*{Galois groups}
+
+Let $F_\infty/F$ be a $\mathbf{Z}_p$-extension, $F_n = F_\infty^{\Gamma_n}$.  
+Let $M_\infty/F$ be a Galois extension such that $M_\infty/F_\infty$ is pro-$p$, abelian.  
+Set $X := \operatorname{Gal}(M_\infty/F_\infty)$. Then $X$ is a $\Lambda$-module and let $M_n$ be the maximal abelian extension of $F_n$ inside $M_\infty$. Then
+$$
+\omega_n X = \operatorname{Gal}(M_\infty/M_n).
+$$
+
+\subsection*{Cohomology}
+
+$\Gamma$ is procyclic, so its cohomological dimension is $1$.
+
+For a short exact sequence
+$$
+0 \to A \to B \to C \to 0
+$$
+one has
+$$
+H^0(\Gamma,M) = M^\Gamma,\quad H^1(\Gamma,M) = M_\Gamma.
+$$
+
+Then, for an exact sequence $0 \to A \to B \to C \to 0$ (alternatively, use the snake lemma on a diagram with vertical $\Gamma$-coinvariants) one obtains the long exact sequence in cohomology.
+
+\section*{Cyclotomic units}
+
+\textbf{Theorem.} Let $M_n$ be the maximal abelian $p$-extension of $F_n$ unramified outside $p$. Then $M_n/F_\infty$ is finite.
+
+\textit{Proof (sketch).} One has
+$$
+U_n/E_n \cong \operatorname{Gal}(M_n/L_n)
+$$
+and $L_n/F_n$ is finite. The $p$-rank of the class group is given by
+$$
+\text{$p$-rank} = [F_n:\mathbf{Q}]
+$$
+(Leopoldt conjecture input).
+
+Define $\mathcal{N}_\infty(U_n)$, $\mathcal{N}_\infty(K_n)$ as projective limits under norm maps.
+
+\textbf{Theorem.} One wants
+$$
+\mathbf{Z}_p\text{-rank } E_n' = [F_n:\mathbf{Q}] - 1.
+$$
+
+Let
+$$
+\alpha_{n,u}: \Gamma_n \to \mathcal{N}_\infty(U_n),\qquad
+\alpha_{n,c}: \Gamma_n \to C_\infty
+$$
+be the natural maps. Then:
+\begin{enumerate}
+\item $(U_\infty/C_\infty)^{\Gamma_n} = 0$.
+\item $\operatorname{Val}(C_\infty) = \mathcal{N}_\infty(U_n)/C_\infty$.
+\end{enumerate}
+These induce a homomorphism
+$$
+\Gamma_n \to \mathcal{N}_\infty(U_n)/C_\infty,
+$$
+and one has
+$$
+\ker(\alpha_{n,u}) \cong \ker(\alpha_{n,c}) \cong \mathbf{Z}_p
+$$
+with a trivial Galois action.
+
+\section*{Global units}
+
+\textbf{Theorem.} $L'(E_\infty)$ is principal in $\Lambda(\Gamma)$.
+
+\textbf{Proposition (Iwasawa).} $X_{\Gamma_0}$ has no non-zero finite $\Lambda(\Gamma_0)$-submodule, where $\Gamma_0 = \operatorname{Gal}(F_\infty/F_0)$.
+
+Use this without proof.
+
+There is a map $E_\infty \to \Lambda(G)$ with torsion cokernel, so $\operatorname{rk}_\Lambda(E_\infty)$ is well defined and equal to $1$. Thus,
+$$
+0 \to E_\infty \to \Lambda(G) \to Q \to 0
+$$
+for some finite $\Lambda(G)$-module $Q$. One wants $Q = 0$. If $Q_{\Gamma_0} = 0$ then $Q = 0$ (Nakayama lemma).
+
+From
+$$
+0 \to E_\infty \to \Lambda(G) \to Q \to 0
+$$
+taking $\Gamma_0$-coinvariants gives an exact sequence of $\mathbf{Z}_p$-modules
+$$
+0 \to (E_\infty)_{\Gamma_0} \to \Lambda(G)_{\Gamma_0} \to Q_{\Gamma_0} \to 0,
+$$
+and $\Lambda(G)_{\Gamma_0}$ is free, so $Q_{\Gamma_0}$ is the $p$-torsion submodule of $(E_\infty)_{\Gamma_0}$. Now one shows $(E_\infty)_{\Gamma_0}$ has no torsion.
+
+There is an exact sequence
+$$
+1 \to V_\infty \to U_\infty \to \operatorname{Gal}(M_\infty/L_\infty) \to 0.
+$$
+Then $\operatorname{Gal}(M_\infty/L_\infty)_{\Gamma_0} = 0$, and $\operatorname{Gal}(M_\infty/L_\infty)^{\Gamma_0} \le X_{\Gamma_0}$. Using class field theory and Leopoldt, one deduces $X_{\Gamma_0}$ is finite, hence $\operatorname{Gal}(M_\infty/L_\infty)_{\Gamma_0} = 0$.
+
+From various norm and valuation maps one gets an exact sequence
+$$
+0 \to \mathcal{N}_\infty(E_n) \to \mathcal{N}_\infty(U_n) \to \mathcal{N}_\infty(U_n')/\mathcal{N}_\infty(E_n) \to 0,
+$$
+so
+$$
+\operatorname{Gal}(M_\infty/L_\infty)_{\Gamma_n} \cong \mathcal{N}_\infty(U_n)/\mathcal{N}_\infty(E_n).
+$$
+Thus there is an exact sequence
+$$
+0 \to \operatorname{Gal}(M_\infty/L_\infty) \to X_\infty \to Y_\infty \to 0,
+$$
+with
+$$
+(X_\infty)_{\Gamma_n} = \operatorname{Gal}(M_n/F_\infty),\quad
+(Y_\infty)_{\Gamma_n} = \operatorname{Gal}(L_n/F_n)\times\operatorname{Gal}(L_nF_\infty/F_\infty).
+$$
+By class field theory
+$$
+\operatorname{Gal}(M_n/L_nF_\infty) \cong \mathcal{N}_\infty(U_n)/E_n,
+$$
+and
+$$
+Y_\infty \cong E_n / \mathcal{N}_\infty(E_n)
+$$
+for large $n$, where $Y_\infty$ is the largest finite $\Lambda(\Gamma_0)$-submodule of $X_\infty$.
+
+\section*{Iwasawa $L$-functions}
+
+One has
+$$
+L'(E_\infty) = \alpha \Lambda(G),\qquad
+L'(C_\infty) = \beta \Lambda(G),
+$$
+with $\alpha\beta = \zeta_p'(0,1)$ for some $\beta$. There is a canonical map
+$$
+T: E_\infty/C_\infty = \Lambda(G)/\beta\Lambda(G)
+$$
+inducing an isomorphism
+$$
+\mathcal{N}_\infty(E_n)/C_\infty \cong R_n/pR_n.
+$$
+
+If (First Theorem) $K_\infty/K_0$ is the maximal abelian $p$-extension, and $M_\infty$ is the maximal abelian $p$-extension of $K_n$, then
+$$
+\operatorname{Gal}(M_\infty/K_\infty)_{\Gamma_n} \cong \operatorname{Gal}(M_n/K_\infty),
+$$
+and $\widehat{K}_\infty$ denotes the $p$-adic completion. Let
+$$
+\mathcal{Z}_\infty = \varprojlim K_n
+$$
+with inverse limit taken with respect to the norm maps. Then
+$$
+\mathcal{Z}_\infty \cong \operatorname{Gal}(M_\infty/K_\infty),
+$$
+and
+$$
+\mathcal{N}_\infty(K_n) \cong \operatorname{Gal}(M_n/K_\infty).
+$$
+From local class field theory one gets a natural map
+$$
+\mathcal{Z}_\infty \to \mathcal{N}_\infty(K_n)
+$$
+whose image identifies with $\mathcal{Z}_\infty = \mathcal{N}_\infty(K).$
+
+On the global side, $W_n$ is the subgroup of $U_n$ generated by cyclotomic units and their Galois conjugates, with $W_0 = \mathcal{N}_\infty(K_n)$, and valuation induces
+$$
+0 \to \dots \to W_n \to \mathbf{Z}_p \to 0.
+$$
+
+Cyclotomic units: taking $\zeta_{p^n}$ and its conjugates, one gets
+$$
+0 \to D_n \to W_n \to \mathbf{Z}_p \to 0.
+$$
+Since $(D_n : D_1)$ is prime to $p$, the projective limit $D_\infty\otimes \mathbf{Z}_p$ is isomorphic to its closure $C_\infty'$ inside $U_\infty$; the $\mathbf{Z}_p$-rank of $E_n$ equals the $\mathbf{Z}$-rank of $D_n$ by Leopoldt.
+
+Finally, snake lemma arguments on the diagram relating $U_n$, $K_n^\times$, and their completions show
+$$
+(U_\infty/C_\infty)_{\Gamma_n}
+$$
+is finite but an elementary $\Lambda(G)$-module has no non-zero finite submodule, so $U_\infty/C_\infty = 0$. This implies $\ker(\alpha_{n,u}) \cong \ker(\alpha_{n,c})$, and comparing $\mathbf{Z}_p$-ranks in the exact sequences shows the desired injectivity.
+
+
+
+\end{document}
