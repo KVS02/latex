@@ -1,0 +1,173 @@
+\documentclass{amsart}
+
+\usepackage{amsmath,amssymb,amsfonts,amscd}
+\usepackage[all,cmtip]{xy}
+\usepackage{enumerate}
+\usepackage{ amssymb, latexsym, amsmath}
+%\setcounter{MaxMatrixCols}{30}%
+\usepackage{fullpage}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{ marvosym }
+\usepackage{quiver}
+
+
+
+\numberwithin{equation}{section}
+
+%\usepackage{cjw-latex}
+
+%\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem*{thm}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{criterion}[theorem]{Criterion}
+%\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{wildconjecture}[theorem]{Wild Conjecture}
+
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem*{dfn}{Definition}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{solution}[theorem]{Solution}
+
+
+
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{remarks}[theorem]{Remarks}
+\newtheorem{summary}[theorem]{Summary}
+\newtheorem{observation}[theorem]{Observation}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+
+
+
+\makeatletter
+\newcommand{\rmnum}[1]{\romannumeral #1}
+\newcommand{\Rmnum}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\Ext}{\operatorname{Ext}}
+\newcommand{\Tor}{\operatorname{Tor}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\osum}{\oplus}
+\newcommand{\aff}{\operatorname{Aff}}
+
+\newcommand{\Id}{\operatorname{Id}}
+\newcommand{\concat}{(\Id \to \Omega \Sigma)}
+\newcommand{\eval}{(\Sigma\Omega \to \Id)}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\g}{\mathfrak{g}}
+\newcommand{\n}{\mathfrak{n}}
+\newcommand{\h}{\mathfrak{h}}
+\newcommand{\p}{\mathfrak{p}}
+\newcommand{\q}{\mathfrak{q}}
+\newcommand{\m}{\mathfrak{m}}
+\newcommand{\e}{\mathfrak{e}}
+\newcommand{\f}{\mathfrak{f}}
+\newcommand{\V}{\mathscr{V}}
+\newcommand{\D}{\mathscr{D}}
+\renewcommand{\S}{\mathscr{S}}
+\newcommand{\Sch}{\mathscr{C}}
+\newcommand{\Y}{\mathscr{Y}}
+\renewcommand{\u}{\mathfrak{u}}
+\newcommand{\set}[2]{ \left\{ {#1} \, \left| \, {#2} \right\}\right.}
+\newcommand{\A}{\mathbb{A}}
+\newcommand{\X}{\mathcal{X}}
+\renewcommand{\Im}{\operatorname{Im}}
+\newcommand{\T}{\mathscr{T}}
+\newcommand{\HH}{\mathscr{H}}
+\newcommand{\PGL}{\operatorname{PGL}}
+\newcommand{\righthookarrow}{\hookrightarrow}
+\newcommand{\sign}{\operatorname{sign}}
+\renewcommand{\_}[2]{\underbrace{#1}_{#2}}
+\renewcommand{\^}[2]{\overbrace{#1}_{#2}}
+\newcommand{\curverightarrow}{\curvearrowright}
+
+\newcommand{\z}{\mathfrak{z}}
+\renewcommand{\sl}{\mathfrak{sl}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\RP}{\mathbb{RP}}
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\C}{\mathbb{C}}
+\renewcommand{\H}{\mathcal{H}}
+\newcommand{\Ind}{\operatorname{Ind}}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Orb}{\mathcal{O}}
+\renewcommand{\k}{\mbox{\Fontauri k}}
+\newcommand{\Ad}{\operatorname{Ad}}
+\newcommand{\ad}{\operatorname{ad}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\Ker}{\operatorname{Ker}}
+\newcommand{\End}{\operatorname{End}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\Stab}{\mbox{Stab}}
+\newcommand{\Lie}{\operatorname{Lie}}
+\newcommand{\GL}{\operatorname{GL}}
+\newcommand{\SL}{\operatorname{SL}}
+\newcommand{\Sp}{\operatorname{Sp}}
+\newcommand{\Mp}{\operatorname{Mp}}
+\renewcommand{\a}{\mathfrak{a}}
+\newcommand{\Wh}{\operatorname{Wh}}
+\newcommand{\Span}{\operatorname{Span}}
+\newcommand{\WF}{\operatorname{WF}}
+\newcommand{\AC}{\operatorname{AC}}
+\newcommand{\Lin}{\operatorname{Lin}}
+\newcommand{\Diff}{\operatorname{Diff}}
+\newcommand{\Gen}{\operatorname{Gen\, Hom}}
+\newcommand{\Her}{\operatorname{Her}}
+\newcommand{\pivot}{&}
+\newcommand{\sgn}{\operatorname{sgn}}
+%\newcommand{C^{\infty}}{DS}
+\newcommand{\vsp}{{\vspace{0.2in}}}
+
+
+
+\title{$p$-adic Reps, Spring 2026 Meeting Notes}
+
+\author{Sudharshan K V}
+\begin{document}
+\maketitle
+
+\section{Meeting 1}
+Smoothness is the natural condition to impose on groups which are locally compact and totally disconnected - topologies on $\C$ and profinite groups are very different. Continuity is a weaker condition, for characters continuity and smoothness are the same. For discrete modules, the notions of continuity and smoothness agree.\\
+
+It is hard to construct finite dimensional non-smooth representations. One may look at $C(G)$, the space of functions on $G$. This is very non-smooth. Perhaps looking at this can produce exact sequences of abstract representations where taking the smooth vectors wouldn't be right exact.\\
+
+Restriction of an induced representation is nice for normal subgroups: $\Ind_H^G(V)|_H = \osum_{g\in G/H} V^g$. In general, this is the subject of Mackey theory. \\
+
+Invariants and coinvaraints are isomorphic for a representation of a compact group.
+
+\section{Meeting 2}
+[Before meeting] Smooth duals are just usual duals when looking at compact-invariant subspaces. Admissibility implies reflexivity. Exactness of representations is the same as exactness at each compact-invariant level. Seems to be powerful.\\
+
+Measures. Haar measure can be used to integrate some functions which are not compactly supported - there are some things which I need to verify - why left Haar measure and left invariant functions?. Integration of vector valued functions - can be done because functionals separate different vectors.\\
+
+Modular character of a group may not be the same as the modular character of the subgroup. However if the subgroup is open they agree. There is a characterization in Prop, 3.4. For open subgroups, this is evident from Frobenius reciprocity. Frobenius reciprocity (for compact induction) is not valid for non-open subgroups in general.\\
+
+\subsection{Meeting Notes}
+Some computations on integration of left compact-invariant functions not necessarily compactly supported. It is important that the function and the Haar measure are both left invariant for the resulting integration to be left invariant.\\
+
+Integration of locally constant functions are just sums (compact support - finite sums). Integrals are easier to manipulate in general; we see this later when computing the product of Hecke operators, convolution is an integration.\\
+
+Remark on Schur's lemma: General form - if dimension of irrep $<$ cardinality of (algebraically closed) base field then Schur's lemma holds (same proof). But in the case of representations of $p$-adic groups over $\bar \F_\ell$ ($\ell \neq p$), Schur's lemma still holds (technical reasons?). Not sure about mod-$p$ representations of $p$-adic groups.
+\end{document}

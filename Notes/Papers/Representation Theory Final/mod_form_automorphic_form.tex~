@@ -1,0 +1,183 @@
+\documentclass{amsart}
+
+\usepackage{amsmath,amssymb,amsfonts,amscd}
+\usepackage[all,cmtip]{xy}
+\usepackage{enumerate}
+\usepackage{ amssymb, latexsym, amsmath}
+%\setcounter{MaxMatrixCols}{30}%
+\usepackage{fullpage}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{ marvosym }
+\usepackage{quiver}
+
+
+
+\numberwithin{equation}{section}
+
+%\usepackage{cjw-latex}
+
+%\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem*{thm}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{criterion}[theorem]{Criterion}
+%\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{wildconjecture}[theorem]{Wild Conjecture}
+
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem*{dfn}{Definition}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{solution}[theorem]{Solution}
+
+
+
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{remarks}[theorem]{Remarks}
+\newtheorem{summary}[theorem]{Summary}
+\newtheorem{observation}[theorem]{Observation}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+
+
+
+\makeatletter
+\newcommand{\rmnum}[1]{\romannumeral #1}
+\newcommand{\Rmnum}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\Ext}{\operatorname{Ext}}
+\newcommand{\Tor}{\operatorname{Tor}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\osum}{\oplus}
+\newcommand{\aff}{\operatorname{Aff}}
+
+\newcommand{\Id}{\operatorname{Id}}
+\newcommand{\concat}{(\Id \to \Omega \Sigma)}
+\newcommand{\eval}{(\Sigma\Omega \to \Id)}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\g}{\mathfrak{g}}
+\newcommand{\n}{\mathfrak{n}}
+\newcommand{\h}{\mathfrak{h}}
+\newcommand{\p}{\mathfrak{p}}
+\newcommand{\q}{\mathfrak{q}}
+\newcommand{\m}{\mathfrak{m}}
+\newcommand{\e}{\mathfrak{e}}
+\newcommand{\f}{\mathfrak{f}}
+\newcommand{\V}{\mathscr{V}}
+\newcommand{\D}{\mathscr{D}}
+\renewcommand{\S}{\mathscr{S}}
+\newcommand{\Sch}{\mathscr{C}}
+\newcommand{\Y}{\mathscr{Y}}
+\renewcommand{\u}{\mathfrak{u}}
+\newcommand{\set}[2]{ \left\{ {#1} \, \left| \, {#2} \right\}\right.}
+\newcommand{\A}{\mathbb{A}}
+\newcommand{\X}{\mathcal{X}}
+\renewcommand{\Im}{\operatorname{Im}}
+\newcommand{\T}{\mathscr{T}}
+\newcommand{\HH}{\mathscr{H}}
+\newcommand{\PGL}{\operatorname{PGL}}
+\newcommand{\righthookarrow}{\hookrightarrow}
+\newcommand{\sign}{\operatorname{sign}}
+\renewcommand{\_}[2]{\underbrace{#1}_{#2}}
+\renewcommand{\^}[2]{\overbrace{#1}_{#2}}
+\newcommand{\curverightarrow}{\curvearrowright}
+
+\newcommand{\z}{\mathfrak{z}}
+\renewcommand{\sl}{\mathfrak{sl}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\RP}{\mathbb{RP}}
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\C}{\mathbb{C}}
+\renewcommand{\H}{\mathcal{H}}
+\newcommand{\Ind}{\operatorname{Ind}}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Orb}{\mathcal{O}}
+\renewcommand{\k}{\mbox{\Fontauri k}}
+\newcommand{\Ad}{\operatorname{Ad}}
+\newcommand{\ad}{\operatorname{ad}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\Ker}{\operatorname{Ker}}
+\newcommand{\End}{\operatorname{End}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\Stab}{\mbox{Stab}}
+\newcommand{\Lie}{\operatorname{Lie}}
+\newcommand{\GL}{\operatorname{GL}}
+\newcommand{\SL}{\operatorname{SL}}
+\newcommand{\SO}{\operatorname{SO}}
+\newcommand{\Sp}{\operatorname{Sp}}
+\newcommand{\Mp}{\operatorname{Mp}}
+\renewcommand{\a}{\mathfrak{a}}
+\newcommand{\Wh}{\operatorname{Wh}}
+\newcommand{\Span}{\operatorname{Span}}
+\newcommand{\WF}{\operatorname{WF}}
+\newcommand{\AC}{\operatorname{AC}}
+\newcommand{\Lin}{\operatorname{Lin}}
+\newcommand{\Diff}{\operatorname{Diff}}
+\newcommand{\Gen}{\operatorname{Gen\, Hom}}
+\newcommand{\Her}{\operatorname{Her}}
+\newcommand{\pivot}{&}
+\newcommand{\sgn}{\operatorname{sgn}}
+%\newcommand{C^{\infty}}{DS}
+\newcommand{\vsp}{{\vspace{0.2in}}}
+
+
+
+\title{Automorphic Form associated to a Modular Form}
+
+\author{Sudharshan K V}
+\begin{document}
+\maketitle
+
+\section{Introduction}
+We construct an automorphic form on $\SL_2$ from a given modular form.
+\section{Adeles}
+
+\section{Automorphic Forms}
+
+\subsection{Strong Approximation}
+
+\section{From Modular forms to Automorphic Forms}
+Let $\Gamma = \Gamma_0(N)$ be the congruence subgroup of $\SL_2(\Z)$ consisting of matrices which are upper triangular modulo $N$. Corresponding to $\Gamma$, there is a compact open subgroup of $K_0(N)$ of $\SL_2(\A)$. Indeed, for $p$ a rational prime, consider the subgroup \[K_0(N)_p = \left \{
+  \begin{pmatrix}
+    a & b \\ c & d
+  \end{pmatrix} \in \SL_2(\Z_p) : c \equiv 0 \bmod p^{v_p(N)}
+  \right \},\]
+where $v_p(N)$ denotes the maximum power of $p$ dividing $N$. When $p$ does not divide $N$, $K_0(N)_p$ is the maximal compact subgroup $\SL_2(\Z_p)$ of $\SL_2(\Q_p)$. Then define \[K_0(N) = \prod_p K_0(N)_p = \left \{
+  \begin{pmatrix}
+    a & b \\ c & d
+  \end{pmatrix} \in \SL_2(\widehat \Z) : c \equiv 0 \bmod N
+  \right \}\] 
+Let $K_\infty$ be the maximal compact $SO_2$ of $SL_2(\R)$. Let $K = K_0(N)K_\infty$, so $K$ is a compact open subgroup of $\SL_2(\A)$. One recovers $\Gamma_0(N)$ from $K$ by $K_0(N) \cap \SL_2(\Q) = \Gamma_0(N)$. \\
+
+Let $f$ be a modular form of weight $k$ with level $\Gamma$. For $\gamma \in \SL_2(\R)$, define the slash operator on $f$ by \[f|\gamma(z) = j(\gamma,z)^{-k}f(\gamma(z)).\] Here $j$ denotes the automorphy factor (which satsifies the cocycle condition). One can define a function $\varphi_f: \SL_2(\R) \to \C$ by \[\varphi_f(\gamma) = f|_\gamma(i).\]
+
+Observe that this function is $\Gamma_0(N)$ invariant, so $\varphi_f: \Gamma_0(N)\backslash \SL_2(\R) \to \C$. But by strong approximation, \[\Gamma_0\backslash \SL_2(\R) \simeq \SL_2(\Q) \backslash \SL_2(\A) /K_0(N).\] Therefore, $\varphi_f$ is a function on the adelic quotient $\SL_2(\Q)\backslash \SL_2(\A)$ which is invariant under the compact set $K_0(N)$. \\
+
+Furthermore, one checks that $K_\infty$ acts on $f$ through the slash operator by rotations. In other words, $\varphi_f$ is an eigenvector under the action of $K_\infty$ on $\SL_2(\R)$. \\
+
+Since $f$ is holomorphic, $\Delta f = 0$ where $\Delta$ is the hyperbolic laplacian. Therefore $\varphi_f$ is an eigenvector of the action of $\mathcal Z_\g$ on $\SL_2(\R)$. This gives $\mathcal Z_\g$-finiteness of $\varphi_f$.
+
+Check some growth conditions to make sure it is indeed an automorphic form. This comes from $f$ having moderate growth due to holomorphy at the cusps.
+
+\end{document}

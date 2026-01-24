@@ -142,15 +142,28 @@
 
 
 
-\title{Notes}
+\title{$p$-adic Reps, Spring 2026 Meeting Notes}
 
 \author{Sudharshan K V}
 \begin{document}
 \maketitle
 
-\section{Introduction}
+\section{Meeting 1}
+Smoothness is the natural condition to impose on groups which are locally compact and totally disconnected - topologies on $\C$ and profinite groups are very different. Continuity is a weaker condition, for characters continuity and smoothness are the same. For discrete modules, the notions of continuity and smoothness agree.\\
 
+It is hard to construct finite dimensional non-smooth representations. One may look at $C(G)$, the space of functions on $G$. This is very non-smooth. Perhaps looking at this can produce exact sequences of abstract representations where taking the smooth vectors wouldn't be right exact.\\
 
+Restriction of an induced representation is nice for normal subgroups: $\Ind_H^G(V)|_H = \osum_{g\in G/H} V^g$. In general, this is the subject of Mackey theory. \\
 
+Invariants and coinvaraints are isomorphic for a representation of a compact group.
+
+\section{Meeting 2}
+[Before meeting] Smooth duals are just usual duals when looking at compact-invariant subspaces. Admissibility implies reflexivity. Exactness of representations is the same as exactness at each compact-invariant level. Seems to be powerful.\\
+
+Measures. Haar measure can be used to integrate some functions which are not compactly supported - there are some things which I need to verify - why left Haar measure and left invariant functions?. Integration of vector valued functions - can be done because functionals separate different vectors.\\
+
+Modular character of a group may not be the same as the modular character of the subgroup. However if the subgroup is open they agree. There is a characterization in Prop, 3.4. For open subgroups, this is evident from Frobenius reciprocity. Frobenius reciprocity (for compact induction) is not valid for non-open subgroups in general.\\
+
+\subsection{Meeting Notes}
 
 \end{document}
