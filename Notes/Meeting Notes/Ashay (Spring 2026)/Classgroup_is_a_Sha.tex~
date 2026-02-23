@@ -1,0 +1,198 @@
+\documentclass{amsart}
+
+\usepackage{amsmath,amssymb,amsfonts,amscd}
+\usepackage[all,cmtip]{xy}
+\usepackage{enumerate}
+\usepackage{ amssymb, latexsym, amsmath}
+%\setcounter{MaxMatrixCols}{30}%
+\usepackage{fullpage}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{ marvosym }
+\usepackage{quiver}
+
+
+
+\numberwithin{equation}{section}
+
+%\usepackage{cjw-latex}
+
+%\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem*{thm}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{criterion}[theorem]{Criterion}
+%\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{wildconjecture}[theorem]{Wild Conjecture}
+
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem*{dfn}{Definition}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{solution}[theorem]{Solution}
+
+
+
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{remarks}[theorem]{Remarks}
+\newtheorem{summary}[theorem]{Summary}
+\newtheorem{observation}[theorem]{Observation}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+
+
+
+\makeatletter
+\newcommand{\rmnum}[1]{\romannumeral #1}
+\newcommand{\Rmnum}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\Ext}{\operatorname{Ext}}
+\newcommand{\Tor}{\operatorname{Tor}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\osum}{\oplus}
+\newcommand{\aff}{\operatorname{Aff}}
+\renewcommand{\bar}[1]{\overline #1}
+
+\newcommand{\Id}{\operatorname{Id}}
+\newcommand{\concat}{(\Id \to \Omega \Sigma)}
+\newcommand{\eval}{(\Sigma\Omega \to \Id)}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\g}{\mathfrak{g}}
+\newcommand{\n}{\mathfrak{n}}
+\newcommand{\h}{\mathfrak{h}}
+\newcommand{\p}{\mathfrak{p}}
+\newcommand{\q}{\mathfrak{q}}
+\newcommand{\m}{\mathfrak{m}}
+\newcommand{\e}{\mathfrak{e}}
+\newcommand{\f}{\mathfrak{f}}
+\newcommand{\V}{\mathscr{V}}
+\newcommand{\D}{\mathscr{D}}
+\renewcommand{\S}{\mathscr{S}}
+\newcommand{\Sch}{\mathscr{C}}
+\newcommand{\Y}{\mathscr{Y}}
+\renewcommand{\u}{\mathfrak{u}}
+\newcommand{\set}[2]{ \left\{ {#1} \, \left| \, {#2} \right\}\right.}
+\newcommand{\A}{\mathbb{A}}
+\newcommand{\X}{\mathcal{X}}
+\renewcommand{\Im}{\operatorname{Im}}
+\newcommand{\T}{\mathscr{T}}
+\newcommand{\HH}{\mathscr{H}}
+\newcommand{\PGL}{\operatorname{PGL}}
+\newcommand{\righthookarrow}{\hookrightarrow}
+\newcommand{\sign}{\operatorname{sign}}
+\renewcommand{\_}[2]{\underbrace{#1}_{#2}}
+\renewcommand{\^}[2]{\overbrace{#1}_{#2}}
+\newcommand{\curverightarrow}{\curvearrowright}
+
+\newcommand{\z}{\mathfrak{z}}
+\renewcommand{\sl}{\mathfrak{sl}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\RP}{\mathbb{RP}}
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\C}{\mathbb{C}}
+\renewcommand{\H}{\mathcal{H}}
+\newcommand{\Ind}{\operatorname{Ind}}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Orb}{\mathcal{O}}
+\renewcommand{\k}{\mbox{\Fontauri k}}
+\newcommand{\Ad}{\operatorname{Ad}}
+\newcommand{\ad}{\operatorname{ad}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\Ker}{\operatorname{Ker}}
+\newcommand{\End}{\operatorname{End}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\Stab}{\mbox{Stab}}
+\newcommand{\Lie}{\operatorname{Lie}}
+\newcommand{\GL}{\operatorname{GL}}
+\newcommand{\SL}{\operatorname{SL}}
+\newcommand{\Sp}{\operatorname{Sp}}
+\newcommand{\Mp}{\operatorname{Mp}}
+\renewcommand{\a}{\mathfrak{a}}
+\newcommand{\Wh}{\operatorname{Wh}}
+\newcommand{\Span}{\operatorname{Span}}
+\newcommand{\WF}{\operatorname{WF}}
+\newcommand{\AC}{\operatorname{AC}}
+\newcommand{\Lin}{\operatorname{Lin}}
+\newcommand{\Diff}{\operatorname{Diff}}
+\newcommand{\Gen}{\operatorname{Gen\, Hom}}
+\newcommand{\Her}{\operatorname{Her}}
+\newcommand{\pivot}{&}
+\newcommand{\sgn}{\operatorname{sgn}}
+%\newcommand{C^{\infty}}{DS}
+\newcommand{\vsp}{{\vspace{0.2in}}}
+\newcommand{\Cl}{\operatorname{Cl}}
+\newcommand{\Sel}{\operatorname{Sel}}
+
+\usepackage[OT2,T1]{fontenc}
+\DeclareSymbolFont{cyrletters}{OT2}{wncyr}{m}{n}
+\DeclareMathSymbol{\Sha}{\mathalpha}{cyrletters}{"58}
+
+\title{Why is the ideal class Group a Shafarevich Group?}
+
+\author{Sudharshan K V}
+\begin{document}
+\begin{abstract}
+  After a short discussion with Prof. David Helm.
+\end{abstract}
+\maketitle
+
+Let $K$ be a number field, $G_K$ be the absolute Galois group of $K$. There is an exact sequence \[ 1 \to K^\times/ K^{\times M} \to \Sel(K,\mu_M) \to \Cl(K)[M] \to 0,\] where $\Sel$ denotes the Selmer group with local conditions cut out by $O_{K_v}^\times/O_{K_v}^{\times M}$. This closely resembled the exact sequence one sees for the Selmer and Shafarevich groups of an elliptic curve. \\
+
+We will see how to view $\Cl(K)$ as a Shafarevich group. For intuition, $\Cl(K)$ is the measure of failure of local-global principle for the ideal groups - locally, all ideals are principal, but given a collection of principal local ideals, the corresponding global ideal is principal iff its class in the class group is trivial.
+
+We claim that there is an isomorphism \[\Cl(K) \simeq \Sha(K,\bar O_K^\times) := \ker \left( H^1(K,\bar O_K^\times) \to \prod_v H^1(K_v, \bar O_{K_v}^\times)\right ),\] where $\bar O_K, \bar O_{K_v}$ denote the rings of integers of algebraic closures $\bar K, \bar K_v$ of $K, K_v$ resp.
+
+\begin{lemma}
+  The map $\bar K^\times/\bar O_K^\times \to \oplus_v \bar K_v^\times/\bar O_{K_v}^\times$ induces an isomorphism \[(\bar K^\times/\bar O_K^\times)^{G_K} \to \oplus_v (\bar K_v^\times/\bar O_{K_v}^\times)^{G_K}.\]
+\end{lemma}
+\begin{proof}
+  The first map is clearly injective. The RHS is just $\oplus_v \Q$ under the valuation maps $K_v \to \Z$, and this product is $G_{K_v}$-invariant already because Galois elements preserve valuation. So we just need surjectivity of the original map. Take $(1/m_v)_v \in \osum_v \Q$. Then take the ideal $\prod_v \p_v^{m_v}$ in $\bar O_K$, and choose an extension $L/K$ in which this becomes principal, say $(x_m) = \prod p_v^{m_v}$. Then the class of $x_m \in \bar K_v^\times$ in $\osum_v \bar K_v^\times/ \bar O_{K_v}^\times$ is precisely $(1/m_v)_v$. 
+\end{proof}
+
+Taking $G_K$ cohomology of the short exact sequence \[1 \to \bar O_K^\times \to \bar K^\times \to \bar K^\times/\bar O_K^\times \to 1,\] we get the exact sequence \[1 \to K^\times/O_K^\times \to (\bar K^\times/ \bar O_K^\times)^{G_K} \to H^1(K, \bar O_K^\times) \to 0.\] We have a similar expression for $K_v$. Then by snake lemma on the diagram 
+
+\[\begin{tikzcd}
+	&& 0 & {\Sha(K,\bar O_K^\times)} \\
+	0 & {K^\times/O_K^\times} & {(\bar K^\times/\bar O_K^\times)^{G_K}} & {H^1(K, \bar O_K^\times)} & 0 \\
+	0 & {\oplus_v K_v^\times/O_{K_v}^\times} & { \oplus_v (\bar K_v^\times/\bar O_{K_v}^\times)^{G_K}} & {\oplus_v H^1(K_v, \bar O_{K_v}^\times)} & 0 \\
+	& {\Cl(K)} & 0
+	\arrow[from=1-3, to=1-4]
+	\arrow[from=1-3, to=2-3]
+	\arrow[from=1-4, to=2-4]
+	\arrow[from=2-1, to=2-2]
+	\arrow[from=2-2, to=2-3]
+	\arrow[from=2-2, to=3-2]
+	\arrow[from=2-3, to=2-4]
+	\arrow[from=2-3, to=3-3]
+	\arrow[from=2-4, to=2-5]
+	\arrow[from=2-4, to=3-4]
+	\arrow[from=3-1, to=3-2]
+	\arrow[from=3-2, to=3-3]
+	\arrow[from=3-2, to=4-2]
+	\arrow[from=3-3, to=3-4]
+	\arrow[from=3-3, to=4-3]
+	\arrow[from=3-4, to=3-5]
+	\arrow[from=4-2, to=4-3]
+\end{tikzcd},\] one immediately obtains \[\Cl(K) \simeq \Sha(K, \bar O_K^\times).\]
+
+\end{document}

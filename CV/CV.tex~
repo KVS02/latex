@@ -1,0 +1,88 @@
+\documentclass[10pt,letterpaper]{article}
+
+% -------------------- Packages --------------------
+\usepackage[margin=0.9in]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{parskip}
+
+% -------------------- Formatting --------------------
+\setlist[itemize]{leftmargin=*,noitemsep,topsep=2pt}
+\titleformat{\section}{\large\bfseries}{}{0em}{}[\titlerule]
+\pagenumbering{gobble}
+\hypersetup{colorlinks=true, urlcolor=blue}
+
+% -------------------- Document --------------------
+\begin{document}
+
+% -------------------- Header --------------------
+\begin{center}
+    {\LARGE \textbf{Your Name}} \\
+    \vspace{2pt}
+    Department of Mathematics, University Name \\
+    City, Country \\
+    \href{mailto:your@email.com}{your@email.com} \quad
+    \href{https://yourwebsite.com}{yourwebsite.com}
+\end{center}
+
+% -------------------- Research Interests --------------------
+\section*{Research Interests}
+Algebraic geometry, homological algebra, representation theory, arithmetic geometry.
+
+% -------------------- Education --------------------
+\section*{Education}
+
+\textbf{Ph.D. in Mathematics} \hfill 2022--Present \\
+University Name \\
+Advisor: Prof.\ Advisor Name \\
+Expected completion: 2027 \\
+Thesis (in preparation): \emph{Working title if applicable}
+
+\textbf{B.Sc./M.Sc. in Mathematics} \hfill 2022 \\
+University Name
+
+% -------------------- Research Experience --------------------
+\section*{Research Experience}
+
+Graduate Researcher under Prof.\ Advisor Name \hfill 2022--Present \\
+Brief 1--2 line description of research direction or problem area.
+
+% -------------------- Conferences Attended --------------------
+\section*{Conferences and Workshops}
+
+\begin{itemize}
+    \item Conference Name, University/Institute, Year
+    \item Workshop on Topic, Institute Name, Year
+    \item Summer School in Topic, Location, Year
+\end{itemize}
+
+% -------------------- Talks (if any) --------------------
+\section*{Talks}
+
+\begin{itemize}
+    \item ``Title of Talk,'' Graduate Student Seminar, University Name, Year
+\end{itemize}
+
+% -------------------- Teaching Experience --------------------
+\section*{Teaching Experience}
+
+Teaching Assistant, Calculus I \hfill Fall 2023 \\
+Teaching Assistant, Linear Algebra \hfill Spring 2024
+
+% -------------------- Awards --------------------
+\section*{Awards and Fellowships}
+
+Graduate Fellowship, University Name \hfill 2022--Present
+
+% -------------------- Coursework (Optional) --------------------
+\section*{Selected Graduate Coursework}
+
+Algebraic Geometry, Commutative Algebra, Algebraic Topology, Functional Analysis, Category Theory
+
+% -------------------- Service (Optional) --------------------
+\section*{Academic Service}
+
+Organizer, Graduate Student Seminar \hfill 2024--Present
+
+\end{document}
