@@ -153,4 +153,46 @@ Let $F$ be a local field. Roughly, the Local Langlands Correspondence (LLC) for 
 
 The representation theory of $W_\R$ is quite simple. On the other hand, the classification of irreducible admissible representations of a real reductive group upto infinitesimal equivalence was achieved by Langlands [cite], and is now called the Langlands classification. The LLC for $\GL_n/\R$ is evident from the Langlands classification for $\GL_n$, once the representations of $W_\R$ are identified. 
 
+\section{The Weil group of $\mathbb R$}
+For any local field $F$, one can define the Weil group $W_F$ axiomatically (see Tate). The Weil group for $\R$ is a non-split extension of $\Gal(\C/\R)$ by $\C^\times$. Concretely, we have $$W_\R = \C^\times \cup j\C^\times,$$ where $j^2 = -1, jzj^{-1} = \bar z$ for $z \in \C^\times$. These are the units of the quarternion algebra: the non-split extension is given by a non-trivial element of the Brauer group of $\R$ (which is $\Z/2\Z$), and this element corresponds to a non-split central simple algebra over $\R$ - the quarternions. We will however, work with the concrete description.
+
+\section{Representations of $W_\R$}
+In this section, we will describe the representations of $W_\R$. We will only consider (complex) representations of $W_\R$ where the group elements act semisimply.
+
+\subsection{One dimensional representations}
+The characters of $W_\R$ factor through its abelianization. One computes immediately the following:
+\[jzj^{-1}z^{-1} = \bar z z^{-1},\] so the commutator subgroup is the unit circle $S^1$ in $\C^\times$. $\C^\times/S^1$ is the positive real numbers, and we can identify $jC^\times/S^1$ with the negative reals. Therefore, $W_\R^{\text{ab}} = \R^\times$. This is one of the axioms in [Tate].\\
+
+The (continuous) characters of $\R>0$ just $x\mapsto x^s$ for $s\in \C$. The continuous characters of $\R^\times$ are thus parameterized by a complex variable $s$ and a character $\epsilon$ of $\{\pm 1\}$.
+
+Because of the identification $W_\R^\text{ab} \simeq \R^\times$, we have 
+
+\begin{theorem}[LLC for $\GL_1/\R$] There is a bijection between irreducible (admissible) representations of $SL_1(\R)$ and the one dimensional (semisimple) representations of the Weil group $W_\R$.
+\end{theorem}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \end{document}
