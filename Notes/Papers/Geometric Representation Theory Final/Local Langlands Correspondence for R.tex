@@ -122,6 +122,7 @@
 \newcommand{\supp}{\operatorname{supp}}
 \newcommand{\Stab}{\mbox{Stab}}
 \newcommand{\Lie}{\operatorname{Lie}}
+\newcommand{\Gal}{\operatorname{Gal}}
 \newcommand{\GL}{\operatorname{GL}}
 \newcommand{\SL}{\operatorname{SL}}
 \newcommand{\Sp}{\operatorname{Sp}}
@@ -149,9 +150,9 @@
 \maketitle
 
 \section{Introduction}
-Let $F$ be a local field. Roughly, the Local Langlands Correspondence (LLC) for $\GL_n/F$ is a \textbf{check} bijection between the $n$-dimensional (complex) representations of the Weil group $W_F$ of $F$ and the irreducible admissible (complex) representations of $\GL_n(F)$. The Weil group of a local field is a modification of the Galois group. In this article, we will describe LLC for the local field $\R$. In fact, the archimedean case was the motivation for Langlands to consider such potential relations over non-archimedean local fields, leading to the formulation of LLC!\\
+Let $F$ be a local field. Roughly, the Local Langlands Correspondence (LLC) for $\GL_n/F$ is a \textbf{check} bijection between the $n$-dimensional (complex) representations of the Weil group $W_F$ of $F$ and the irreducible admissible (complex) representations of $\GL_n(F)$. The Weil group of a local field is a modification of its absolute Galois group. In this article, we will describe LLC for the local field $\R$. In fact, the archimedean case was the motivation for Langlands to consider such potential relations over non-archimedean local fields, leading to the formulation of LLC!\\
 
-The representation theory of $W_\R$ is quite simple. On the other hand, the classification of irreducible admissible representations of a real reductive group upto infinitesimal equivalence was achieved by Langlands [cite], and is now called the Langlands classification. The LLC for $\GL_n/\R$ is evident from the Langlands' classification for $\GL_n$, once the representations of $W_\R$ are identified. 
+The representation theory of $W_\R$ is quite simple. On the other hand, the classification of irreducible admissible representations of a real reductive group upto infinitesimal equivalence was achieved by Langlands [cite], and is now called the Langlands classification. The LLC for $\GL_n/\R$ is evident from the Langlands classification for $\GL_n$, once the representations of $W_\R$ are identified. 
 
 \section{The Weil group of $\mathbb R$}
 For any local field $F$, one can define the Weil group $W_F$ axiomatically (see Tate). The Weil group for $\R$ is a non-split extension of $\Gal(\C/\R)$ by $\C^\times$. Concretely, we have $$W_\R = \C^\times \cup j\C^\times,$$ where $j^2 = -1, jzj^{-1} = \bar z$ for $z \in \C^\times$. These are the units of the quarternion algebra: the non-split extension is given by a non-trivial element of the Brauer group of $\R$ (which is $\Z/2\Z$), and this element corresponds to a non-split central simple algebra over $\R$ - the quarternions. We will however, work with the concrete description.
@@ -163,26 +164,40 @@ In this section, we will describe the representations of $W_\R$. We will only co
 The characters of $W_\R$ factor through its abelianization. One computes immediately the following:
 \[jzj^{-1}z^{-1} = \bar z z^{-1},\] so the commutator subgroup is the unit circle $S^1$ in $\C^\times$. $\C^\times/S^1$ is the positive real numbers, and we can identify $jC^\times/S^1$ with the negative reals. Therefore, $W_\R^{\text{ab}} = \R^\times$. This is one of the axioms in [Tate].\\
 
-The (continuous) characters of $\R>0$ just $x\mapsto x^s$ for $s\in \C$. The continuous characters of $\R^\times$ are thus parameterized by a complex variable $s$ and a character $\epsilon$ of $\{\pm 1\}$.
+The (continuous) characters of $\R>0$ just $x\mapsto x^s$ for $s\in \C$. The continuous characters of $\R^\times$ are thus parameterized by a complex variable $s$ and a character $\epsilon$ of $\{\pm 1\}$. We denote by $\chi_{s, \epsilon}$ the character which sends complex $z$ to $|z|^s$ and $j$ to $\epsilon(-1)$, where $|.|$ is the usual absolute value on $\C$. \\
 
 Because of the identification $W_\R^\text{ab} \simeq \R^\times$, we have 
 
-\begin{theorem}[LLC for $\GL_1/\R$] There is a bijection between irreducible (admissible) representations of $SL_1(\R)$ and the one dimensional (semisimple) representations of the Weil group $W_\R$.
+\begin{theorem}[LLC for $\GL_1/\R$] There is a bijection between irreducible (admissible) representations of $\GL_1(\R)$ and the one dimensional (semisimple) representations of the Weil group $W_\R$.
 \end{theorem}
 
+In general, any character of $\C^\times$ is given by a pair of complex numbers $\mu, \nu$, \[z \mapsto z^\mu \bar z^\nu,\]  where the only restriction is that $\mu - \nu$ is an integer. We denote this character by $\chi_{\mu,\nu}$. 
 
+\subsection{Two dimensional representations}
+Here, we identify the two dimensional irreducible representations of $W_\R$. As before, we assume that the elements of $W_\R$ act semisimply. \\
 
+Let $\varphi$ be a two dimensional representation of $W_\R$. First, we restrict the representation $\varphi, V$ to $\C^\times$. The set of operators $\varphi(z), z \in \C^\times$ is a family of commuting semisimple operators, so we choose a basis $u,v$ of $V$ in which the matrix representation is diagonal and write \[\varphi =
+  \begin{pmatrix}
+    \chi_{\mu, \nu} & 0 \\
+    0 & \chi_{\mu', \nu'}
+  \end{pmatrix}.\]
 
+Let $u' = \varphi(j) u$. For $z\in \C^\times$, we compute \[\varphi(z)(u') = \varphi(j\bar z j^{-1})(u') = \chi_{\mu, \nu}(\bar z)\varphi(j)(u)=z^\nu \bar z^\mu u'.\] So $u'$ is also a common eigenvector for the $\C^\times$ action. If the two characters $\chi_{\mu,\nu}$ and $\chi_{\mu',\nu'}$ are the same, then the representation is reducible - and decomposes as sum of eigenspaces of the semisimple operator $\varphi(j)$.
+If $u'$ is a scalar multiple of $u$, then $\mu = \nu$, and similar reasoning for $v' = \varphi(j) v$ shows that $v' \in \C v$ and $\mu' = \nu'$. Again, this representation decomposes as a sum of two characters of $W_\R$.\\
 
+Finally suppose that $u' \in \C v$ and that $\varphi$ is irreducible. In this case, we have $\mu = \nu'$ and $\mu' = \nu$ (and $\mu \neq \nu$). The representations restricting to $\chi_{\mu,\nu} \osum \chi_{\nu,\mu}$ and $\chi_{\nu,\mu}\osum \chi_{\mu,\nu}$ are isomorphic. Therefore, irreducible two dimensional representations of $W_\R$ are parameterized by a complex number $s = \frac12 \left(\mu +\nu\right)$ and a positive integer $l = \mu - \nu$. 
 
+\subsection{Reducibility of representations}
+Let $\varphi, V$ be a $n$-dimensional representation of $W_\R$. Consider the representation $V$ as a $\C^\times$ representation, and one has the decomposition into (one dimensional) eigenspaces \[V = \osum_{\mu,\nu} V_{\mu,\nu}.\] As before, one sees that the action of $\varphi(j)$ permutes the eigenspaces. If $\varphi(j)V_{\mu,\nu} = V_{\mu,\nu}$ then it is a one dimensional subrepresentation of $V$. Otherwise, $\varphi(j)V_{\mu,\nu} = V_{\nu,\mu}$, and as before, the representation $V_{\mu,\nu} \osum V_{\nu,\mu}$ is representation of $W_\R$.\\
 
+\begin{theorem}
+  The $n$ dimensional representations of $W_\R$ are completely reducible, and each irreducible constituent is either one or two dimensional.
+\end{theorem}
 
+\section{The Langlands Classification for $\GL_n(\R)$}
+In this section, we state Langlands classification for irreducible admissible representations of $\GL_n(\R)$ upto infinitesimal equivalence. As mentioned earlier, the representations of $\GL_1(\R)$ are parameterized by a complex variable $s$ and a character of $\{\pm 1\}$. We will first discuss the classification for $\GL_2$ and then about how one builds representations of $\GL_n$ from the representations in rank $1$ and $2$.
 
-
-
-
-
-
+\subsection{$n=2$}
 
 
 
