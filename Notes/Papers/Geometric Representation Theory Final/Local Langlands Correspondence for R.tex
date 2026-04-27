@@ -185,7 +185,7 @@ Let $\varphi$ be a two dimensional representation of $W_\R$. First, we restrict 
 Let $u' = \varphi(j) u$. For $z\in \C^\times$, we compute \[\varphi(z)(u') = \varphi(j\bar z j^{-1})(u') = \chi_{\mu, \nu}(\bar z)\varphi(j)(u)=z^\nu \bar z^\mu u'.\] So $u'$ is also a common eigenvector for the $\C^\times$ action. If the two characters $\chi_{\mu,\nu}$ and $\chi_{\mu',\nu'}$ are the same, then the representation is reducible - and decomposes as sum of eigenspaces of the semisimple operator $\varphi(j)$.
 If $u'$ is a scalar multiple of $u$, then $\mu = \nu$, and similar reasoning for $v' = \varphi(j) v$ shows that $v' \in \C v$ and $\mu' = \nu'$. Again, this representation decomposes as a sum of two characters of $W_\R$.\\
 
-Finally suppose that $u' \in \C v$ and that $\varphi$ is irreducible. In this case, we have $\mu = \nu'$ and $\mu' = \nu$ (and $\mu \neq \nu$). The representations restricting to $\chi_{\mu,\nu} \osum \chi_{\nu,\mu}$ and $\chi_{\nu,\mu}\osum \chi_{\mu,\nu}$ are isomorphic. Therefore, irreducible two dimensional representations of $W_\R$ are parameterized by a complex number $s = \frac12 \left(\mu +\nu\right)$ and a positive integer $l = \mu - \nu$. 
+Finally suppose that $u' \in \C v$ and that $\varphi$ is irreducible. In this case, we have $\mu = \nu'$ and $\mu' = \nu$ (and $\mu \neq \nu$). The representations restricting to $\chi_{\mu,\nu} \osum \chi_{\nu,\mu}$ and $\chi_{\nu,\mu}\osum \chi_{\mu,\nu}$ are isomorphic. Therefore, irreducible two dimensional representations of $W_\R$ are parameterized by a complex number $t = \frac12 \left(\mu +\nu\right)$ and a positive integer $l = \mu - \nu$. We denote this $\tau_{l,t}$
 
 \subsection{Reducibility of representations}
 Let $\varphi, V$ be a $n$-dimensional representation of $W_\R$. Consider the representation $V$ as a $\C^\times$ representation, and one has the decomposition into (one dimensional) eigenspaces \[V = \osum_{\mu,\nu} V_{\mu,\nu}.\] As before, one sees that the action of $\varphi(j)$ permutes the eigenspaces. If $\varphi(j)V_{\mu,\nu} = V_{\mu,\nu}$ then it is a one dimensional subrepresentation of $V$. Otherwise, $\varphi(j)V_{\mu,\nu} = V_{\nu,\mu}$, and as before, the representation $V_{\mu,\nu} \osum V_{\nu,\mu}$ is representation of $W_\R$.\\
@@ -195,19 +195,33 @@ Let $\varphi, V$ be a $n$-dimensional representation of $W_\R$. Consider the rep
 \end{theorem}
 
 \section{The Langlands Classification for $\GL_n(\R)$}
-In this section, we state Langlands classification for irreducible admissible representations of $\GL_n(\R)$ upto infinitesimal equivalence. As mentioned earlier, the representations of $\GL_1(\R)$ are parameterized by a complex variable $s$ and a character of $\{\pm 1\}$. We will first discuss the classification for $\GL_2$ and then about how one builds representations of $\GL_n$ from the representations in rank $1$ and $2$.
+In this section, we state Langlands classification for irreducible admissible representations of $\GL_n(\R)$ upto infinitesimal equivalence. As mentioned earlier, the representations of $\GL_1(\R)$ are parameterized by a complex variable $s$ and a character of $\{\pm 1\}$. We will first mention some special representations $\GL_2$ and then about how one builds representations of $\GL_n$ from these representations in rank $1$ and $2$.
 
-\subsection{$n=2$}
+\subsection{Special Representations of $\GL_2$}
 
+For $l\geq 2$ an integer, recall that $\SL_2(\R)$ has the discrete series representations $D_l^+$, and the limit of discrete series representations denoted $D_1^+$. Let $\SL_2^\pm(\R)$ denote the group of $2\times 2$ real matrices with determinant $\pm 1$. We consider the following (tempered) representations of $SL_2^\pm(\R)$: \[D_l = \Ind_{\SL_2(\R)}^{\SL_2^\pm(\R)}(D_l^+),\] for $l\geq 1$.\\
+Next, consider the \emph{relative discrete series} representations $\sigma_{l,t}$ given by \[\sigma_{l,t} = D_l \otimes |\det|^t,\] where $l \geq 1$ and $t \in \C$. These representations will be the building blocks (in rank 2) for representations of $\GL_n(\R)$. (Relate this to the representation
 
+\subsection{Langlands Classification for $\GL_n$}
+We state Langlands classification of irreducible admissible representations of $\GL_n(\R)$ upto infinitesimal equivalence. There is a more general version for an arbitrary reductive group in place of $\GL_n$, but we will not state that here. See [getz hahn].
 
+For any partition of $n = \sum_i^r n_i$ where $n_i = 1$ or $2$, and representations $\sigma_i$ of $\GL_{n_i}$ of the form mentioned above (i.e. characters of $\R^\times$ or the relative discrete series $\sigma_{l,t}$), let $M$ be the Levi subgroup $\prod_i \GL_{n_i}(\R)$ of $\GL_n(\R)$ and let $P$ be the standard parabolic of $\GL_n(\R)$ containing $M$. Inflate the representation $\sigma = (\sigma_1, \dots, \sigma_r)$ of $M$ to $P$, and consider the normalized induction \[I(\sigma_1,\dots,\sigma_r) = \Ind_P^{\GL_n(\R)} \left( (\sigma_1, \dots, \sigma_r) \otimes \frac12 \rho_P \right ),\] where $\rho_P$ denotes the sum of positive roots associated to the parabolic $P$. 
 
+\begin{theorem}[Langlands]
+\begin{enumerate}
+\item Suppose $t_1/n_1 \geq \t_2/n_2 \geq \dots \geq t_r/n_r$, then $I(\sigma_1,\dots, \sigma_r)$ has a unique irreducible quotient denoted $J(\sigma_1,\dots,\sigma_r)$.
+\item All irreducible admissible representations of $\GL_n(\R)$ are infinitesimally equivalent to some $J(\sigma_1, \dots, \sigma_r)$. 
+\item $J(\sigma_1,\dots,\sigma_r)$ and $J(\sigma'_1,\dots,\sigma'_{r'})$ are infinitesimally equivalent if and only if $r = r'$ and the $\sigma_i'$ are a permutation of $\sigma_i$ (such that the condition in (1) holds).
+\end{enumerate}
+\end{theorem}
 
+\begin{corollary}[LLC for $\GL_n/\R$]
+There is a one-one correspondence between irreducible admissible representations of $\GL_n(\R)$ upto infinitesimal equivalence and the isomorphism classes of $n$-dimensional representations of $W_\R$ where the group acts semisimply.
+\end{corollary}
+\begin{proof}
+Let $J = J(\sigma_1,\dots, \sigma_r)$ be an irreducible admissible representation of $\GL_n(\R)$. To each representation $\sigma_i$ of $\GL_{n_i}$, consider the associated $n_i$-dimensional Weil group representation: if $n_i = 1$, then consider the character $\tau_i: W_\R \to \R^\times \to \C^\times$, where the first map is the projection $W_\R \to W_\R^{\text{ab}}$ and the second map is $\sigma_i$. If $n_i = 2$, consider the representation $\tau_i = \tau_{l,t}$ described in Section \ref{sec:weil-rep}, where $l, t$ are the parameters associated to $\sigma_i$. Now associate to $J$ the $n$-dimensional representation $\sum_i \tau_i$ of $W_\R$.\\
 
-
-
-
-
-
+This association is the desired bijection. The inverse map is clear: to any $n$-dimensional Weil representation $V$, consider its decomposition $V = \sum_{i=1}^r \tau_i$ into one and two dimensional pieces. For each $i$, consider the representation $\sigma_i$ of $\GL_1(\R)$ or $\GL_2(\R)$ with the same parameters as $\tau_i$ as above. Permute the factors so that the condition (1) of the theorem is satisfied, and consider $J(\sigma_1,\dots,\sigma_r)$.
+\end{proof}
 
 \end{document}
