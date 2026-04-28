@@ -155,9 +155,10 @@ Let $F$ be a local field. Roughly, the Local Langlands Correspondence (LLC) for 
 The representation theory of $W_\R$ is quite simple. On the other hand, the classification of irreducible admissible representations of a real reductive group upto infinitesimal equivalence was achieved by Langlands [cite], and is now called the Langlands classification. The LLC for $\GL_n/\R$ is evident from the Langlands classification for $\GL_n$, once the representations of $W_\R$ are identified. 
 
 \section{The Weil group of $\mathbb R$}
-For any local field $F$, one can define the Weil group $W_F$ axiomatically (see Tate). The Weil group for $\R$ is a non-split extension of $\Gal(\C/\R)$ by $\C^\times$. Concretely, we have $$W_\R = \C^\times \cup j\C^\times,$$ where $j^2 = -1, jzj^{-1} = \bar z$ for $z \in \C^\times$. These are the units of the quarternion algebra: the non-split extension is given by a non-trivial element of the Brauer group of $\R$ (which is $\Z/2\Z$), and this element corresponds to a non-split central simple algebra over $\R$ - the quarternions. We will however, work with the concrete description.
+For any local field $F$, one can define the Weil group $W_F$ axiomatically (see Tate). The Weil group for $\R$ is a non-split extension of $\Gal(\C/\R)$ by $\C^\times$. Concretely, we have $$W_\R = \C^\times \cup j\C^\times,$$ where $j^2 = -1, jzj^{-1} = \bar z$ for $z \in \C^\times$. These are the units of the quarternion algebra: the non-split extension is given by the non-trivial element of the Brauer group of $\R$ (which is $\Z/2\Z$), and this element corresponds to a non-split central simple algebra over $\R$ - the quarternions. We will however, work with the concrete description.
 
 \section{Representations of $W_\R$}
+\label{sec:weil-rep}
 In this section, we will describe the representations of $W_\R$. We will only consider (complex) representations of $W_\R$ where the group elements act semisimply.
 
 \subsection{One dimensional representations}
@@ -195,10 +196,8 @@ Let $\varphi, V$ be a $n$-dimensional representation of $W_\R$. Consider the rep
 \end{theorem}
 
 \section{The Langlands Classification for $\GL_n(\R)$}
-<<<<<<< HEAD
-=======
+
 In this section, we state Langlands classification for irreducible admissible representations of $\GL_n(\R)$ upto infinitesimal equivalence. As mentioned earlier, the representations of $\GL_1(\R)$ are parameterized by a complex variable $s$ and a character of $\{\pm 1\}$. We will first mention some special representations $\GL_2$ and then about how one builds representations of $\GL_n$ from these representations in rank $1$ and $2$.
->>>>>>> 11d626ee760b51f735940ef5fc1fa1524b8ca733
 
 \subsection{Special Representations of $\GL_2$}
 
@@ -208,11 +207,11 @@ Next, consider the \emph{relative discrete series} representations $\sigma_{l,t}
 \subsection{Langlands Classification for $\GL_n$}
 We state Langlands classification of irreducible admissible representations of $\GL_n(\R)$ upto infinitesimal equivalence. There is a more general version for an arbitrary reductive group in place of $\GL_n$, but we will not state that here. See [getz hahn].
 
-For any partition of $n = \sum_i^r n_i$ where $n_i = 1$ or $2$, and representations $\sigma_i$ of $\GL_{n_i}$ of the form mentioned above (i.e. characters of $\R^\times$ or the relative discrete series $\sigma_{l,t}$), let $M$ be the Levi subgroup $\prod_i \GL_{n_i}(\R)$ of $\GL_n(\R)$ and let $P$ be the standard parabolic of $\GL_n(\R)$ containing $M$. Inflate the representation $\sigma = (\sigma_1, \dots, \sigma_r)$ of $M$ to $P$, and consider the normalized induction \[I(\sigma_1,\dots,\sigma_r) = \Ind_P^{\GL_n(\R)} \left( (\sigma_1, \dots, \sigma_r) \otimes \frac12 \rho_P \right ),\] where $\rho_P$ denotes the sum of positive roots associated to the parabolic $P$. 
+For any partition of $n = \sum_{i=1}^r n_i$ where $n_i = 1$ or $2$, and representations $\sigma_i$ of $\GL_{n_i}$ of the form mentioned above (i.e. characters of $\R^\times$ or the relative discrete series $\sigma_{l,t}$), let $M$ be the Levi subgroup $\prod_i \GL_{n_i}(\R)$ of $\GL_n(\R)$ and let $P$ be the standard parabolic of $\GL_n(\R)$ containing $M$. Inflate the representation $\sigma = (\sigma_1, \dots, \sigma_r)$ of $M$ to $P$, and consider the normalized induction \[I(\sigma_1,\dots,\sigma_r) = \Ind_P^{\GL_n(\R)} \left( (\sigma_1, \dots, \sigma_r) \otimes \frac12 \rho_P \right ),\] where $\rho_P$ denotes the sum of positive roots associated to the parabolic $P$. 
 
 \begin{theorem}[Langlands]
 \begin{enumerate}
-\item Suppose $t_1/n_1 \geq \t_2/n_2 \geq \dots \geq t_r/n_r$, then $I(\sigma_1,\dots, \sigma_r)$ has a unique irreducible quotient denoted $J(\sigma_1,\dots,\sigma_r)$.
+\item Suppose $t_1/n_1 \geq t_2/n_2 \geq \dots \geq t_r/n_r$, then $I(\sigma_1,\dots, \sigma_r)$ has a unique irreducible quotient denoted $J(\sigma_1,\dots,\sigma_r)$.
 \item All irreducible admissible representations of $\GL_n(\R)$ are infinitesimally equivalent to some $J(\sigma_1, \dots, \sigma_r)$. 
 \item $J(\sigma_1,\dots,\sigma_r)$ and $J(\sigma'_1,\dots,\sigma'_{r'})$ are infinitesimally equivalent if and only if $r = r'$ and the $\sigma_i'$ are a permutation of $\sigma_i$ (such that the condition in (1) holds).
 \end{enumerate}
@@ -223,7 +222,6 @@ There is a one-one correspondence between irreducible admissible representations
 \end{corollary}
 \begin{proof}
 Let $J = J(\sigma_1,\dots, \sigma_r)$ be an irreducible admissible representation of $\GL_n(\R)$. To each representation $\sigma_i$ of $\GL_{n_i}$, consider the associated $n_i$-dimensional Weil group representation: if $n_i = 1$, then consider the character $\tau_i: W_\R \to \R^\times \to \C^\times$, where the first map is the projection $W_\R \to W_\R^{\text{ab}}$ and the second map is $\sigma_i$. If $n_i = 2$, consider the representation $\tau_i = \tau_{l,t}$ described in Section \ref{sec:weil-rep}, where $l, t$ are the parameters associated to $\sigma_i$. Now associate to $J$ the $n$-dimensional representation $\sum_i \tau_i$ of $W_\R$.\\
-
 This association is the desired bijection. The inverse map is clear: to any $n$-dimensional Weil representation $V$, consider its decomposition $V = \sum_{i=1}^r \tau_i$ into one and two dimensional pieces. For each $i$, consider the representation $\sigma_i$ of $\GL_1(\R)$ or $\GL_2(\R)$ with the same parameters as $\tau_i$ as above. Permute the factors so that the condition (1) of the theorem is satisfied, and consider $J(\sigma_1,\dots,\sigma_r)$.
 \end{proof}
 
