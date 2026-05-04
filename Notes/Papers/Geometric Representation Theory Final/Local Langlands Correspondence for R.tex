@@ -12,7 +12,6 @@
 \usepackage{quiver}
 
 
-
 \numberwithin{equation}{section}
 
 %\usepackage{cjw-latex}
@@ -143,19 +142,21 @@
 
 
 
-\title{Notes}
-
+\title{Local Langlands Correspondence for $\GL_n/\R$}
 \author{Sudharshan K V}
+\date{\today}
 \begin{document}
 \maketitle
-
+\begin{abstract}
+  These are the notes for my short talk for the finals of Geometric Representation Theory (M392C) taught by Lucas Mason Brown.
+\end{abstract}
 \section{Introduction}
-Let $F$ be a local field. Roughly, the Local Langlands Correspondence (LLC) for $\GL_n/F$ is a \textbf{check} bijection between the $n$-dimensional (complex) representations of the Weil group $W_F$ of $F$ and the irreducible admissible (complex) representations of $\GL_n(F)$. The Weil group of a local field is a modification of its absolute Galois group. In this article, we will describe LLC for the local field $\R$. In fact, the archimedean case was the motivation for Langlands to consider such potential relations over non-archimedean local fields, leading to the formulation of LLC!\\
+Let $F$ be a local field. Roughly, the Local Langlands Correspondence (LLC) for $\GL_n/F$ is a bijection between the $n$-dimensional (+ adjectives) representations of the Weil group $W_F$ of $F$ [Galois side] and the irreducible (+ adjectives) representations of $\GL_n(F)$ [Automorphic side]. The Weil group of a local field is a modification of its absolute Galois group. In this note, we will describe the LLC for the local field $\R$. In fact, the archimedean case motivated Langlands to consider such potential relations over non-archimedean local fields, leading to the formulation of the LLCs!\\
 
-The representation theory of $W_\R$ is quite simple. On the other hand, the classification of irreducible admissible representations of a real reductive group upto infinitesimal equivalence was achieved by Langlands [cite], and is now called the Langlands classification. The LLC for $\GL_n/\R$ is evident from the Langlands classification for $\GL_n$, once the representations of $W_\R$ are identified. 
+The representation theory of $W_\R$ is quite simple. On the other hand, the classification of irreducible admissible representations of a real reductive group upto infinitesimal equivalence was achieved by Langlands (\cite{langlands}), and is called the Langlands classification. The LLC for $\GL_n/\R$ is evident from the Langlands classification for $\GL_n$, once the representations of $W_\R$ are identified. 
 
 \section{The Weil group of $\mathbb R$}
-For any local field $F$, one can define the Weil group $W_F$ axiomatically (see Tate). The Weil group for $\R$ is a non-split extension of $\Gal(\C/\R)$ by $\C^\times$. Concretely, we have $$W_\R = \C^\times \cup j\C^\times,$$ where $j^2 = -1, jzj^{-1} = \bar z$ for $z \in \C^\times$. These are the units of the quarternion algebra: the non-split extension is given by the non-trivial element of the Brauer group of $\R$ (which is $\Z/2\Z$), and this element corresponds to a non-split central simple algebra over $\R$ - the quarternions. We will however, work with the concrete description.
+For any local field $F$, one can define the Weil group $W_F$ axiomatically (see \cite{tate}). The Weil group for $\R$ is a non-split extension of $\Gal(\C/\R)$ by $\C^\times$. Concretely, we have $$W_\R = \C^\times \cup j\C^\times,$$ where $j^2 = -1, jzj^{-1} = \bar z$ for $z \in \C^\times$. These are the units of the quarternion algebra: the non-split extension is given by the non-trivial element of the Brauer group of $\R$ (which is $\Z/2\Z$), and this element corresponds to a non-split central simple algebra over $\R$ - the quarternions. We will however, work with the concrete description.
 
 \section{Representations of $W_\R$}
 \label{sec:weil-rep}
@@ -163,13 +164,13 @@ In this section, we will describe the representations of $W_\R$. We will only co
 
 \subsection{One dimensional representations}
 The characters of $W_\R$ factor through its abelianization. One computes immediately the following:
-\[jzj^{-1}z^{-1} = \bar z z^{-1},\] so the commutator subgroup is the unit circle $S^1$ in $\C^\times$. $\C^\times/S^1$ is the positive real numbers, and we can identify $jC^\times/S^1$ with the negative reals. Therefore, $W_\R^{\text{ab}} = \R^\times$. This is one of the axioms in [Tate].\\
+\[jzj^{-1}z^{-1} = \bar z z^{-1},\] so the commutator subgroup is the unit circle $S^1$ in $\C^\times$. $\C^\times/S^1$ is the positive real numbers, and we can identify $jC^\times/S^1$ with the negative reals. Therefore, $W_\R^{\text{ab}} = \R^\times$. This is one of the axioms in \cite{tate}.\\
 
-The (continuous) characters of $\R>0$ just $x\mapsto x^s$ for $s\in \C$. The continuous characters of $\R^\times$ are thus parameterized by a complex variable $s$ and a character $\epsilon$ of $\{\pm 1\}$. We denote by $\chi_{s, \epsilon}$ the character which sends complex $z$ to $|z|^s$ and $j$ to $\epsilon(-1)$, where $|.|$ is the usual absolute value on $\C$. \\
+The (continuous) characters of $\R>0$ just $x\mapsto x^s$ for $s\in \C$. The continuous characters of $\R^\times$ are thus parameterized by a complex variable $s$ and a character $\epsilon$ of $\{\pm 1\}$. \\
 
 Because of the identification $W_\R^\text{ab} \simeq \R^\times$, we have 
 
-\begin{theorem}[LLC for $\GL_1/\R$] There is a bijection between irreducible (admissible) representations of $\GL_1(\R)$ and the one dimensional (semisimple) representations of the Weil group $W_\R$.
+\begin{theorem}\label{thm:llcgl1}[LLC for $\GL_1/\R$] There is a bijection between irreducible (admissible) representations of $\GL_1(\R)$ and the one dimensional (semisimple) representations of the Weil group $W_\R$.
 \end{theorem}
 
 In general, any character of $\C^\times$ is given by a pair of complex numbers $\mu, \nu$, \[z \mapsto z^\mu \bar z^\nu,\]  where the only restriction is that $\mu - \nu$ is an integer. We denote this character by $\chi_{\mu,\nu}$. 
@@ -186,7 +187,7 @@ Let $\varphi$ be a two dimensional representation of $W_\R$. First, we restrict 
 Let $u' = \varphi(j) u$. For $z\in \C^\times$, we compute \[\varphi(z)(u') = \varphi(j\bar z j^{-1})(u') = \chi_{\mu, \nu}(\bar z)\varphi(j)(u)=z^\nu \bar z^\mu u'.\] So $u'$ is also a common eigenvector for the $\C^\times$ action. If the two characters $\chi_{\mu,\nu}$ and $\chi_{\mu',\nu'}$ are the same, then the representation is reducible - and decomposes as sum of eigenspaces of the semisimple operator $\varphi(j)$.
 If $u'$ is a scalar multiple of $u$, then $\mu = \nu$, and similar reasoning for $v' = \varphi(j) v$ shows that $v' \in \C v$ and $\mu' = \nu'$. Again, this representation decomposes as a sum of two characters of $W_\R$.\\
 
-Finally suppose that $u' \in \C v$ and that $\varphi$ is irreducible. In this case, we have $\mu = \nu'$ and $\mu' = \nu$ (and $\mu \neq \nu$). The representations restricting to $\chi_{\mu,\nu} \osum \chi_{\nu,\mu}$ and $\chi_{\nu,\mu}\osum \chi_{\mu,\nu}$ are isomorphic. Therefore, irreducible two dimensional representations of $W_\R$ are parameterized by a complex number $t = \frac12 \left(\mu +\nu\right)$ and a positive integer $l = \mu - \nu$. We denote this $\tau_{l,t}$
+Finally suppose that $u' \in \C v$ and that $\varphi$ is irreducible. In this case, we have $\mu = \nu'$ and $\mu' = \nu$ (and $\mu \neq \nu$). The representations restricting to $\chi_{\mu,\nu} \osum \chi_{\nu,\mu}$ and $\chi_{\nu,\mu}\osum \chi_{\mu,\nu}$ are isomorphic. Therefore, irreducible two dimensional representations of $W_\R$ are parameterized by a complex number $t = \frac12 \left(\mu +\nu\right)$ and a positive integer $l = \mu - \nu$. We denote the associated representation by $\tau_{l,t}$.
 
 \subsection{Reducibility of representations}
 Let $\varphi, V$ be a $n$-dimensional representation of $W_\R$. Consider the representation $V$ as a $\C^\times$ representation, and one has the decomposition into (one dimensional) eigenspaces \[V = \osum_{\mu,\nu} V_{\mu,\nu}.\] As before, one sees that the action of $\varphi(j)$ permutes the eigenspaces. If $\varphi(j)V_{\mu,\nu} = V_{\mu,\nu}$ then it is a one dimensional subrepresentation of $V$. Otherwise, $\varphi(j)V_{\mu,\nu} = V_{\nu,\mu}$, and as before, the representation $V_{\mu,\nu} \osum V_{\nu,\mu}$ is representation of $W_\R$.\\
@@ -197,17 +198,17 @@ Let $\varphi, V$ be a $n$-dimensional representation of $W_\R$. Consider the rep
 
 \section{The Langlands Classification for $\GL_n(\R)$}
 
-In this section, we state Langlands classification for irreducible admissible representations of $\GL_n(\R)$ upto infinitesimal equivalence. As mentioned earlier, the representations of $\GL_1(\R)$ are parameterized by a complex variable $s$ and a character of $\{\pm 1\}$. We will first mention some special representations $\GL_2$ and then about how one builds representations of $\GL_n$ from these representations in rank $1$ and $2$.
+In this section, we state Langlands classification for irreducible admissible representations of $\GL_n(\R)$ upto infinitesimal equivalence. As mentioned earlier, the representations of $\GL_1(\R)$ are parameterized by a complex variable $s$ and a character of $\{\pm 1\}$. We will first mention some special representations of $\GL_2(\R)$ and then talk about how one builds representations of $\GL_n$ from these representations in rank $1$ and $2$.
 
 \subsection{Special Representations of $\GL_2$}
 
 For $l\geq 2$ an integer, recall that $\SL_2(\R)$ has the discrete series representations $D_l^+$, and the limit of discrete series representations denoted $D_1^+$. Let $\SL_2^\pm(\R)$ denote the group of $2\times 2$ real matrices with determinant $\pm 1$. We consider the following (tempered) representations of $SL_2^\pm(\R)$: \[D_l = \Ind_{\SL_2(\R)}^{\SL_2^\pm(\R)}(D_l^+),\] for $l\geq 1$.\\
-Next, consider the \emph{relative discrete series} representations $\sigma_{l,t}$ given by \[\sigma_{l,t} = D_l \otimes |\det|^t,\] where $l \geq 1$ and $t \in \C$. These representations will be the building blocks (in rank 2) for representations of $\GL_n(\R)$. (Relate this to the representation
+Next, consider the \emph{relative discrete series} representations $\sigma_{l,t}$ of $\GL_2(\R)$, given by \[\sigma_{l,t} = D_l \otimes |\det|^t,\] where $l \geq 1$ and $t \in \C$. These representations will be the building blocks (in rank 2) for representations of $\GL_n(\R)$. (Relate this to the representation
 
 \subsection{Langlands Classification for $\GL_n$}
-We state Langlands classification of irreducible admissible representations of $\GL_n(\R)$ upto infinitesimal equivalence. There is a more general version for an arbitrary reductive group in place of $\GL_n$, but we will not state that here. See [getz hahn].
+We state Langlands' classification of irreducible admissible representations of $\GL_n(\R)$ upto infinitesimal equivalence. There is a more general version for an arbitrary reductive group in place of $\GL_n$, but we will not state that here (see \cite{getzhahn}, Chapter 4).
 
-For any partition of $n = \sum_{i=1}^r n_i$ where $n_i = 1$ or $2$, and representations $\sigma_i$ of $\GL_{n_i}$ of the form mentioned above (i.e. characters of $\R^\times$ or the relative discrete series $\sigma_{l,t}$), let $M$ be the Levi subgroup $\prod_i \GL_{n_i}(\R)$ of $\GL_n(\R)$ and let $P$ be the standard parabolic of $\GL_n(\R)$ containing $M$. Inflate the representation $\sigma = (\sigma_1, \dots, \sigma_r)$ of $M$ to $P$, and consider the normalized induction \[I(\sigma_1,\dots,\sigma_r) = \Ind_P^{\GL_n(\R)} \left( (\sigma_1, \dots, \sigma_r) \otimes \frac12 \rho_P \right ),\] where $\rho_P$ denotes the sum of positive roots associated to the parabolic $P$. 
+For any partition of $n = \sum_{i=1}^r n_i$ where $n_i = 1$ or $2$, and representations $\sigma_i$ of $\GL_{n_i}$ of the form mentioned above (i.e. characters of $\R^\times$ or the relative discrete series $\sigma_{l,t}$), let $M$ be the Levi subgroup $\prod_i \GL_{n_i}(\R)$ of $\GL_n(\R)$ and let $P$ be the standard parabolic of $\GL_n(\R)$ containing $M$. Inflate the representation $\sigma = (\sigma_1, \dots, \sigma_r)$ of $M$ to $P$, and consider the normalized induction \[I(\sigma_1,\dots,\sigma_r) = \Ind_P^{\GL_n(\R)} \left( (\sigma_1, \dots, \sigma_r) \otimes \rho_P \right ),\] where $\rho_P$ denotes the half-sum of positive roots associated to the parabolic $P$. 
 
 \begin{theorem}[Langlands]
 \begin{enumerate}
@@ -221,8 +222,12 @@ For any partition of $n = \sum_{i=1}^r n_i$ where $n_i = 1$ or $2$, and represen
 There is a one-one correspondence between irreducible admissible representations of $\GL_n(\R)$ upto infinitesimal equivalence and the isomorphism classes of $n$-dimensional representations of $W_\R$ where the group acts semisimply.
 \end{corollary}
 \begin{proof}
-Let $J = J(\sigma_1,\dots, \sigma_r)$ be an irreducible admissible representation of $\GL_n(\R)$. To each representation $\sigma_i$ of $\GL_{n_i}$, consider the associated $n_i$-dimensional Weil group representation: if $n_i = 1$, then consider the character $\tau_i: W_\R \to \R^\times \to \C^\times$, where the first map is the projection $W_\R \to W_\R^{\text{ab}}$ and the second map is $\sigma_i$. If $n_i = 2$, consider the representation $\tau_i = \tau_{l,t}$ described in Section \ref{sec:weil-rep}, where $l, t$ are the parameters associated to $\sigma_i$. Now associate to $J$ the $n$-dimensional representation $\sum_i \tau_i$ of $W_\R$.\\
+Let $J = J(\sigma_1,\dots, \sigma_r)$ be an irreducible admissible representation of $\GL_n(\R)$. To each representation $\sigma_i$ of $\GL_{n_i}$, consider the associated $n_i$-dimensional Weil group representation: if $n_i = 1$, then consider the character $\tau_i: W_\R \to \R^\times \to \C^\times$, where the first map is the projection $W_\R \to W_\R^{\text{ab}}$ and the second map is $\sigma_i$ ($\tau_i$ corresponds to $\sigma_i$ in Theorem \ref{thm:llcgl1}). If $n_i = 2$, consider the representation $\tau_i = \tau_{l,t}$ described in Section \ref{sec:weil-rep}, where $l, t$ are the parameters associated to $\sigma_i$. Now associate to $J$ the $n$-dimensional representation $\osum_i \tau_i$ of $W_\R$.\\
 This association is the desired bijection. The inverse map is clear: to any $n$-dimensional Weil representation $V$, consider its decomposition $V = \sum_{i=1}^r \tau_i$ into one and two dimensional pieces. For each $i$, consider the representation $\sigma_i$ of $\GL_1(\R)$ or $\GL_2(\R)$ with the same parameters as $\tau_i$ as above. Permute the factors so that the condition (1) of the theorem is satisfied, and consider $J(\sigma_1,\dots,\sigma_r)$.
 \end{proof}
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{references}
 
 \end{document}
+
